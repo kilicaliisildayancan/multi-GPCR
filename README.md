@@ -20,11 +20,11 @@ When we have results (referred to here on out as hmmouts), we will want to parse
 
 Now with the sub-database we have (candidate multi-GPCRs), we want to group and analyze them. In the initial search procedure, we decided to cluster them at 50%, and pick clusters that have more than five members. The resulting clusters didn't seem to be taxonomically consistent (proteins in clusters were sometimes too far apart in taxonomy), and I am currently omitting this clustering step but might get back to it later. Maybe a more exhaustive search would be more responsive to the clustering part. Nevertheless, we have decided to plot high-scoring pairs between seeds and the target candidate sequence to visualize the domains. On the x-axis we index the protein sequence (e.g. 900 amino acis), and we plot on the y-axis the hits between each seed and a respective amino acid in the target sequence. It looks like this.
 
-![Figure 1-1](https://raw.github.com/kilicaliisildayancan/multi-GPCR/master/images/hitplot.png "Hit plots")
+![Figure 1](https://raw.github.com/kilicaliisildayancan/multi-GPCR/master/images/hitplot.png "Hit plots")
 
 With some ICLs or ECLs being too long, some single GPCRs can survive through the filters and make it to the end results. These hit plots allow us to differentiate between them, and we can see an example of two false positives that passed through the filters here:
 
-![Figure 1-1](https://raw.github.com/kilicaliisildayancan/multi-GPCR/master/images/falsepos-hitplot.png "False positives")
+![Figure 2](https://raw.github.com/kilicaliisildayancan/multi-GPCR/master/images/falsepos-hitplot.png "False positives")
 
 When we have finished with identifying multi-GPCR candidates, meaningful groupings must be done. For now, we are thinking of functionality (e.g. class, similarity to other known receptors), taxonomy (present in a taxonomical cluster), and GPCR count (di, tri, tetra, and poly). After this, we can analyze them further, which we can get into in another section.
 

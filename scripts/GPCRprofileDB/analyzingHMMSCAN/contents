@@ -1,0 +1,6 @@
+This directory should contain:
+
+1. hits-from-hmmscan.py
+2. multiplePlots-to-PDF.py
+3. movingAvg_hitVector.py
+ 

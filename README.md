@@ -33,36 +33,6 @@ Overall, My aim is to find a cluster of mGPCR proteins that are taxonomically co
 \*Swissprot: I personally did not expect to find a mGPCR in Swissprot since it is manually curated (also did not find any after searching). If it was there, we would have known about its existence before this project. With this in mind, we hope to find sequences in relatives of model organisms and trace them back to organisms that are represented in Swissprot and build a link between them. An important double-edged sword is the abundance and lack of data. With highly-curated organisms, we don't expect due to above-mentioned reasons, and with other organisms, there is so little experimental data that it is hard to build a convincing case that they exist.
 
 
-### Searching for GPCRs using seeds
-
-#### Seed selection
-
-#### Strenghtening seeds (hhblits_seed-on-DB.sh)
-
-#### Profile building (a3m-to-sto.sh, hmmbuild.sh)
-
-#### Searching databases (hmmsearch_profiles-on-DB.sh)
-
-### Applying "loose" filters on results
-
-#### Pre-filtering (prefilter.py)
-
-#### Filtering by length of span (length-filter.py)
-
-### Identifying high-scoring hits
-
-#### Hmmpress and hmmscan (hmmpress.sh, hmmscan_prstSeed-on-subDB.sh)
-
-#### Parsing hits into hit vectors (hits-from-hmmscan.py)
-
-
-### Visualizing the results
-
-#### Plotting hits versus sequence indices (multiplePlots-to-PDF.py)
-
-#### Identifying GPCR domains by hit vectors (movingAvg_hitVector.py)
-
-
 ### Future aspects, notes, opinions
 
 #### Caveats and limitations in methods used

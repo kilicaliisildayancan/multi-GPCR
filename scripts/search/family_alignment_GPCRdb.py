@@ -13,8 +13,6 @@ familyInfo='/home/bental/multi-domain_gpcr/datafiles/GPCRfamilies.json'
 baseUrl='https://gpcrdb.org/services/alignment/family'
 
 
-familyName='naber'
-
 # Get all subfamilies and their names from familyInfo json file
 with open(familyInfo,'r') as handle:
     familyJSON=json.load(handle)

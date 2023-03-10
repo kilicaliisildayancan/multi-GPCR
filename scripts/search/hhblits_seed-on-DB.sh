@@ -1,7 +1,4 @@
 #!/bin/bash
-
-###  PBS LINES HERE ARE RELEVANT TO THE HPC CLUSTER IN OUR UNIVERSITY, PLEASE REFER TO WIKI PAGE FOR DOCUMENTATION
-
 #PBS -e /scratch200/kilicali/LOG/hhblits_err.log
 #PBS -o /scratch200/kilicali/LOG/hhblits_out.log
 #PBS -l select=1:ncpus=8:mem=64g

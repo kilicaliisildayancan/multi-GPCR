@@ -1,11 +1,14 @@
 #!/bin/bash
+
+###  PBS LINES HERE ARE RELEVANT TO THE HPC CLUSTER IN OUR UNIVERSITY, PLEASE REFER TO WIKI PAGE FOR DOCUMENTATION
+
 #PBS -e /scratch200/kilicali/LOG/hhblits_err.log
 #PBS -o /scratch200/kilicali/LOG/hhblits_out.log
 #PBS -l select=1:ncpus=8:mem=64g
 #PBS -q bentalweb
 
 cd /a/home/cc/lifesci/kilicali/pipe_ecod92/
-module load hh-suite 
+module load hh-suite  #loading relevant programs
 
 
 INDIR='/scratch200/kilicali/ECOD/sequences'

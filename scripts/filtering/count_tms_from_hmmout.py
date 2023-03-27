@@ -55,7 +55,7 @@ for candidate in records.hits:
             condition2=k-TM_START_INDICES>tolerance
 
             tm_hit_bool_vector=np.logical_and(condition1, condition2)
-            tm_counter+=np.sum(tm_hit_bool_vector)
+            tm_counter+=int(np.sum(tm_hit_bool_vector))
 
         new_candidate['name']=candidate.description_all[0]
         new_candidate['accession']=candidate.id

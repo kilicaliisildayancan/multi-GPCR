@@ -24,6 +24,8 @@ CHEMOKINE_TM_INDICES={1: (0, 35), 2: (39, 69), 3: (73, 109), 4: (117, 144), 5: (
 TM_START_INDICES=np.array([x[0] for x in CHEMOKINE_TM_INDICES.values()])
 TM_END_INDICES=np.array([x[1] for x in CHEMOKINE_TM_INDICES.values()])
 
+tolerance=15
+
 ### RUNNING SCRIPT ###
 
 #There is no way I could find to parse it in a for loop slowly, we have to load everything to the records object
@@ -49,8 +51,8 @@ for candidate in records.hits:
             h=query_range[0]
             k=query_range[1]
 
-            condition1=TM_END_INDICES-h>15
-            condition2=k-TM_START_INDICES>15
+            condition1=TM_END_INDICES-h>tolerance
+            condition2=k-TM_START_INDICES>tolerance
 
             tm_hit_bool_vector=np.logical_and(condition1, condition2)
             tm_counter+=np.sum(tm_hit_bool_vector)

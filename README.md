@@ -45,9 +45,3 @@ Overall, My aim is to find a cluster of mGPCR proteins that are taxonomically co
 ### Future aspects, notes, opinions
 
 #### Caveats and limitations in methods used
-
-#### Communication in science
-
-With my close-to-little experience in science and the scientific method, I am developing a very naive idea of the philosophy of science on my own. I have realized that one of the biggest pillars in science is communication. Whatever being tested is, it should be communicated well enough to be understandable and reproducable (other than being relevant and important). As a thought experiment, when discoveries are taken to the extreme, Fermat's Last Theorem comes to mind. In his "lab notebook", he stated, near his death, that he had found the proof of the conjecture "[...] I have discovered a truly marvelous proof of this, which this margin is too narrow to contain". If he ever formulated a correct proof is debated still today, while being very unlikely, this shows that communication is the most important part of scientific discoveries to not lose humanity centuries of time due to lack of pages.
-
-This is why in my first serious scientific research, I will be extensively documenting over-arching thoughts and concepts, as well as minute details of the research procedure. Moreover, I will be going out of my way to produce understandable, interpretable, intriguing and aesthetically pleasing visuals to communicate as best what is found and what is known. This might be sub-par for other people's expectations, but I find that over the long haul the "going out of my way" part will make me one of the better communicators in science and I believe at least this thought process will be crucial for my contribution to science and human knowledge.

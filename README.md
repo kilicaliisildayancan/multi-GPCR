@@ -2,9 +2,15 @@
 
 Research project repositofy for identifying and analyzing multi-domain GPCRs.
 
-## Format
+## Important note for oncomers (weird, but OK):
 
-#### I have written this file in a style so that everyone can read through and understand the logic and reasoning behind every step. I have written the associated/mentioned scripts next to the sub-headers so that every script is explained and contained in a title. More elaborate explanations could be in their respective directories.
+Due to the attack on October, my research was abruptly interrupted (as well as my master's degree haha). For anyone who wants to pursue this idea, here are a list of things we did not get to publish on the arxiv, and is not here, all summarized up:
+
+* CCR2-CCR5 chemokine receptors likely have an evolutionary force keeping their **orientation** (direction which it is transcribed) and **intergenic distance** (base pair count between two genes) constant, and does not allow for these two to change. A quick check on animals (that have this receptor obviously) should show that this is indeed the case. Their intergenic distance, if I remember correctly, is strictly around 10k bp, which is very unusual, (we can statistically benchmark this using random pairs, random pairs from similar families, functionally relevant pairs etc.).
+* This evolutionary force is not unique to CCR2-CCR5 pair, but it's rare. For this, I looked for which gene pairs are generally conserved throughout animals that have (1) same transcription direction, and (2) have a very tight intergenic distance (e.g. less than 100k bp). The latter could be extended based on transcription elongation research, I don't remember what my threshold was when doing this part. There weren't many genes like this, because common genes across a lot of animals are rare (and most animals are not at all well-studied, and data quality was a big part of the below research hitting a wall, and most of our discussions with Nir), and it's very hard to keep two genes in the same orientation and very close together. This is the main rationale behind:
+* There might be some alternative splicing events happening at those locations. CCR2-CCR5 are functionally very relevant, in some specific cells they are expressed together (my wetlab experiments focused on this, but apparently wet labs are tedious and I also suck at it). Whether they are expressed as a ~fusion protein~ remains an open question, but there might be some splicing sorcery going on at these locations.
+* If not, this conservation has to be explained some other way (either bad data, which is fair, bad analysis, which is also fair, or just by pure luck, which I don't buy in biology).
+* *If the above interests you even the slightest bit, I'd be happy to look over my latest files and go over them with you, it is a little complicated but it shouldn't be more than a days work. Just contact me at kilic dot isildayancan \[the cool sign we use for these things\] try all the popular mail domains for US dot com, e.g. hotmail, (sorry for righting it that way, I just hate spam so so much, hint: it's the very big number).*
 
 ## Identifying proteins with multiple G-protein Coupled Receptor Domains
 

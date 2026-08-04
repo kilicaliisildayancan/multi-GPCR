@@ -1,6 +1,6 @@
 # Research Moved (HTTP 301)
 
-The approach is both noted in the [README.md](./README.md) and [APPROACH.md](/APPROACH.md). 
+The approach is both noted in the [old-README.md](./old-README.md) and [APPROACH.md](./APPROACH.md). 
 
 Unfortunately, we couldn't find any "high-quality" multi-domain GPCR proteins.
 

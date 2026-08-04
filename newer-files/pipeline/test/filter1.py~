@@ -1,0 +1,43 @@
+#BioPython imports
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
+from Bio import Bio.SearchIO
+from Bio import SeqIO
+
+#Other imports
+import numpy as np
+import os
+import sys
+
+#define directories here
+hmmout_folder='./'
+fasta_folder='/home/kilic_tp/multi-domain_gpcr/datafiles/primary_data/ECOD'
+
+#define global variables here
+master_dict={}
+
+#filtering for only hmmout files
+files=[x for x in files if '.out' in files]
+
+
+#iterate through all the files to scrape the important information
+fasta_path=fasta_folder+file.replace('.out','.fasta')
+fasta_records=SeqIO.to_dict(fasta_path,'fasta')
+
+hmm_path=hmmout_folder+file
+records=SearchIO.read(hmm_path,'hmmer3-text')
+    
+for hit in records:
+    for hsp in hit.hsps:
+        q_id=hsp.query.id
+        q_st,q_end=hsp.query_range
+
+        h_id=hsp.hit.id
+        h_st,h_end=hsp.hit_range
+       
+        stringified=f'{q_id};{};{};{}'
+          
+        if h_id not in master_dict.keys():
+            master_dict[h_id]=[]
+        else:
+        

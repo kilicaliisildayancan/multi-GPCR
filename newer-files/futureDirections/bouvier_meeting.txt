@@ -1,0 +1,9 @@
+Almost all have basal activity; but still we can use a library of PAINS compounds. But again this might confuse the results.
+
+How will it be translated, transported to the membrane?
+
+For chemokine receptors, we can use chemokines from extracts of the native organism/synthesize chemokines from these organisms
+
+For olfactory receptors, we can use a wide array of odorant molecules as the specificity might be irrelevant considering musk-induced GPCR activation; these are
+already noted by Amit in the supplementary part. One thing of note, some olfactory receptors are found to be metalloproteins, and they work in the presence of Copper.
+

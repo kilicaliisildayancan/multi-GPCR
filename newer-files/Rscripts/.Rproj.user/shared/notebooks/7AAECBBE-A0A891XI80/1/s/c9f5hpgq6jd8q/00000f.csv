@@ -1,0 +1,3 @@
+"0","#ray traced, width: 11cm, height: 10cm"
+"0","pwAli <- ""/home/kilicali/multi-domain_gpcr/mGPCR_analysis/allatostatin-C-like/pairwise_alignment_needle.png"""
+"0","knitr::include_graphics(pwAli)"

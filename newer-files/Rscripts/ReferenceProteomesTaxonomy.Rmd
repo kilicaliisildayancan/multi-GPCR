@@ -1,0 +1,42 @@
+---
+title: "Taxonomical Coverage of Reference Proteomes"
+author: "Kilicali Isildayancan"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Taxonomical Analysis
+
+## First look
+
+```{r startup, echo=FALSE, warning=FALSE, message=FALSE}
+library('ggtree')
+library('ggplot2')
+library('ggimage')
+library('RColorBrewer')
+direcPhylo <- '/home/kilicali/multi-domain_gpcr/phylo/tax-refprot'
+direcImage <- '/home/kilicali/multi-domain_gpcr/plot'
+```
+
+
+```{r directories, warning=FALSE}
+filePhylo <- read.csv(direcPhylo, sep = '\t')
+taxidCol <- as.numeric(filePhylo$Tax)
+```
+
+```{r fetchingInfo, warning=FALSE}
+taxDB <- taxize::classification(filePhylo$Tax, db = 'ncbi')
+```
+
+```{r plottingTree}
+specTree <- taxize::class2tree(taxDB)
+
+#I need to split this tree up to be able to visualize it properly!
+#ggtree::ggtree(specTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+```
+

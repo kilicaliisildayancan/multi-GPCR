@@ -1,0 +1,7 @@
+"0","# Create the bar plot"
+"0","ggplot2::ggplot(split3ord, aes(x = allOs, y = Freq, fill = allOs)) + "
+"0","  geom_bar(stat = ""identity"") +"
+"0","  labs(title = ""diChemokines in Organisms by Order"", x = ""Order"", y = ""Frequency"") +"
+"0","  geom_text(aes(label=allOs),nudge_y=.1, size=6, check_overlap=TRUE)+"
+"0","  theme_minimal() +"
+"0","  theme(axis.text.x=element_blank())"

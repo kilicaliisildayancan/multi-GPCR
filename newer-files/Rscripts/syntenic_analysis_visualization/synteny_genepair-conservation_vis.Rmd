@@ -1,0 +1,138 @@
+---
+title: "syntenic_pairs_hum-mous-cat-chick-zfish"
+author: "Kilicali Isildayancan"
+date: "2024-05-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = F, warning = F)
+library(ggplot2)
+
+data_dir <- "/home/kilicali/multi-domain_gpcr/datafiles/synteny_analysis/UCSC_data/conservation/main_seeds/"
+
+genome_data <- paste0(data_dir,"human-mouse-cat-chicken-zebrafish_syntenic_gene-pairs.tsv")
+
+gene_sets0 <- data.frame(read.csv(genome_data, sep = "\t"))
+gene_pairs <- paste(gene_sets0$Gene1, gene_sets0$Gene2, sep = "-")
+gene_sets <- data.frame(gene_pairs = gene_pairs,
+                        human = gene_sets0$IG_distance_human,
+                        mouse = gene_sets0$IG_distance_mouse,
+                        cat = gene_sets0$IG_distance_cat,
+                        chicken = gene_sets0$IG_distance_chicken,
+                        zebrafish = gene_sets0$IG_distance_zebrafish)
+
+```
+
+
+```{r}
+common_sel <- !apply(gene_sets, 1, function(row) any(is.na(row)))
+
+gs_long <- reshape2::melt(gene_sets[,2:6])
+ggplot(gs_long, aes(x=value, fill=variable)) + geom_histogram() + labs(title = "Intergenic Distance", x = "Distance", y = "Frequency") + scale_x_continuous(n.breaks=10)
+```
+
+
+```{r}
+human_mouse <- gene_sets[,c(1,2,3)]
+hm_sel <- !apply(human_mouse, 1, function(row) any(is.na(row)))
+
+
+human_cat <- gene_sets[,c(1,2,4)]
+hcat_sel <- !apply(human_cat, 1, function(row) any(is.na(row)))
+human_cat <- human_cat[hcat_sel,]
+
+human_chicken <- gene_sets[,c(1,2,5)]
+hchicken_sel <- !apply(human_chicken, 1, function(row) any(is.na(row)))
+human_chicken <- human_chicken[hchicken_sel,]
+
+human_zebrafish <- gene_sets[,c(1,2,6)]
+hzebrafish_sel <- !apply(human_zebrafish, 1, function(row) any(is.na(row)))
+human_zebrafish <- human_zebrafish[hzebrafish_sel,]
+```
+
+
+```{r}
+sel1 <- (abs(human_mouse$human - human_mouse$mouse) < (apply(human_mouse[,c('human','mouse')], 1, function(row) max(row))*.2)) | (abs(human_mouse$human - human_mouse$mouse) < 20000)
+
+ggplot(human_mouse, aes(x=human, y=mouse, color=sel1)) + geom_point() + labs(title = "Intergenic Distance", x = "Human Genes", y = "Mouse Genes") + scale_x_continuous(n.breaks=10) + geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 0, slope = 1, color = "blue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 50000, slope = 1, color = "lightblue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = -50000, slope = 1, color = "lightblue")
+
+```
+
+```{r}
+sel2 <- (abs(human_cat$human - human_cat$cat) < (apply(human_cat[,c('human','cat')], 1, function(row) max(row))*.2)) | (abs(human_cat$human - human_cat$cat) < 20000)
+
+sel3 <- (abs(human_chicken$human - human_chicken$chicken) < (apply(human_chicken[,c('human','chicken')], 1, function(row) max(row))*.2)) | (abs(human_chicken$human - human_chicken$chicken) < 20000)
+
+sel4 <- (abs(human_zebrafish$human - human_zebrafish$zebrafish) < (apply(human_zebrafish[,c('human','zebrafish')], 1, function(row) max(row))*.2)) | (abs(human_zebrafish$human - human_zebrafish$zebrafish) < 20000)
+
+ggplot(human_cat, aes(x=human, y=cat, color=sel2)) + geom_point() + labs(title = "Intergenic Distance", x = "Human Genes", y = "Cat Genes") + scale_x_continuous(n.breaks=10) + geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 0, slope = 1, color = "blue")+
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 50000, slope = 1, color = "lightblue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = -50000, slope = 1, color = "lightblue")
+
+
+ggplot(human_chicken, aes(x=human, y=chicken, color=sel3)) + geom_point() + labs(title = "Intergenic Distance", x = "Human Genes", y = "Chicken Genes") + scale_x_continuous(n.breaks=10) +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 0, slope = 1, color = "blue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 50000, slope = 1, color = "lightblue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = -50000, slope = 1, color = "lightblue")
+
+ggplot(human_zebrafish, aes(x=human, y=zebrafish, color=sel4)) + geom_point() + labs(title = "Intergenic Distance", x = "Human Genes", y = "Chicken Genes") + scale_x_continuous(n.breaks=10) +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 0, slope = 1, color = "blue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 50000, slope = 1, color = "lightblue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = -50000, slope = 1, color = "lightblue")
+```
+
+
+```{r}
+hm_genes <- gene_sets$gene_pairs %in% human_mouse$gene_pairs[sel1]
+hcat_genes <- gene_sets$gene_pairs %in% human_cat$gene_pairs[sel2]
+hchicken_genes <- gene_sets$gene_pairs %in% human_chicken$gene_pairs[sel3]
+hzebrafish_genes <- gene_sets$gene_pairs %in% human_zebrafish$gene_pairs[sel4]
+
+filter_level <- data.frame(gene_pairs = gene_sets$gene_pairs, level = (hm_genes + hcat_genes + hchicken_genes + hzebrafish_genes))
+
+ggplot(human_mouse, aes(x=human, y=mouse, color=factor(filter_level$level))) + 
+  geom_point(data = human_mouse[filter_level$level == 0,c('human', 'mouse')], size = 1) + 
+  labs(title = "Intergenic Distance", x = "Human Genes", y = "Mouse Genes") +
+  scale_x_continuous(n.breaks=10) + geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 0, slope = 1, color = "blue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 50000, slope = 1, color = "lightblue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = -50000, slope = 1, color = "lightblue") +
+  scale_color_brewer(palette = "Set1")
+
+
+ggplot() + 
+  geom_point(data = human_mouse[filter_level$level == 0,c('human', 'mouse')], aes(x=human,y=mouse),color='gray', size = .5) +
+  geom_point(data = human_mouse[filter_level$level == 1,c('human', 'mouse')], aes(x=human,y=mouse),color='lightgreen', size = 1) +
+  geom_point(data = human_mouse[filter_level$level == 2,c('human', 'mouse')], aes(x=human,y=mouse),color='yellow', size = 1.5) +
+  geom_point(data = human_mouse[filter_level$level == 3,c('human', 'mouse')], aes(x=human,y=mouse),color='orange', size = 2) +
+  geom_point(data = human_mouse[filter_level$level == 4,c('human', 'mouse')], aes(x=human,y=mouse),color='red', size = 3) +
+  labs(title = "Intergenic Distance", x = "Human Genes", y = "Mouse Genes") +
+  scale_x_continuous(n.breaks=10) + geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 0, slope = 1, color = "blue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = 50000, slope = 1, color = "lightblue") +
+  geom_rect(aes(xmin = 500, xmax = 50000, ymin = 500, ymax = 50000),
+              fill = NA, color = "red", size = 0.1) + geom_abline(intercept = -50000, slope = 1, color = "lightblue") +
+  scale_color_brewer(palette = "Set2")
+
+```
+
+
+

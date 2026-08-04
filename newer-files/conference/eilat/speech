@@ -1,0 +1,44 @@
+Hello everyone, my name is Kilic and I'm joining here today from the department of Biochemistry in Tel Aviv University under the supervision of Professor Nir Ben-Tal.
+
+Today I will be presenting on our findings from our preprint "Proteins with multiple GPCR (G-protein coupled receptor) domains".
+
+Our research is on GPCRs, 7-transmembrane helix receptors that transduce extracellular signals to inside the cells. 
+
+Here, we can see a canonical GPCR signal transduction pathway with its structure on the side.
+
+Interesting research is being done by various groups on the functionality and evolution of GPCRs, and some of it is based on how and why they oligomerize.
+We have known for some time that GPCRs form homo- and hetero-oligomers.
+An example here, we see the structure of the micro-opioid receptor. This GPCR, like many others, forms dimers for its proper activity.
+
+This connects us to our main hypothesis: by some mechanism of evolution could there be proteins with multiple GPCR domains? 
+These would be proteins that get translated as a single chain, and fold into the oligomeric structure of multiple seperate GPCRs in vivo, but only by using one chain.
+
+With this question in mind, we devised a search protocol to search for multi-domain GPCRs. In the end, although we didn't do an all inclusive search, we managed to find 57 representative multi-domain GPCRs that are similar to different classes of GPCRs.
+Here we can see a schematic representation of a multi-GPCR of two domains on the left-hand side. They are non-overlapping. And each domain has 7 transmembrane helices.
+The dotted line here (slide 3) depicts that the linker between two GPCR domains can be variable. 
+On the right is an alphafold predicted structure of a candidate multi-domain GPCR we discovered with our pipeline, and it is colored according to the schematic on the left. 
+
+Interestingly we found that most of our 
+In majority, we found GPCRs that were olfactory-related;We found a few of chemokine-related; 
+Here we can see the taxonomic distribution of the 57 multi-domain GPCRs. On the left is the phylogenetic tree with small animal silhouettes to depict some of the species.
+On the y-axis there are the different species that possibly contain multi-domain GPCRs, from top to bottom, there are the mammals, birds, reptiles, other amphibians, and lastly the bottom part are fish. 
+On the x-axis there are the 57 different newly-discovered multi-domain GPCRs, and as you can see most of them contain only two GPCRs.
+Colored dots depict if a homologue of the respective protein was found in that specific species.
+
+The distribution is narrower relative to canonical GPCRs, but nevertheless wide enough to be present throughout Chordates. Additionally, as of the current search procedure, they seem to be sparsely distributed, either pointing to them being not essential for the families of these species. 
+
+To wrap-up our flash-talk session, we have the summary and outlook.
+
+Many putative proteins with multi-GPCR domains
+From fish to mammals
+Up to monkeys, meaning could be present in our close relatives
+Annotated mostly as olfactory receptors; few chemokine receptors
+None of them prevail, so probably not indispensable
+
+for other classes we are working on devising alternate search protocols in hoping to find better representation for class C GPCRs which do not function without dimerization.
+
+So this leads us on to a few open questions:
+What is their unique contribution? What evolutionary benefit is there to multiple GPCRs being on the same protein chain? Stochasticity? Stabilit?
+Mechanisms? Is it the same canonical GPCR signal transduction pathway they go through? Have they diverged to employ different behaviour?
+And lastly an evolutionary question: My predecessor Ron Solan, with the help of the rest of the lab, has previously found multi-domain beta barrels. These transmembrane proteins very much like to oligomerize and be together, so that leads us into the obvious question of: What other multi-domain membrane proteins are there? 
+

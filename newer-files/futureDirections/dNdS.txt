@@ -1,0 +1,7 @@
+To determine whether expression in an all-cone retina altered
+evolutionary constraints on RH1, we analyzed selection patterns
+with PAML random-site, branch, branch-site, and clade models (SI
+Appendix, Fig. S3 and Table S2). The M0 model found an average ω
+(ratio of nonsynonymous to synonymous substitutions; dN/dS) of
+0.07 and significant rate variation across sites (M3 vs. M0; SI Appendix, Table S2), as expected for a protein-coding gene under
+strong selective constraint.

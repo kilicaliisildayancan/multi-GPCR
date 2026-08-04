@@ -1,0 +1,114 @@
+---
+title: "Protocol Template"
+author: "Kilicali Isildayancan"
+date: "Last updated on: `r format(Sys.time(), '%d %B %Y')`"
+output: 
+  pdf_document: 
+    extra_dependencies: ["fancyhdr", "xcolor"]
+urlcolor: blue
+
+#bibliography: "" #pathway to .bib
+---
+\pagestyle{fancy}
+\widowpenalties 1 10000
+\raggedbottom
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+options(knitr.kable.NA = "")
+source("./func/util.R")
+
+#CSV paths
+eqCSVpath <- "./data/labEquipment.csv"
+reagentsCSVpath <- "./data/labReagents.csv"
+disposablesCSVpath <- "./data/labDisposables.csv"
+BECSVpath <- "./data/labBioEntities.csv"
+containersCSVpath <- "./data/labContainers.csv"
+```
+
+# Notes {.unnumbered .unlisted}
+
+* Update something about document. Has to be removed before finished!
+
+# Abstract {.unnumbered .unlisted}
+
+This is a template. Here, the reason for conducting this particular protocol is outlined.
+
+# Notice {.unnumbered .unlisted}
+
+The procedures here can be modified based on empirical and practical results. Of note, some of these steps can be omitted and skipped ($\textit{e.g.}$ no need to thaw if sample is not frozen). When moving liquids from one container to another, do so under the fumehood to avoid possible contamination from air. Please document each completed step (and skipped step) with appropriate data written down  synchronously so as to collect information on procedures. Please take the time to do these things while performing the procedures, and do not eyeball numbers/values long after they are done. This is the most scientific and robust practice in a laboratory.
+
+\newpage
+\tableofcontents
+\newpage
+
+
+
+```{r RequiredMaterial}
+#look up the names from the csv
+usedEquipments <- c("Dumminator2000",
+                    "iso-Mikropipet", 
+                    "Thermomac Autoclave") 
+usedReagents <- c("A", "B", "C")
+usedDisposables <- c("Filtered tips")
+usedBE <- c("PCR reverse-transcriptase, 500 µL")
+usedContainers <- c("Eppendorf Tube")
+```
+
+
+# Required Materials
+\renewcommand{\arraystretch}{2}
+```{r usedMaterials}
+matTable <- usedMaterialsTable(usedEquipments, usedReagents,usedBE, usedContainers)
+knitr::kable(matTable)
+```
+\renewcommand{\arraystretch}{1}
+
+
+\newpage
+
+# Procedure
+
+\nopagebreak
+
+## 0. Preparation of required materials
+
+\nopagebreak
+
+This section describes methods on how to prepare required media and solutions that are mentioned in this protocol.
+
+# Remove later - formatting templates
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Note: some note that will be inside a box.
+    }%
+}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textcolor{red}{Critical}: Some important stuff.
+    }%
+}
+
+
+\textcolor{red}{color}
+\textcolor{purple}{Ref protocols, section N. Dancing}
+\colorbox{green}{highlighted text}
+
+\colorbox{orange}{\parbox{\textwidth}{Negative Control and Positive Control: text}}
+
+list of colors available: black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow.
+
+
+For mathematical formulas, use this template:
+
+\begin{center}
+\begin{math}\displaystyle{
+F(x) = (OD_{260}-OD_{320}) {\div} (OD_{x}-OD_{320}), x \in [230, 320]
+}
+\end{math}
+\end{center}
+
+
+

@@ -1,0 +1,6 @@
+"0","allOs <- c()"
+"0","phylumDB <- data.frame()"
+"0","for (taxo in taxDB) {"
+"0","  order<-taxo$name[taxo$rank=='order']"
+"0","  allOs <- c(allOs, order)"
+"0","}"

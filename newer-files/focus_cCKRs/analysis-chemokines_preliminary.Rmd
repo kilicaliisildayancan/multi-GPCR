@@ -1,0 +1,334 @@
+---
+title: "Class A Receptor Taxonomical Analysis"
+author: "Kilicali Isildayancan"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_document
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+# Taxonomical Analysis
+
+## First look
+
+```{r startup, echo=FALSE, warning=FALSE, message=FALSE}
+library('ggtree')
+library('ggplot2')
+library('ggimage')
+library('RColorBrewer')
+direcInfo <- '/home/kilicali/multi-domain_gpcr/datafiles/7TMresults/subgrouped_based_on_TM-count/allTMs_A.tsv'
+```
+
+First we get the TSV file from the UniProt API parser. This file contains names of proteins, their Accession ID, TaxID, Existence, GPCR Domain count, and finally TM count. All is based on UniProt classification.
+
+```{r directories, warning=FALSE}
+fileTSV <- read.csv(direcInfo, sep = '\t')
+
+fileTSV <- fileTSV[fileTSV$GPCR_domain_count>0,]
+
+#Protein ID & domain count
+protNames <- fileTSV$Name
+accIDs <- fileTSV$AccessionID
+taxIds <- fileTSV$TaxID
+tmCount <- fileTSV$TM_count
+domainCount <- fileTSV$GPCR_domain_count
+```
+
+
+### Domains
+
+Here, we can see that we have `r length(unique(accIDs))` unique proteins with a minimum of `r min(domainCount)` and a maximum of `r max(domainCount)` domain hits. The distribution of the number of domain frequencies are as follows:
+
+```{r histoDomainCount, echo=FALSE, fig.align='center'}
+ddist <- plot(table(domainCount),
+     col=brewer.pal(n=11, 'Dark2'),
+     lwd=10,
+     xlab="Number of domains",
+     main='Distribution class A receptors GPCR domain counts')
+```
+
+### TM count
+
+The proteins have a 7+ transmembrane domains with a minimum count of `r min(tmCount)` and a maximum of `r max(tmCount)` domain hits. The distribution of the number of domain frequencies are as follows:
+
+```{r histoTMCount, echo=FALSE, fig.align='center'}
+ddist <- plot(table(tmCount),
+              col=brewer.pal(n=7,'Oranges'),
+              lwd=3,
+              xlab="Number of TM domains",
+              ylab='Amount of proteins',
+              main='Distribution class A receptors TM domain counts')
+
+```
+
+## Specific cases
+
+### Chemokine Receptors
+
+```{r subData}
+chemokines<-fileTSV[grepl('chemokine',fileTSV$Name),]
+```
+
+Here are all the "chemokine" annotated receptors (has chemokine in their name). There are `r length(chemokines$AccessionID)` receptors that were annotated with chemokine homolgy.
+
+```{r chemoNames}
+(chemokines)
+```
+
+```{r histoChemoDomainCount, echo=FALSE, fig.align='center'}
+ddist <- plot(table(chemokines$GPCR_domain_count),
+              col=brewer.pal(n=7,'Dark2'),
+              lwd=10,
+              xlab="Number of GPCR domains",
+              ylab='Amount of proteins',
+              main='Distribution class A receptors TM domain counts')
+```
+```{r histoChemoTMDomainCount, echo=FALSE, fig.align='center'}
+ddist <- plot(table(chemokines$TM_count),
+              col=brewer.pal(n=max(chemokines$TM_count),'Oranges'),
+              lwd=10,
+              xlab="Number of TM domains",
+              ylab='Amount of proteins',
+              main='Distribution class A receptors TM domain counts')
+```
+
+```{r ChemoTaxInfo, warning=FALSE, fig.width=15}
+chemoClass <- taxize::classification(unique(chemokines$TaxID), db = 'ncbi')
+chemoTree <- taxize::class2tree(chemoClass,check=FALSE)
+label2=chemokines$TM_count[]
+ggtree::ggtree(chemoTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)#+geom_tiplab(mapping=aes(label=c(1:29)),nudge_x=6, nudge_y=0.2)
+```
+
+
+
+## High-level taxonomy (Superkingdoms, kingdoms, and phylum)
+
+```{r fetchingAllInfo, warning=FALSE}
+taxDB <- taxize::classification(taxIds, db = 'ncbi')
+```
+
+```{r low_level3s}
+allSKs<-c()
+allKs <- c()
+allPs <- c()
+idPs <- c()
+for (taxo in taxDB) {
+  superkingdom<-taxo$name[taxo$rank=='superkingdom']
+  allSKs <- c(allSKs, superkingdom)
+  kingdom<-taxo$name[taxo$rank=='kingdom']
+  allKs <- c(allKs, kingdom)
+  phylum<-taxo$name[taxo$rank=='phylum']
+  allPs <- c(allPs, phylum)
+  tmpid <- taxo$id[taxo$rank=='phylum']
+  idPs <- unique(c(idPs, tmpid))
+}
+
+idPs <- as.numeric(idPs)
+```
+
+### Superkingdoms
+
+-   There are `r length(unique(allSKs))` superkingdom(s), namely: `r unique(allSKs)`. Eukaryotes represent `r sum(allSKs=='Eukaryota')/length(allSKs)*100`% (There are `r sum(allSKs=='Bacteria')` from Bacteria).
+
+### Kingdoms
+
+-   There are `r length(unique(allKs))` kingdoms, namely: `r unique(allKs)`. Here is the distribution:
+
+```{r histKingdoms, fig.align='center', fig.width=15}
+kingdomDF <- as.data.frame(table(allKs))
+# Create the bar plot
+ggplot2::ggplot(kingdomDF, aes(x = allKs, y = Freq, fill = allKs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "Categorical Frequencies", x = "Category", y = "Frequency") +
+  theme_minimal()
+```
+
+### Phylum
+
+-   There are `r length (unique(allPs))` phylums, namely: `r unique(allPs)`.
+
+Here is a visual representation of all the phylums present (which covers all the lower-level taxa):
+
+```{r treeP, fig.align='center', fig.width=15}
+phylumClass<-taxize::classification(idPs,'ncbi')
+phylumTree <- taxize::class2tree(phylumClass)
+ggtree::ggtree(phylumTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+```
+
+Also the histogram distribution:
+
+```{r histPhylum, fig.align='center', fig.width=15}
+
+phylumDF <- as.data.frame(table(allPs))
+# Create the bar plot
+ggplot2::ggplot(phylumDF, aes(x = allPs, y = Freq, fill = allPs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Phylum", x = "Phylum", y = "Frequency") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1,size=12))
+```
+
+The chordates represent `r sum(allPs=='Chordata')/length(allPs)*100` of all the phylums in the reference proteomes with a total of `r sum(allPs=='Chordata')`.
+
+## Mid-level taxonomy (Order)
+
+We are considering only order here, and looking for primates in particular.
+
+```{r mid_level}
+allOs <- c()
+for (taxo in taxDB) {
+  order<-taxo$name[taxo$rank=='order']
+  allOs <- c(allOs, order)
+}
+```
+
+```{r histOrder}
+
+orderDF <- as.data.frame(table(allOs))
+split1ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq>30],Freq=orderDF$Freq[orderDF$Freq>30])
+split2ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq<=30 & orderDF$Freq>=10],Freq=orderDF$Freq[orderDF$Freq<=30 & orderDF$Freq>=10])
+split3ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq<=10 & orderDF$Freq>=5],Freq=orderDF$Freq[orderDF$Freq<=10 & orderDF$Freq>=5])
+split4ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq<5],Freq=orderDF$Freq[orderDF$Freq<5])
+```
+
+```{r ordGT30, fig.align='center', fig.width=17}
+# Create the bar plot
+ggplot2::ggplot(split1ord, aes(x = allOs, y = Freq, fill = allOs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Order", x = "Order", y = "Frequency") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1,size=13))
+```
+
+```{r ordBTW10and30, fig.align='center', fig.width=17}
+# Create the bar plot
+ggplot2::ggplot(split2ord, aes(x = allOs, y = Freq, fill = allOs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Order", x = "Order", y = "Frequency") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1,size=13))
+```
+
+```{r ordsplit3, fig.align='center', fig.width=17}
+# Create the bar plot
+ggplot2::ggplot(split3ord, aes(x = allOs, y = Freq, fill = allOs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Order", x = "Order", y = "Frequency") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1,size = 13))
+```
+
+
+
+## Low-level taxonomy (Family and Species)
+
+```{r hi_level}
+allFams <- c()
+idFs <- c()
+for (taxo in taxDB) {
+  family<-taxo$name[taxo$rank=='family']
+  allFams <- c(allFams, family)
+  if ('Cricetidae' %in% taxo$name) {
+    tmpid <- taxo$id[taxo$rank=="species"]
+    idFs <- unique(c(idFs, tmpid))
+  }
+  
+}
+
+idFs <- as.numeric(idFs)
+```
+
+```{r histFamily}
+familyDF <- as.data.frame(table(allFams))
+split1f <- data.frame(allFams=familyDF$allFams[familyDF$Freq>30],Freq=familyDF$Freq[familyDF$Freq>30])
+split2f <- data.frame(allFams=familyDF$allFams[familyDF$Freq<30 & familyDF$Freq>10],Freq=familyDF$Freq[familyDF$Freq<30 & familyDF$Freq>10])
+split3f <- data.frame(allFams=familyDF$allFams[familyDF$Freq<10 & familyDF$Freq>5],Freq=familyDF$Freq[familyDF$Freq<10 & familyDF$Freq>5])
+split4f <- data.frame(allFams=familyDF$allFams[familyDF$Freq<5],Freq=familyDF$Freq[familyDF$Freq<5])
+```
+
+```{r famGT30, fig.align='center', fig.width=10}
+# Create the bar plot
+ggplot2::ggplot(split1f, aes(x = allFams, y = Freq, fill = allFams)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Family", x = "Family", y = "Frequency") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+
+```{r famBTW3and5, fig.align='center', fig.width=10}
+# Create the bar plot
+ggplot2::ggplot(split2f, aes(x = allFams, y = Freq, fill = allFams)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Family", x = "Family", y = "Frequency") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+
+```{r famLT3}
+#There is a need to split further this group if need be, but I am ignoring it for the current analysis
+# Create the bar plot
+```
+
+### Cricetidae
+
+```{r Cricetidae, fig.align='center'}
+famClass<-taxize::classification(idFs,'ncbi')
+famTree <- taxize::class2tree(famClass,check=FALSE)
+ggtree::ggtree(famTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+```
+
+
+
+### Families of model organisms
+
+Considered model organisms (and respective orders): if they are in our protein phylogeny
+
+-   Mus musculus (Rodentia): `r ("Rodentia" %in% allOs)`
+
+-   Rattus norvegicus (Rodentia): `r ("Rodentia" %in% allOs)`
+
+-   Drosophila melanogaster (Drosophilidae): `r ("Drosophilidae" %in% allOs)`
+
+-   Bos taurus (Artiodactyla): `r ("Artiodactyla" %in% allOs)`
+
+-   Callosobruchus maculatus (Coleoptera): `r ("Coleoptera" %in% allOs)`
+
+-   Danio rerio (Cypriniformes): `r ("Cypriniformes" %in% allOs)`
+
+-   Fundulus heteroclitus (Cyprinodontiformes) \~not a "model" : `r ("Cyprinodontiformes" %in% allOs)`
+
+-   Nothobranchius furzeri (Cyprinodontiformes): `r ("Cyprinodontiformes" %in% allOs)`
+
+-   Oryzias latipes (Beloniformes): `r ("Beloniformes" %in% allOs)`
+
+-   Anolis carolinensis (Squamata): `r ("Squamata" %in% allOs)`
+
+-   Gallus gallus (Galliformes): `r ("Galliformes" %in% allOs)` (UPI001F01E243 is in Gallus gallus?)
+
+-   Taeniopygia castanotis (Passeriformes): `r ("Passeriformes" %in% allOs)`
+
+-   Xenopus laevis (Anura): `r ("Anura" %in% allOs)`
+
+-   Xenopus tropicalis (Anura): `r ("Anura" %in% allOs)`
+
+-   Saccharomyces cerevisiae (Saccharomycetales): `r ("Saccharomycetales" %in% allOs)`
+
+-   Any primate might be good to start with (Primates): `r ("Primates" %in% allOs)`
+
+-   Caenorhabditis elegans (Rhabditida): `r ("Rhabditida" %in% allOs)`
+
+-   Strongylocentrotus purpuratus (Echinoida): `r ("Echinoida" %in% allOs)`
+
+
+
+

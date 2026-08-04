@@ -1,0 +1,169 @@
+---
+title: "Cell Maintenance"
+author: "Kilicali Isildayancan"
+date: "Last updated on: `r format(Sys.time(), '%d %B %Y')`"
+output: 
+  pdf_document: 
+    extra_dependencies: ["fancyhdr", "xcolor"]
+
+#bibliography: "" #pathway to .bib
+---
+\pagestyle{fancy}
+\widowpenalties 1 10000
+\raggedbottom
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+options(knitr.kable.NA = "")
+source("/home/kilicali/phi11/func/util.R")
+
+#CSV paths
+eqCSVpath <- "/home/kilicali/phi11/data/labEquipment.csv"
+reagentsCSVpath <- "/home/kilicali/phi11/data/labReagents.csv"
+disposablesCSVpath <- "/home/kilicali/phi11/data/labDisposables.csv"
+BECSVpath <- "/home/kilicali/phi11/data/labBioEntities.csv"
+containersCSVpath <- "/home/kilicali/phi11/data/labContainers.csv"
+```
+
+# Notes {.unnumbered .unlisted}
+
+* Update something about document. Has to be removed before finished!
+
+# Abstract {.unnumbered .unlisted}
+
+This document oultines detailed procedures on cell culture maintenance, passage, and related methods on cell cultures. These protocols are intended on the maintenance of the THP-1 cell line.
+
+# Notice {.unnumbered .unlisted}
+
+The procedures here can be modified based on empirical and practical results. Of note, some of these steps can be omitted and skipped ($\textit{e.g.}$ no need to thaw if sample is not frozen). When moving liquids from one container to another, do so under the fumehood to avoid possible contamination from air. Please document each completed step (and skipped step) with appropriate data written down  synchronously so as to collect information on procedures. Please take the time to do these things while performing the procedures, and do not eyeball numbers/values long after they are done. This is the most scientific and robust practice in a laboratory.
+
+\newpage
+\tableofcontents
+\newpage
+
+
+
+```{r RequiredMaterial}
+#look up the names from the csv
+usedEquipments <- c("Dumminator2000",
+                    "iso-Mikropipet", 
+                    "Thermomac Autoclave") 
+
+usedReagents <- rbind(c("Yeast Extract", "10g"),
+                      c("Peptone", "20g"),
+                      c("Dextrose", "20g")) 
+usedDisposables <- rbind(c("Microtube", "0.5mL", 20),
+                        c("Pipette Tip", "0.2", 300))
+usedBE <- rbind(c("GS115", "One stab"),
+                c("Furin", "1 pack"))
+usedContainers <- rbind(c("Erlenmeyer Flask", "1000mL"),
+                        c("Erlenmeyer Flask", "2000mL"))
+```
+
+
+\renewcommand{\arraystretch}{1}
+
+\newpage
+
+# Procedure
+
+\nopagebreak
+
+## 0. THP-1 cells
+
+\nopagebreak
+
+### 0.0. Basic information
+
+THP-1 cell line is a monocytic cell line derived from AML (Acute Myeloid Leukemia). The cryo-stocks are preserved in ${\neg}80{^\circ}C$, and this is the most genetically and metabolically similar to the initial cell lines. Although these are immortal cells (continuously expandable), each passage decreases the quality of the cells. Therefore, this cryo-preserved stock is used each time the quality of the cell cultures is inadequate.
+
+### 0.1. Feed stock
+
+The feed stock for the THP-1 cell line is made up of RPMI1640, with additional supplements (e.g. heat-inactivated fetal calf serum, antibiotics, etc.). This is what is referred to each time the term "fresh feed" is used.
+
+### 0.2. Morphology
+
+The cells are non-adhesive, and remain in suspension. When alive and healthy, they are round and shiny. Clustering into clumps is not desired, but generally only indicates a need for passage.
+
+### 0.3. Storage and Incubation
+
+Cryo-stocks are preserved in ${\neg}80{^\circ}C$ in the cryogenic freezer. The cells do not undergo any process in this condition.
+
+For incubation and culturing, the cells are incubated in the incubator in $+37{^\circ}C$, 5% $CO_{2}$. 
+
+
+## 1. Cell passage
+
+Cell passage is done on already-incubating cells (not from the cryo-preserved stock). 2 small flasks are used for the passage, and each time 2 new flasks are prepared. For experiments, more flasks are added in for passage, but these 2 flasks are always kept for a continuous passage.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textcolor{red}{Critical}: Sterile conditions MUST be used when doing cell passage and culture. Any contamination will render the cultures unusable.
+    }%
+}
+
+### 1.1. New cell culture from old one
+
+Every 4-5 days (with the Peled lab: Sundays & Thursdays), old cell cultures are passed to new ones and discarded.
+
+\colorbox{yellow}{\parbox{\textwidth}{It's good practice to check, before the transfer, the old cell culture under a microscope to ensure no contamination, and vital cells with correct morphology.}}
+
+With a ration of 1:10 of [old cells]:[fresh feed], a 5mL of new cell culture is prepared in 2 new flasks for passage, and more for experimentation. The passage flasks will have 5mL of total volume, and experimental flasks can have 10mL for higher cell content.
+
+For 5mL of fresh cell culture in a small incubator flask:
+
+* 500 ${\mu}L$ of cells from old media
+
+* 4500 ${\mu}L$ of fresh feed
+
+
+## 2. Cell counting
+
+The cell count can be important for some experiments (e.g. FACS), and crucial for others (e.g. migration assay). If this is taken from the experimental flask, and the following experiment doesn't require sterile conditions, sterility can be discarded and a regular bench could be used (although the camera is in the sterile room).
+
+### 2.0. Preparation
+
+1. Collect all cells into a centrifuge tube.
+
+2. Centrifuge at 1500 RPM for 5 minutes.
+
+3. Discard the supernatant, resuspend the cells with 1mL fresh feed.
+
+### 2.1. Counting solution
+
+Prepare the counting solution. The cell culture counting solution is made up of trypan blue mixed with minute amounts of the cell solution. Trypan blue stains the dead cells.
+
+Generally a ratio of 1:100 is used:
+
+* 2 ${\mu}L$ of cells
+
+* 198 ${\mu}L$ of trypan blue
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Note: Whichever dilution is used, it will be carried onto the formula below to count the cells. If more/less than 1:100 is used, please take a note of it.
+    }%
+}
+
+
+### 2.2. Cell counting
+
+Count the cells under the microscope. Using the camera (specific glass slide for cell counting) and a slide cover, 10 ${\mu}L$ of the cell counting solution is sandwiched between them. Under the microscope, the 4x4 grid on the camera can be seen. 
+
+\colorbox{yellow}{\parbox{\textwidth}{Only the alive cells are counted: no debris, no clumped cells, no stained cells.}}
+
+### 2.3. Cell concentration formula
+
+With the number of cells, here is the formula to calculate the concentration of cells per mL of solution:
+
+\begin{center}
+\begin{math}\displaystyle{
+[Cell] = ({\#}cells) {\times} (dilution) {\times} 10^{4}
+}
+\end{math}
+\end{center}
+
+As an example, if we counted 2 cells in the 1:100 ($10^{2}$) dilution, we will have $2 {\times} 10^{2} {\times} 10^{4}$ cells in total.
+
+
+

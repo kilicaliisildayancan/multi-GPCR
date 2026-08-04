@@ -1,0 +1,2 @@
+"0","motifs_legends <- ""/home/kilicali/multi-domain_gpcr/mGPCR_analysis/motif_legends.png"""
+"0","knitr::include_graphics(motifs_legends)"

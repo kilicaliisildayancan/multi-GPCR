@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="129.34018mm"
+   height="37.67432mm"
+   viewBox="0 0 129.34018 37.67432"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="GPCR-motifs_legends.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.3786088"
+     inkscape:cx="211.88856"
+     inkscape:cy="73.362211"
+     inkscape:window-width="2486"
+     inkscape:window-height="1369"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g738" />
+  <defs
+     id="defs2">
+    <rect
+       x="30.088892"
+       y="25.774885"
+       width="50.545296"
+       height="17.066746"
+       id="rect584" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text582"
+       style="white-space:pre;shape-inside:url(#rect584);display:inline;fill:#000000" />
+    <g
+       id="g763"
+       transform="translate(-5.0953473,0.83712805)">
+      <rect
+         style="fill:#ff0000;stroke-width:0.264583"
+         id="rect308"
+         width="13.243785"
+         height="13.243785"
+         x="8.1567345"
+         y="13.153149" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;fill:#000000;stroke-width:0.264583"
+         x="11.426118"
+         y="11.917718"
+         id="text642"><tspan
+           sodipodi:role="line"
+           id="tspan640"
+           style="stroke-width:0.264583"
+           x="11.426118"
+           y="11.917718">DRY</tspan></text>
+    </g>
+    <g
+       id="g758"
+       transform="translate(-9.6831262,-1.4726888)">
+      <rect
+         style="fill:#0000ff;stroke-width:0.264583"
+         id="rect362"
+         width="13.243785"
+         height="13.243785"
+         x="31.520212"
+         y="15.380058" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;fill:#000000;stroke-width:0.264583"
+         x="32.989704"
+         y="14.310442"
+         id="text696"><tspan
+           sodipodi:role="line"
+           id="tspan694"
+           style="stroke-width:0.264583"
+           x="32.989704"
+           y="14.310442">NPxxY</tspan></text>
+    </g>
+    <g
+       id="g753"
+       transform="translate(-10.583418,-4.0416286)">
+      <rect
+         style="fill:#00ffff;stroke-width:0.264583"
+         id="rect364"
+         width="13.243785"
+         height="13.243785"
+         x="52.252136"
+         y="18.374159" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;fill:#000000;stroke-width:0.264583"
+         x="50.884594"
+         y="16.551889"
+         id="text700"><tspan
+           sodipodi:role="line"
+           id="tspan698"
+           style="stroke-width:0.264583"
+           x="50.884594"
+           y="16.551889">Na Pocket</tspan></text>
+    </g>
+    <g
+       id="g748"
+       transform="translate(-2.2246795,-3.1557889)">
+      <rect
+         style="fill:#ff6600;stroke-width:0.264583"
+         id="rect366"
+         width="13.243785"
+         height="13.243785"
+         x="65.506134"
+         y="17.012758" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;fill:#000000;stroke-width:0.264583"
+         x="67.518234"
+         y="16.0858"
+         id="text704"><tspan
+           sodipodi:role="line"
+           id="tspan702"
+           style="stroke-width:0.264583"
+           x="67.518234"
+           y="16.0858">CWxP</tspan></text>
+    </g>
+    <g
+       id="g743"
+       transform="translate(36.938434,0.84419335)">
+      <rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect368"
+         width="13.243785"
+         height="13.243785"
+         x="71.656738"
+         y="13.153149" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;fill:#000000;stroke-width:0.264583"
+         x="75.87645"
+         y="11.903587"
+         id="text708"><tspan
+           sodipodi:role="line"
+           id="tspan706"
+           style="stroke-width:0.264583"
+           x="75.87645"
+           y="11.903587">PIF</tspan></text>
+    </g>
+    <g
+       id="g738"
+       transform="translate(-5.6548837,-5.4806322)">
+      <rect
+         style="fill:#ffff00;stroke-width:0.264583"
+         id="rect370"
+         width="13.243785"
+         height="13.243785"
+         x="91.593201"
+         y="20.052944" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;fill:#000000;stroke-width:0.264583"
+         x="98.036804"
+         y="15.400336"
+         id="text712"><tspan
+           sodipodi:role="line"
+           id="tspan710"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="98.036804"
+           y="15.400336">Cholesterol</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="98.036804"
+           y="19.369085"
+           id="tspan714">Motifs</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,4 @@
+Interesting candidates that have synteny and orientation conserved:
+1. CCR2-CCR5
+2. PTGDR-PTGER2 (found in mast cells; immune related) -- maybe not?
+3. Olfactory receptors?

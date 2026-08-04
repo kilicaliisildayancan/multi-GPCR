@@ -1,0 +1,125 @@
+(
+(
+'Platysternon megacephalum':4,
+(
+'Tupaia chinensis':4,
+'Galemys pyrenaicus':4,
+'Diceros bicornis minor':4,
+(
+'Fukomys damarensis':4,
+(
+'Neotoma lepida':4,
+'Cricetulus griseus':4
+)Cricetidae:4
+)Rodentia:4,
+(
+(
+'Bos mutus':4,
+'Ovis aries':4
+)Bovidae:4,
+'Balaenoptera physalus':4
+)Artiodactyla:4,
+'Felis catus':4
+)Mammalia:4,
+(
+(
+'Zosterops borbonicus':4,
+'Hirundo rustica rustica':4,
+'Lepidothrix coronata':4,
+'Lonchura striata domestica':4,
+'Lamprotornis superbus':4
+)Passeriformes:4,
+'Bambusicola thoracicus':4
+)Aves:4,
+'Ophiophagus hannah':4,
+(
+'Collichthys lucidus':4,
+'Menidia menidia':4,
+(
+'Silurus meridionalis':4,
+'Bagarius yarrelli':4
+)Siluriformes:4,
+'Albula glossodonta':4,
+'Scleropages formosus':4,
+(
+'Takifugu flavidus':4,
+'Tetraodon nigroviridis':4
+)Tetraodontidae:4,
+'Scophthalmus maximus':4,
+(
+'Poecilia formosa':4,
+'Gambusia affinis':4
+)Poeciliidae:4,
+(
+'Oryzias javanicus':4,
+'Oryzias melastigma':4
+)Oryzias:4,
+'Dicentrarchus labrax':4,
+(
+'Dissostichus mawsoni':4,
+'Gymnodraco acuticeps':4,
+(
+'Etheostoma spectabile':4,
+'Perca fluviatilis':4
+)Percidae:4
+)Perciformes:4,
+'Astatotilapia calliptera':4,
+(
+'Coregonus sp. ''balchen''':4,
+'Oncorhynchus mykiss':4
+)Salmonidae:4,
+'Astyanax mexicanus':4,
+(
+'Triplophysa tibetana':4,
+'Anabarilius grahami':4,
+(
+'Onychostoma macrolepis':4,
+'Labeo rohita':4,
+'Cyprinus carpio':4,
+'Carassius auratus':4
+)Cyprinidae:4,
+(
+'Danionella translucida':4,
+'Danio rerio':4
+)Danionidae:4
+)Cypriniformes:4,
+'Clupea harengus':4,
+'Atractosteus spatula':4,
+'Acipenser ruthenus':4
+)Actinopteri:4,
+'Latimeria chalumnae':4,
+(
+'Branchiostoma belcheri':4,
+'Branchiostoma floridae':4
+)Branchiostoma:4
+)Chordata:4,
+(
+(
+'Daphnia magna':4,
+'Daphnia galeata':4
+)Daphnia:4,
+(
+(
+'Trichomalopsis sarcophagae':4,
+'Temnothorax longispinosus':4
+)Hymenoptera:4,
+'Apolygus lucorum':4,
+(
+'Anopheles epiroticus':4,
+'Culicoides sonorensis':4
+)Diptera:4,
+'Spodoptera exigua':4,
+(
+'Tribolium castaneum':4,
+'Tenebrio molitor':4
+)Tenebrionidae:4,
+(
+'Timema cristinae':4,
+'Carausius morosus':4
+)Phasmatodea:4,
+'Blattella germanica':4
+)Insecta:4,
+'Tigriopus californicus':4,
+'Penaeus vannamei':4
+)Arthropoda:4
+)Metazoa:4;

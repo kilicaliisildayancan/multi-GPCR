@@ -1,0 +1,153 @@
+---
+title: "Class A Receptor Taxonomical Analysis"
+author: "Kilicali Isildayancan"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: pdf_document
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+
+
+
+# Taxonomical Analysis
+
+
+```{r startup, echo=FALSE, warning=FALSE, message=FALSE}
+library('ggtree')
+library('ggplot2')
+library('ggimage')
+library('RColorBrewer')
+library('jsonlite')
+json_uniprot_directory <- '/home/kilicali/multi-domain_gpcr/datafiles/ur100_chemokines_7TM.json'
+json_cluster_directory <- '/home/kilicali/multi-domain_gpcr/datafiles/clusters/chemokine_receptors/7TM/fasta_clustered/five_plus_clusters.json'
+jsondata <- jsonlite::fromJSON(json_uniprot_directory)
+json_clusters <- jsonlite::fromJSON(json_cluster_directory)
+```
+
+
+```{r}
+cluster <- json_clusters[[8]]
+taxIds <-unique(jsondata$organism$taxonId)
+in_cluster_taxIds <-unique(jsondata$organism$taxonId[jsondata$primaryAccession %in% cluster])
+taxDB <- taxize::classification(taxIds, db = 'ncbi')
+cluster_taxDB <- taxize::classification(in_cluster_taxIds, db = 'ncbi')
+taxClass <- taxize::classification(unique(taxIds), db = 'ncbi')
+fullTree <- taxize::class2tree(taxDB, check=FALSE)
+
+ggtree::ggtree(fullTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+```
+
+```{r}
+clusterTree <- taxize::class2tree(cluster_taxDB, check=FALSE)
+ggtree::ggtree(clusterTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+```
+
+### Kingdoms
+
+-   There are `r length(unique(allKs))` kingdoms, namely: `r unique(allKs)`.
+
+### Phylum
+
+-   There are `r length (unique(allPs))` phylums, namely: `r unique(allPs)`.
+
+Here is a visual representation of all the phylums present (which covers all the lower-level taxa):
+
+```{r treeP, fig.align='center', fig.width=15}
+ggtree::ggtree(phylumTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+```
+
+Also the histogram distribution:
+
+```{r histPhylum, fig.align='center', fig.width=15}
+# Create the bar plot
+ggplot2::ggplot(phylumDF, aes(x = allPs, y = Freq, fill = allPs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Phylum", x = "Phylum", y = "Frequency") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1,size=12))
+```
+
+The chordates represent `r sum(allPs=='Chordata')/length(allPs)*100` of all the phylums in the reference proteomes with a total of `r sum(allPs=='Chordata')`.
+
+## Mid-level taxonomy (Order)
+
+We are considering only order here, and looking for primates in particular.
+
+
+```{r orderTable}
+(table(allOs))
+```
+
+
+## Low-level taxonomy (Family and Species)
+
+
+```{r orderTable}
+(table(allFs))
+```
+
+
+
+### Families
+
+```{r family_tree, fig.align='center'}
+
+ggtree::ggtree(famTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+```
+
+## Absent children
+
+```{r}
+order_id <- "9443"
+taxize::downstream(order_id, db='ncbi', downto='species')
+```
+
+
+### Orders of model organisms
+
+Considered model organisms (and respective orders): if they are in our protein phylogeny
+
+-   Mus musculus (Rodentia): `r ("Rodentia" %in% allOs)`
+
+-   Rattus norvegicus (Rodentia): `r ("Rodentia" %in% allOs)`
+
+-   Drosophila melanogaster (Drosophilidae): `r ("Drosophilidae" %in% allOs)`
+
+-   Bos taurus (Artiodactyla): `r ("Artiodactyla" %in% allOs)`
+
+-   Callosobruchus maculatus (Coleoptera): `r ("Coleoptera" %in% allOs)`
+
+-   Danio rerio (Cypriniformes): `r ("Cypriniformes" %in% allOs)`
+
+-   Fundulus heteroclitus (Cyprinodontiformes) \~not a "model" : `r ("Cyprinodontiformes" %in% allOs)`
+
+-   Nothobranchius furzeri (Cyprinodontiformes): `r ("Cyprinodontiformes" %in% allOs)`
+
+-   Oryzias latipes (Beloniformes): `r ("Beloniformes" %in% allOs)`
+
+-   Anolis carolinensis (Squamata): `r ("Squamata" %in% allOs)`
+
+-   Gallus gallus (Galliformes): `r ("Galliformes" %in% allOs)` (UPI001F01E243 is in Gallus gallus?)
+
+-   Taeniopygia castanotis (Passeriformes): `r ("Passeriformes" %in% allOs)`
+
+-   Xenopus laevis (Anura): `r ("Anura" %in% allOs)`
+
+-   Xenopus tropicalis (Anura): `r ("Anura" %in% allOs)`
+
+-   Saccharomyces cerevisiae (Saccharomycetales): `r ("Saccharomycetales" %in% allOs)`
+
+-   Any primate might be good to start with (Primates): `r ("Primates" %in% allOs)`
+
+-   Caenorhabditis elegans (Rhabditida): `r ("Rhabditida" %in% allOs)`
+
+-   Strongylocentrotus purpuratus (Echinoida): `r ("Echinoida" %in% allOs)`
+
+
+
+

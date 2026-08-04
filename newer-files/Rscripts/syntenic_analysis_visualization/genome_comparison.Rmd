@@ -1,0 +1,110 @@
+---
+title: "Genome Comparisons"
+author: "Kilicali Isildayancan"
+date: "2024-04-11"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = F, warning = F)
+
+data_dir <- "/home/kilicali/multi-domain_gpcr/datafiles/synteny_analysis/UCSC_data/raw_data_genomes/stats/"
+genome_data <- paste0(data_dir,"gene_sets.tsv")
+
+gene_sets <- read.csv(genome_data, sep = "\t")
+
+parse_set <- function(df) {
+  df$gene_set <- gsub("[{'} ]","",df$gene_set)
+  df$gene_set <- stringr::str_split(df$gene_set , ",")
+  return(df)
+}
+
+genomes_p <- parse_set(gene_sets)
+
+data_attrs <- c("name","chrom",	"strand","txStart",	"txEnd","cdsStart",	"cdsEnd","exonCount",	"exonStarts","exonEnds",	"score","name2",	"cdsStartStat","cdsEndStat",	"exonFrames")
+```
+
+## Spliced Multi-Protein Genes
+
+### Data Structure
+
+UCSC Genomic Data has `r length(data_attrs)`, Importantly, these are specified:
+
+* unique identifier (e.g. ENST00000684719.1)
+* chromosome number (e.g. chr3)
+* strand (+ or -)
+* transcription start and end location
+* gene name (e.g. RERE, EIF4G3)
+
+All of the attributes are: `r data_attrs`
+
+### Search Protocol
+
+1. Pre-processing genomic data
+
+First, all entries are split according to their chromosome, and then according to their strand orientation. This produces 2n different files given n chromosomes of an organism. For example, humans have 22+2 chromosomes, and this produces 48 files for sorting. This is done for the next steps and how the analysis algorithm works. The rationale behind this is that we are interested in the local proximity of the any one gene, and this is constrained by the chromosome and locus, as well as the strand (reverse genes shouldn't produce meaningful multi-protein products). Splitting the data into smaller parts allows the algorithm to work in a simple way, dealing with only a chromosome and a single strand orientation at any given time.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Potential problem: chromosome-based splitting is based on their naming (potentially their assembly), and this causes to be more than 2n files (chr1, chromUn, etc. could all correspond to the same chromosome). To check if this is a problem, we can look at the amount of unique genes that are in the 'alternative chromosome naming' (e.g. comparing chr22 and chr22_KQ458388v1_alt) because joining these haphazardly is probably not trivial. Moreover, this seems like a big problem (drosophila doesn't have this problem, and their pairs go up to 160k).
+    }%
+}
+
+2. Finding proximal gene pairs
+
+Given each file (specifying a chromosome and strand), each gene is paired with a proximal gene based on their transcription end and start locations, with a 200k bp intergenic distance threshold. The algorithm looks at the end location of the transcription of a gene, and checks if the next closest gene is close enough to be under the given threshold. This is extended to other genes if it's under the threshold. This procedure produces a list of pairs of genes (GENE1 - GENE2) for a given genome of a species. 
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Potential problem: While producing the list, the gene name is used instead of their unique identifier. This is done to enable comparing with other genes from other organisms. This could have potential drawbacks when extending to other species (i.e. the problem of naming genes).
+    }%
+}
+
+3. Comparing between species
+
+Once the pairing is done for every gene pair, inter-species data is compared. A script goes through two organism gene pairs, and extracts all the common gene pairs as well as their intergenic distance. This supports a presence of evolutionary pressure to keep two genes in close proximity. When a gene pair is conserved across multiple species, we should have stronger support against random chance and more support for evolutionary pressure.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Potential problem: As we will see in the next chapter, genomes that are not well studied (relative to human or mouse) shorten the list dramatically, because the total pool of gene pairs shrink drastically. What we could do is start with human-mouse comparison, and then when comparing with a third species, first check if both of the genes in the gene pair are available in the third organism to ascertain a true negative: that the synteny was not conserved in the third organism.
+    }%
+}
+
+
+## Genome Quality
+
+To look at the extent of the amount of raw gene data in animals genomes, we compare the sets of genes (according to their gene names) of species we have data for. Each unique gene is counted once, and then the sets of unique genes are compared in a matrix form to look at the potential gene pool we are choosing from.
+
+Centering on humans, we have primates, mammals, vertebrates, and one insect that is well studied (drosophila melanogaster). Important to note that some genes are simply not present in distant species, so looking for chemokine receptors in insects or fish is not relevant.
+
+
+```{r}
+# Create a matrix to store the number of common elements
+common_elements <- matrix(0, nrow = length(genomes_p$gene_set), ncol = length(genomes_p$gene_set))
+
+# Calculate the number of common elements between each pair of sets
+for (i in 1:length(genomes_p$gene_set)) {
+  for (j in 1:length(genomes_p$gene_set)) {
+    common_elements[i, j] <- length(intersect(genomes_p$gene_set[[i]], genomes_p$gene_set[[j]]))
+  }
+}
+
+library(gplots)
+# Plot the heatmap
+heatmap.2(common_elements,
+          Rowv=F, Colv=F,
+          col = rev(heat.colors(max(common_elements))),
+          dendrogram = 'none',
+          main = "Common Genes",
+          cellnote = common_elements, # Add numbers to heatmap blocks
+          notecol = "black", # Set color for the numbers
+          trace='none',
+          key=F,
+          labRow = genomes_p$species, labCol = genomes_p$species)
+```
+
+
+## Finding Syntenic Pairs
+
+
+

@@ -1,0 +1,5 @@
+"0","# Create the bar plot"
+"0","ggplot2::ggplot(split1f, aes(x = allFams, y = Freq, fill = allFams)) + "
+"0","  geom_bar(stat = ""identity"") +"
+"0","  labs(title = ""diChemokines in Organisms by Family"", x = ""Family"", y = ""Frequency"") +"
+"0","  theme_minimal()"

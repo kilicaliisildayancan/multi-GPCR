@@ -1,0 +1,319 @@
+---
+title: "RNA methods"
+author: "Kilicali Isildayancan"
+date: "Last updated on: `r format(Sys.time(), '%d %B %Y')`"
+output: 
+  pdf_document: 
+    extra_dependencies: ["fancyhdr", "xcolor"]
+urlcolor: blue
+
+#bibliography: "" #pathway to .bib
+---
+\pagestyle{fancy}
+\widowpenalties 1 10000
+\raggedbottom
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+options(knitr.kable.NA = "")
+source("./func/util.R")
+
+#CSV paths
+eqCSVpath <- "/home/kilicali/phi11/data/labEquipment.csv"
+reagentsCSVpath <- "/home/kilicali/phi11/data/labReagents.csv"
+disposablesCSVpath <- "/home/kilicali/phi11/data/labDisposables.csv"
+BECSVpath <- "/home/kilicali/phi11/data/labBioEntities.csv"
+containersCSVpath <- "/home/kilicali/phi11/data/labContainers.csv"
+```
+
+# Notes {.unnumbered .unlisted}
+
+* Update something about document. Has to be removed before finished!
+
+# Abstract {.unnumbered .unlisted}
+
+This document oultines detailed procedures on RNA. It goes into methods on extraction and storage of cellular RNA; conversion to cDNA; running a PCR reaction; analyzing results on a Southern Blot gel.
+
+# Notice {.unnumbered .unlisted}
+
+The procedures here can be modified based on empirical and practical results. Of note, some of these steps can be omitted and skipped ($\textit{e.g.}$ no need to thaw if sample is not frozen). When moving liquids from one container to another, do so under the fumehood to avoid possible contamination from air. Please document each completed step (and skipped step) with appropriate data written down  synchronously so as to collect information on procedures. Please take the time to do these things while performing the procedures, and do not eyeball numbers/values long after they are done. This is the most scientific and robust practice in a laboratory.
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+# Procedure
+
+\nopagebreak
+
+## 1. RNA extraction and storage
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textcolor{red}{Critical}: RNA is very unstable when isolated. As soon as it is pure in suspension, it is to be put on ice. RNA is stored in ${\neg}80{^\circ}C$. When working around RNA (on the RNA bench), filtered tips for pipettes are used, and everything should be nuclease-free (e.g. DEPC-treated water, nuclease-free eppendorf tubes, etc.).
+    }%
+}
+
+
+## 2. cDNA synthesis and storage
+
+By using a reverse transcriptase, RNA from any extraction is converted to cDNA and semi-amplified using a number of PCR cycles.
+
+The protocol is from [qScript cDNA Synthesis Kit (Quantabio)](https://www.quantabio.com/media/contenttype/IFU-024.1_REV_02_95047_qScript_cDNA_Synthesis_Kit.pdf).
+
+
+### 2.0 Required Materials
+
+```{r RequiredMaterial}
+#look up the names from the csv
+usedEquipments <- c("Pipettor",
+                    "Filtered Tips", 
+                    "PCR machine (thermal cycler)") 
+
+usedReagents <- c("qScript Reaction Mix (5X)", "Nuclease-free water")
+
+usedBE <- c("RNA extract, 500 ng x tube",
+          "qScript Reverse Transcriptase (20X), 1 pack")
+
+usedContainers <- c("Eppendorf Tube", "PCR array tubes (0.2 mL each)")
+```
+
+
+```{r usedMaterials}
+matTable <- usedMaterialsTable(usedEquipments, usedReagents,usedBE, usedContainers)
+knitr::kable(matTable)
+```
+
+### 2.1. cDNA synthesis
+
+1. Thaw all frozen components, place all of them on ice.
+
+2. Add the following to a $0.2 mL$ PCR array tube sitting on ice for a final volume of $20 {\mu}L$:
+
+    * RNA ($500 ng$), variable volume $-$ depends on RNA solution concentration
+
+    * Nuclease-free water, variable volume
+
+    * qScript Reaction Mix (5X), $4{\mu}L$
+
+    * qScript RT, $1{\mu}L$
+
+3. Vortex gently, then centrifuge for 10 seconds (PCR-tube centrifuge).
+
+4. Place PCR array tubes in a thermal cycler with the following program:
+
+      1 cycle: $22{^\circ}C$, 5 min
+  
+      1 cycle: $42{^\circ}C$, 30 min
+  
+      1 cycle: $85{^\circ}C$, 5 min
+
+      $4{^\circ}C$ hold
+
+5. (Optional) After completion of cDNA synthesis, use $1/5^{th}$ to $1/10^{th}$ of the first-strand reaction ($2-4{\mu}L$) for PCR amplification. If desired, cDNA product can be diluted with 10 mM Tris-HCl (pH 8.0), 0.1 mM EDTA and stored at ${\neg}20{^\circ}C$. 
+
+\newpage
+
+## 3. Primers
+
+### 3.1 Primer design
+
+Primer design is computationally done through the online web-tool [NCBI Primer-BLAST](https://www.ncbi.nlm.nih.gov/tools/primer-blast/index.cgi). The designed primers will have a desired $T_{m}$, GC content, and specificity for the gene of interest. Because of isoforms and SNPs and genetic sequence variability in databases, [NCBI Gene](https://www.ncbi.nlm.nih.gov/gene) is generally used as the reference gene database. From here, the desired gene is selected, and the transcript page is sought. On the transcript page, under "Analysis", "Design Primers" is selected and primers can be designed with desired parameters ($e.g.$ on exon-exon junctions).
+
+### 3.2 Ordering primers
+
+From Sigma-Aldrich, primer sequences are ordered, designed from NCBI Primer Design. The primers are named, and the names should include the targeted gene, organism if relevant, and other information to distinguish gene, purpose or characteristics ($e.g.$ CCR2ab, used to detect isoforms A and B of CCR2; while CCR5ab cannot detect the isoform C of CCR5). The primer sequences are put in from $5' - 3'$ direction ($i.e.$ from last nucleotide to first in the antisense primer). Other options are:
+
+* 0.025 mole
+
+* Desalt
+
+* Dry
+
+### 3.3 Primer stock preparation
+
+Primers arrive with a datasheet specifying their properties ($e.g.$ $T_{m}$, 2ndry tendency, GC%). The datasheet also contains required volume of DEPC-treated water to reach $100 {\mu}M$ concentration. To prepare primer stocks, for each tube add double the respective specified volume to achieve a final concentration of $50 {\mu}M$. Store the primer in ${\neg}20C^{\circ}$ with other DNA. Primer stocks are used $1{\mu}L$ for each PCR reaction.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textcolor{orange}{Important}: Keep the datasheet. It contains important information for later use.
+    }%
+}
+
+\newpage
+
+## 4. PCR
+
+### 4.0 Required Materials
+
+```{r RequiredMaterialPCR}
+
+usedEquipments <- c("Pipettor",
+                    "Filtered Tips", 
+                    "PCR machine (thermal cycler)") 
+
+usedReagents <- c("qScript Reaction Mix (5X)", "Nuclease-free water")
+
+usedBE <- c("RNA extract, 500 ng x tube",
+          "qScript Reverse Transcriptase (20X), 1 pack")
+
+usedContainers <- c("Eppendorf Tube", "PCR array tubes (0.2 mL each)")
+```
+
+
+```{r usedMaterialsPCR}
+matTable <- usedMaterialsTable(usedEquipments, usedReagents,usedBE, usedContainers)
+knitr::kable(matTable)
+```
+
+### 4.1 Preparing PCR tubes
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textcolor{orange}{Important}: Before starting, each PCR tube should be named according to the primers, cell type, date etc.
+    }%
+}
+
+Add the following to each $0.2 mL$ PCR tubes for a final volume of $20{\mu}L$:
+
+  * PCR mix: $10{\mu}L$
+
+  * cDNA: $2{\mu}L$
+        
+      This can be increased if the detection is poor (or the targeted RNA is sparsely transcribed)
+
+  * Forward primer: $1{\mu}L$
+    
+      Leave out if negative control.
+    
+  * Reverse primer: $1{\mu}L$
+
+      Leave out if negative control.
+        
+  * DEPC-treated water: $6-8{\mu}L$
+    
+      Fill until total volume $20{\mu}L$
+    
+### 4.2 Running PCR in a thermal cycler
+
+For semi-quantitative PCR, the desired program is designed, and the tubes are placed in the thermal cycler.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textcolor{red}{Critical}: PCR tubes, when placed in the thermal cycler, should be closed air-tight. Otherwise, during the cycles, the PCR solution will evaporate and the experiment will fail (at least in the open tube).
+    }%
+}
+
+The thermal cycler has 4 total steps, for a total duration of [01:16:00-01:36:00]:
+
+1. Initialization ($95{^\circ}C$; 00:01:00)
+
+2. PCR reaction; 35-45 cycles (01:10:00 - 01:30:00)
+
+    2a. Denaturation ($95{^\circ}C$; 00:00:30)
+    
+        
+    
+    2b. Priming ($60-70{^\circ}C$; 00:01:00)
+    
+      This temperature is variable, it should be lower than the minimum $T_{m}$ of all of the primers.
+    
+    2c. Elongation ($72{^\circ}C$; 00:00:30 - 00:02:00)
+    
+      Optimal temperature for the polymerase enzyme to use the annealed primers to elongate the chain. Elongation step can be longer (e.g. 2 minutes) if the expected PCR product is longer (e.g. 2000 bp). 30 seconds is good for products less than 1000 bp.
+    
+3. Wrap-up polymerase reaction ($72{^\circ}C$ - 00:05:00)
+
+4. Hold ($4{^\circ}C$)
+
+## 5. Southern Blot
+
+### 5.0 Required Materials
+
+```{r RequiredMaterialSB}
+#look up the names from the csv
+usedEquipments <- c("Microwave",
+                    "", 
+                    "Electrophoressis Apparatus") 
+
+usedReagents <- c("1.5g Agar Powder", "TAE x1")
+
+usedBE <- c("RNA extract, 500 ng x tube",
+          "qScript Reverse Transcriptase (20X), 1 pack")
+
+usedContainers <- c("50mL beaker", "PCR array tubes (0.2 mL each)")
+```
+
+
+```{r usedMaterialsSB}
+matTable <- usedMaterialsTable(usedEquipments, usedReagents,usedBE, usedContainers)
+knitr::kable(matTable)
+```
+
+### 5.1 Preparing Agar Gel
+
+Generally, 1.5% Agar Gel is prepared ($g/100mL$), but the ration can be varied based on the size of the DNA being run.
+
+To prepare a solution of 1.5% Agar Gel solution, mix:
+
+* 1.5g agar powder
+
+* 100 mL TAE x1
+
+Swirl to mix in 
+
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textcolor{olive}{Anecdote}: 1.0% Agar, 40 minutes of gel electrophoresis with 100V and 400 mA cleanly spreads out the DNA ladder.
+    }%
+}
+
+### 5.2 Setting up Southern blot
+
+### 5.3 Running DNA on the gel
+
+
+# Remove later - formatting templates
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Note: some note that will be inside a box.
+    }%
+}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textcolor{orange}{Important}: Some important stuff
+    }%
+}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textcolor{red}{Critical}: Some critically important stuff.
+    }%
+}
+
+
+\textcolor{red}{color}
+\textcolor{purple}{Ref protocols, section N. Dancing}
+\colorbox{green}{highlighted text}
+
+\colorbox{orange}{\parbox{\textwidth}{Negative Control and Positive Control: text}}
+
+list of colors available: black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow.
+
+
+For mathematical formulas, use this template:
+
+\begin{center}
+\begin{math}\displaystyle{
+F(x) = (OD_{260}-OD_{320}) {\div} (OD_{x}-OD_{320}), x \in [230, 320]
+}
+\end{math}
+\end{center}
+
+
+

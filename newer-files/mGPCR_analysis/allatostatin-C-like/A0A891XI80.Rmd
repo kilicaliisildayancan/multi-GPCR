@@ -1,0 +1,191 @@
+---
+title: "Allatostatin-C-like Receptor Analysis"
+author: "Kilicali Isildayancan"
+date: "2023-04-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+# A0A891XI80
+
+## First Domain
+
+
+Sequence [52-342]: PTLLLITQVLCAAVCIVGLLGNSLVIYVVLRFSKMQTVTNMYIVNLAVADECFLIGVPF
+LLATMNLRIWPFGSIMCKAYMTTTSINQFTSSIFLTIMSADRYIAVCHPISAPKVRTPLISKVVSASAWTASALLMIP
+IFIYANIMTNENVVSCNILWPESENVSSQGAFTLYTFILGFSIPLMLISVFYILVIRKLKTVGPKNKSKEKKKSHRKV
+TKLVLTVITVYVLCWLPYWLTQMALIFTPPKQCQSRVSITVSLLAGCLSYSNSAMNPILYAFLSDNFKKSFLKACT
+
+### Homologies
+
+Psi-blast search against Swiss-Prot:
+
+
+#### First 5 Full Homologues
+
+
+```{r fiveH1, echo=FALSE}
+receptorNames <- c("Somatostatin receptor type 2", "Somatostatin receptor type 1", "Somatostatin receptor type 1", "Somatostatin receptor type 1", "Somatostatin receptor type 1")
+organisms <- c("Homo sapiens","Rattus norvegicus","Mus musculus","Homo sapiens","Canis lupus familiaris")
+identities <- c("47%","43%","43%","43%","43%")
+positives <- c("68%","68%","68%","68%","68%")
+fiveH <- data.frame(receptorNames, identities, positives, organisms)
+(fiveH)
+```
+
+#### First 50 Unique Homologues
+
+```{r fiftyUnique1, echo=FALSE}
+uniqReceptorNames <- c("Somatostatin receptor type 2","Somatostatin receptor type 1","Somatostatin receptor type 4","Somatostatin receptor type 5","Somatostatin receptor type 3","Nociceptin receptor", "Kappa-type opioid receptor", "Neuropeptides B/W receptor type 2", "Delta-type opioid receptor", "Mu-type opioid receptor", "Neuropeptides B/W receptor type 1", "Galanin receptor")
+(uniqReceptorNames)
+```
+
+The similarity of the 50th match: 33% identity, 57% positives
+
+### Structure
+
+### Motifs
+
+```{r, echo=FALSE, fig.align='center'}
+motifs_legends <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/motif_legends.png"
+knitr::include_graphics(motifs_legends)
+```
+
+
+```{r, fig.align='center', echo=FALSE}
+#ray traced, width: 11cm, height: 10cm
+motifs1 <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/allatostatin-C-like/first_domain_motifs-colored.png"
+knitr::include_graphics(motifs1)
+```
+
+
+### Conservation
+
+Conservation of the protein from SwissProt with highest homology to the first domain:
+Somatostatin receptor type 2, UniProt ID: P30874
+
+#### Conservation in the homolog
+
+```{r, echo=FALSE, fig.align='center'}
+cons_first <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/allatostatin-C-like/conservation_first-domain.png"
+knitr::include_graphics(cons_first)
+```
+
+#### Pairwise alignment with homolog
+
+Looking at the conserved sites predicted by ConSurf, and cross-referencing to our first domain sequence:
+
+```{r, echo=FALSE, fig.align='center'}
+pairwise_cons <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/allatostatin-C-like/pairwise_homolog_first-domain.png"
+knitr::include_graphics(pairwise_cons)
+```
+
+#### Binding ligands of homolog
+
+7T10 is with natural ligand,
+7WIC is a non-natural ligand
+
+#### Ligand superimposition of domain and homolog with ligand
+
+
+#### Superimposition
+
+RMSD: 0.895
+
+```{r, fig.align='center', echo=FALSE}
+#ray traced, width: 11cm, height: 10cm
+motifs1 <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/allatostatin-C-like/consurf_superimposed_first_domain.png"
+knitr::include_graphics(motifs1)
+```
+
+\* Both are AlphaFold predicted structures
+
+## Second domain
+
+Sequence [448-700]: TNLLIINLALADLLFIVFCVPFTATDYMLPYWPFGDVWCKIVQYLIVVTAYASVYTLV
+LMSLDRFLAVVHPIASISVRTERNAVTAIGVTWVVILLSSVPVYLSHGVTNYIYLSSEHTACVFLDDYNKPVFQILFF
+ATSYVIPLALICGLYLCMLMRLWRGVAPGGHVSAESRRGRKRVTRMVVVVVAIFAVCWFPIQMILVLKSVDRYEITNT
+SVMVQIVSHVLAYMNSCVNPILYAFLSENFRKAFRKVI
+
+### Homologies
+
+Psi-blast search against Swiss-Prot:
+
+
+#### First 5 Full Homologues
+
+
+```{r fiveH2, echo=FALSE}
+receptorNames <- c("Allatostatin-A receptor", "Galanin receptor 2a", "Galanin receptor type 2", "Galanin receptor 2b", "Somatostatin receptor type 1")
+organisms <- c("Bombyx mori","Danio rerio","Mus musculus","Danio rerio","Rattus norvegicus")
+identities <- c("70%","40%","40%","39%","40%")
+positives <- c("85%","63%","61%","62%","61%")
+fiveH <- data.frame(receptorNames, identities, positives, organisms)
+(fiveH)
+```
+
+
+
+#### First 50 Unique Homologues
+
+```{r fiftyUnique2, echo=FALSE}
+uniqReceptorNames <- c("Allatostatin-A receptor", "Galanin receptor 2a", "Galanin receptor type 2", "Galanin receptor 2b", "Somatostatin receptor type 1", "Galanin receptor type 3", "Galanin receptor type 1", "Nociceptin receptor", "Somatostatin receptor type 5", "Mu-type opioid receptor", "KiSS-1 receptor", "Kappa-type opioid receptor", "Somatostatin receptor type 2", "G-protein coupled receptor 54 (orphan)", "Somatostatin receptor type 3", "Somatostatin receptor type 4","Delta-type opioid receptor")
+(uniqReceptorNames)
+```
+
+The similarity of the 50th match: 35% identity, 53% positives
+
+### Structure
+
+### Motifs
+
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics(motifs_legends)
+```
+
+```{r, fig.align='center', echo=FALSE}
+#ray traced, width: 19cm, height: 15cm
+motifs2 <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/allatostatin-C-like/second_domain_motifs-colored.png"
+knitr::include_graphics(motifs2)
+```
+
+### Conservation
+
+Conservation of the protein from SwissProt with highest homology to the second domain:
+Allatostatin-A receptor, UniProt ID: Q8WPA2
+
+#### Conservation with homolog
+
+#### Pairwise alignment with homolog
+
+```{r, echo=FALSE, fig.align='center'}
+pairwise_cons <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/allatostatin-C-like/pairwise_homolog_second-domain.png"
+knitr::include_graphics(pairwise_cons)
+```
+
+#### Superimposition
+
+RMSD: 0.895
+
+```{r, fig.align='center', echo=FALSE}
+consurf_superimpo2 <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/allatostatin-C-like/consurf_superimposed_second_domain.png"
+knitr::include_graphics(consurf_superimpo2)
+```
+
+## Relative domains
+
+### Pairwise alignment
+
+```{r, fig.align='center', echo=FALSE}
+pwAli <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/allatostatin-C-like/pairwise_alignment_needle.png"
+knitr::include_graphics(pwAli)
+```
+
+## Genomic sequence
+
+Does not exist in a genome database viewer.
+

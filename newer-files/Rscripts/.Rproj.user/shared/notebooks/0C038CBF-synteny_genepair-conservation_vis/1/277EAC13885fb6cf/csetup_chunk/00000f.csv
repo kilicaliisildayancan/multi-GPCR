@@ -1,0 +1,5 @@
+"0","gene_sets <- data.frame(read.csv(genome_data, sep = ""\t""))
+"
+"2","Warning: cannot open file '/home/kilicali/multi-domain_gpcr/datafiles/synteny_analysis/UCSC_data/conservation/main_seeds/human-mouse-cat-chicken-zebrafish-non_elim.tsv': No such file or directory"
+"2","Error in file(file, ""rt"") : cannot open the connection
+"

@@ -1,0 +1,48 @@
+#align two structures, also calculate their rmsd
+# read two G-protein structures
+source("./utilities.R")
+
+pdbid1 <- "4XT3"
+pdbid2 <- "1U19"
+pdb1 <- bio3d::read.pdb(pdbid1)
+pdb2 <- bio3d::read.pdb(pdbid2)
+
+chain1 <- "A"
+chain2 <- "A"
+secondaryStructure <- "helix"
+PDBdb1 <- PDBdbInitialize(pdb1)
+PDBdb2 <- PDBdbInitialize(pdb2)
+PDBdb1 <- helixAttributor(PDBdb1, pdb1)
+PDBdb2 <- helixAttributor(PDBdb2, pdb2)
+
+plotly::plot_ly(x = PDBdb1$x, y = PDBdb1$y, z = PDBdb1$z, type = 'scatter3d', mode = 'lines',color = PDBdb1$y)
+
+startEndCoercion <- ssStartEndSelector( PDBdb, chain, secondaryStructure)
+
+atoSeq <- atomicSequenceExtractor(pdbfile, PDBdb, chain, startEndCoercion[1], startEndCoercion[2])
+
+finalTrimmed <- seqresExtractor(pdbfile, chain, atoSeq)
+
+
+allHelices <- indSSExtractor(PDBdb1, secondaryStructure, chain)
+
+
+
+ss <- "helix"
+chain <- "A"
+selChain <- PDBdb1$chain == chain
+sel <- PDBdb1$ssType[selChain] == ss
+diffvec <- cumsum(c(1,abs(diff(1 != sel))))
+
+split(PDBdb1$ssType, diffvec)
+
+
+
+
+keywordlist <- c("N-term", "TM1", "ICL1", "TM2", "ECL1", "TM3", "ICL2","TM4", "ECL2", "TM5", "ICL3", "TM6", "ECL3", "TM7", "C-term")
+if (identifier %in% keywordlist) {
+
+}
+
+
+

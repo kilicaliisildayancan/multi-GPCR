@@ -1,0 +1,7322 @@
+[
+    {
+        "slug": "000",
+        "name": "Parent family",
+        "parent": null
+    },
+    {
+        "slug": "001",
+        "name": "Class A (Rhodopsin)",
+        "parent": {
+            "slug": "000",
+            "name": "Parent family"
+        }
+    },
+    {
+        "slug": "001_001",
+        "name": "Aminergic receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_001_001",
+        "name": "5-Hydroxytryptamine receptors",
+        "parent": {
+            "slug": "001_001",
+            "name": "Aminergic receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                68
+            ],
+            "3": [
+                72,
+                108
+            ],
+            "4": [
+                116,
+                142
+            ],
+            "5": [
+                157,
+                197
+            ],
+            "6": [
+                237,
+                275
+            ],
+            "7": [
+                279,
+                305
+            ]
+        }
+    },
+    {
+        "slug": "001_001_001_001",
+        "name": "5-HT<sub>1A</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_002",
+        "name": "5-HT<sub>1B</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_003",
+        "name": "5-HT<sub>1D</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_004",
+        "name": "5-HT<sub>1E</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_005",
+        "name": "5-HT<sub>1F</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_006",
+        "name": "5-HT<sub>2A</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_007",
+        "name": "5-HT<sub>2B</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_008",
+        "name": "5-HT<sub>2C</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_009",
+        "name": "5-HT<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_010",
+        "name": "5-HT<sub>5A</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_011",
+        "name": "5-HT<sub>5B</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_012",
+        "name": "5-HT<sub>6</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_001_013",
+        "name": "5-HT<sub>7</sub> receptor",
+        "parent": {
+            "slug": "001_001_001",
+            "name": "5-Hydroxytryptamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_002",
+        "name": "Acetylcholine receptors (muscarinic)",
+        "parent": {
+            "slug": "001_001",
+            "name": "Aminergic receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                69
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                117,
+                149
+            ],
+            "5": [
+                164,
+                205
+            ],
+            "6": [
+                357,
+                395
+            ],
+            "7": [
+                399,
+                425
+            ]
+        }
+    },
+    {
+        "slug": "001_001_002_001",
+        "name": "M<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_001_002",
+            "name": "Acetylcholine receptors (muscarinic)"
+        }
+    },
+    {
+        "slug": "001_001_002_002",
+        "name": "M<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_001_002",
+            "name": "Acetylcholine receptors (muscarinic)"
+        }
+    },
+    {
+        "slug": "001_001_002_003",
+        "name": "M<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_001_002",
+            "name": "Acetylcholine receptors (muscarinic)"
+        }
+    },
+    {
+        "slug": "001_001_002_004",
+        "name": "M<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_001_002",
+            "name": "Acetylcholine receptors (muscarinic)"
+        }
+    },
+    {
+        "slug": "001_001_002_005",
+        "name": "M<sub>5</sub> receptor",
+        "parent": {
+            "slug": "001_001_002",
+            "name": "Acetylcholine receptors (muscarinic)"
+        }
+    },
+    {
+        "slug": "001_001_003",
+        "name": "Adrenoceptors",
+        "parent": {
+            "slug": "001_001",
+            "name": "Aminergic receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                34
+            ],
+            "2": [
+                38,
+                70
+            ],
+            "3": [
+                74,
+                110
+            ],
+            "4": [
+                118,
+                145
+            ],
+            "5": [
+                162,
+                202
+            ],
+            "6": [
+                233,
+                271
+            ],
+            "7": [
+                275,
+                300
+            ]
+        }
+    },
+    {
+        "slug": "001_001_003_001",
+        "name": "&alpha;<sub>1A</sub>-adrenoceptor",
+        "parent": {
+            "slug": "001_001_003",
+            "name": "Adrenoceptors"
+        }
+    },
+    {
+        "slug": "001_001_003_002",
+        "name": "&alpha;<sub>1B</sub>-adrenoceptor",
+        "parent": {
+            "slug": "001_001_003",
+            "name": "Adrenoceptors"
+        }
+    },
+    {
+        "slug": "001_001_003_003",
+        "name": "&alpha;<sub>1D</sub>-adrenoceptor",
+        "parent": {
+            "slug": "001_001_003",
+            "name": "Adrenoceptors"
+        }
+    },
+    {
+        "slug": "001_001_003_004",
+        "name": "&alpha;<sub>2A</sub>-adrenoceptor",
+        "parent": {
+            "slug": "001_001_003",
+            "name": "Adrenoceptors"
+        }
+    },
+    {
+        "slug": "001_001_003_005",
+        "name": "&alpha;<sub>2B</sub>-adrenoceptor",
+        "parent": {
+            "slug": "001_001_003",
+            "name": "Adrenoceptors"
+        }
+    },
+    {
+        "slug": "001_001_003_006",
+        "name": "&alpha;<sub>2C</sub>-adrenoceptor",
+        "parent": {
+            "slug": "001_001_003",
+            "name": "Adrenoceptors"
+        }
+    },
+    {
+        "slug": "001_001_003_007",
+        "name": "&beta;<sub>1</sub>-adrenoceptor",
+        "parent": {
+            "slug": "001_001_003",
+            "name": "Adrenoceptors"
+        }
+    },
+    {
+        "slug": "001_001_003_008",
+        "name": "&beta;<sub>2</sub>-adrenoceptor",
+        "parent": {
+            "slug": "001_001_003",
+            "name": "Adrenoceptors"
+        }
+    },
+    {
+        "slug": "001_001_003_009",
+        "name": "&beta;<sub>3</sub>-adrenoceptor",
+        "parent": {
+            "slug": "001_001_003",
+            "name": "Adrenoceptors"
+        }
+    },
+    {
+        "slug": "001_001_004",
+        "name": "Dopamine receptors",
+        "parent": {
+            "slug": "001_001",
+            "name": "Aminergic receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                35,
+                67
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                115,
+                141
+            ],
+            "5": [
+                154,
+                196
+            ],
+            "6": [
+                215,
+                253
+            ],
+            "7": [
+                258,
+                284
+            ]
+        }
+    },
+    {
+        "slug": "001_001_004_001",
+        "name": "D<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_001_004",
+            "name": "Dopamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_004_002",
+        "name": "D<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_001_004",
+            "name": "Dopamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_004_003",
+        "name": "D<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_001_004",
+            "name": "Dopamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_004_004",
+        "name": "D<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_001_004",
+            "name": "Dopamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_004_005",
+        "name": "D<sub>5</sub> receptor",
+        "parent": {
+            "slug": "001_001_004",
+            "name": "Dopamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_005",
+        "name": "Histamine receptors",
+        "parent": {
+            "slug": "001_001",
+            "name": "Aminergic receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                27
+            ],
+            "2": [
+                31,
+                62
+            ],
+            "3": [
+                66,
+                102
+            ],
+            "4": [
+                110,
+                136
+            ],
+            "5": [
+                158,
+                198
+            ],
+            "6": [
+                256,
+                294
+            ],
+            "7": [
+                298,
+                324
+            ]
+        }
+    },
+    {
+        "slug": "001_001_005_001",
+        "name": "H<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_001_005",
+            "name": "Histamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_005_002",
+        "name": "H<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_001_005",
+            "name": "Histamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_005_003",
+        "name": "H<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_001_005",
+            "name": "Histamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_005_004",
+        "name": "H<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_001_005",
+            "name": "Histamine receptors"
+        }
+    },
+    {
+        "slug": "001_001_006",
+        "name": "Trace amine receptors",
+        "parent": {
+            "slug": "001_001",
+            "name": "Aminergic receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                35,
+                67
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                115,
+                142
+            ],
+            "5": [
+                166,
+                212
+            ],
+            "6": [
+                218,
+                257
+            ],
+            "7": [
+                261,
+                287
+            ]
+        }
+    },
+    {
+        "slug": "001_001_006_001",
+        "name": "TA<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_001_006",
+            "name": "Trace amine receptors"
+        }
+    },
+    {
+        "slug": "001_002",
+        "name": "Peptide receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_002_001",
+        "name": "Angiotensin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                68
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                117,
+                144
+            ],
+            "5": [
+                167,
+                202
+            ],
+            "6": [
+                209,
+                246
+            ],
+            "7": [
+                249,
+                282
+            ]
+        }
+    },
+    {
+        "slug": "001_002_001_001",
+        "name": "AT<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_001",
+            "name": "Angiotensin receptors"
+        }
+    },
+    {
+        "slug": "001_002_001_002",
+        "name": "AT<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_001",
+            "name": "Angiotensin receptors"
+        }
+    },
+    {
+        "slug": "001_002_002",
+        "name": "Apelin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                28
+            ],
+            "2": [
+                33,
+                64
+            ],
+            "3": [
+                69,
+                105
+            ],
+            "4": [
+                113,
+                140
+            ],
+            "5": [
+                164,
+                204
+            ],
+            "6": [
+                207,
+                248
+            ],
+            "7": [
+                251,
+                284
+            ]
+        }
+    },
+    {
+        "slug": "001_002_002_001",
+        "name": "apelin receptor",
+        "parent": {
+            "slug": "001_002_002",
+            "name": "Apelin receptors"
+        }
+    },
+    {
+        "slug": "001_002_003",
+        "name": "Bombesin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                67
+            ],
+            "3": [
+                72,
+                108
+            ],
+            "4": [
+                116,
+                143
+            ],
+            "5": [
+                163,
+                206
+            ],
+            "6": [
+                211,
+                251
+            ],
+            "7": [
+                257,
+                286
+            ]
+        }
+    },
+    {
+        "slug": "001_002_003_001",
+        "name": "BB<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_003",
+            "name": "Bombesin receptors"
+        }
+    },
+    {
+        "slug": "001_002_003_002",
+        "name": "BB<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_003",
+            "name": "Bombesin receptors"
+        }
+    },
+    {
+        "slug": "001_002_003_003",
+        "name": "BB<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_002_003",
+            "name": "Bombesin receptors"
+        }
+    },
+    {
+        "slug": "001_002_004",
+        "name": "Bradykinin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                36
+            ],
+            "2": [
+                40,
+                71
+            ],
+            "3": [
+                76,
+                112
+            ],
+            "4": [
+                119,
+                147
+            ],
+            "5": [
+                165,
+                210
+            ],
+            "6": [
+                216,
+                250
+            ],
+            "7": [
+                253,
+                286
+            ]
+        }
+    },
+    {
+        "slug": "001_002_004_001",
+        "name": "B<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_004",
+            "name": "Bradykinin receptors"
+        }
+    },
+    {
+        "slug": "001_002_004_002",
+        "name": "B<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_004",
+            "name": "Bradykinin receptors"
+        }
+    },
+    {
+        "slug": "001_002_005",
+        "name": "Cholecystokinin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                35,
+                67
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                115,
+                142
+            ],
+            "5": [
+                159,
+                204
+            ],
+            "6": [
+                261,
+                300
+            ],
+            "7": [
+                308,
+                333
+            ]
+        }
+    },
+    {
+        "slug": "001_002_005_001",
+        "name": "CCK<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_005",
+            "name": "Cholecystokinin receptors"
+        }
+    },
+    {
+        "slug": "001_002_005_002",
+        "name": "CCK<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_005",
+            "name": "Cholecystokinin receptors"
+        }
+    },
+    {
+        "slug": "001_002_006",
+        "name": "Complement peptide receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                35,
+                66
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                115,
+                142
+            ],
+            "5": [
+                159,
+                196
+            ],
+            "6": [
+                201,
+                232
+            ],
+            "7": [
+                235,
+                271
+            ]
+        }
+    },
+    {
+        "slug": "001_002_006_001",
+        "name": "C3a receptor",
+        "parent": {
+            "slug": "001_002_006",
+            "name": "Complement peptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_006_002",
+        "name": "C5a<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_006",
+            "name": "Complement peptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_006_003",
+        "name": "C5a<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_006",
+            "name": "Complement peptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_007",
+        "name": "Endothelin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                39
+            ],
+            "2": [
+                44,
+                74
+            ],
+            "3": [
+                79,
+                115
+            ],
+            "4": [
+                123,
+                150
+            ],
+            "5": [
+                172,
+                217
+            ],
+            "6": [
+                221,
+                260
+            ],
+            "7": [
+                266,
+                299
+            ]
+        }
+    },
+    {
+        "slug": "001_002_007_001",
+        "name": "ET<sub>A</sub> receptor",
+        "parent": {
+            "slug": "001_002_007",
+            "name": "Endothelin receptors"
+        }
+    },
+    {
+        "slug": "001_002_007_002",
+        "name": "ET<sub>B</sub> receptor",
+        "parent": {
+            "slug": "001_002_007",
+            "name": "Endothelin receptors"
+        }
+    },
+    {
+        "slug": "001_002_008",
+        "name": "Formylpeptide receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                37
+            ],
+            "2": [
+                39,
+                70
+            ],
+            "3": [
+                75,
+                111
+            ],
+            "4": [
+                119,
+                146
+            ],
+            "5": [
+                167,
+                214
+            ],
+            "6": [
+                218,
+                249
+            ],
+            "7": [
+                257,
+                286
+            ]
+        }
+    },
+    {
+        "slug": "001_002_008_001",
+        "name": "FPR1",
+        "parent": {
+            "slug": "001_002_008",
+            "name": "Formylpeptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_008_002",
+        "name": "FPR2/ALX",
+        "parent": {
+            "slug": "001_002_008",
+            "name": "Formylpeptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_008_003",
+        "name": "FPR3",
+        "parent": {
+            "slug": "001_002_008",
+            "name": "Formylpeptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_009",
+        "name": "Galanin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                36,
+                67
+            ],
+            "3": [
+                72,
+                108
+            ],
+            "4": [
+                116,
+                143
+            ],
+            "5": [
+                158,
+                200
+            ],
+            "6": [
+                203,
+                242
+            ],
+            "7": [
+                246,
+                275
+            ]
+        }
+    },
+    {
+        "slug": "001_002_009_001",
+        "name": "GAL<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_009",
+            "name": "Galanin receptors"
+        }
+    },
+    {
+        "slug": "001_002_009_002",
+        "name": "GAL<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_009",
+            "name": "Galanin receptors"
+        }
+    },
+    {
+        "slug": "001_002_009_003",
+        "name": "GAL<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_002_009",
+            "name": "Galanin receptors"
+        }
+    },
+    {
+        "slug": "001_002_010",
+        "name": "Ghrelin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                68
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                117,
+                144
+            ],
+            "5": [
+                169,
+                208
+            ],
+            "6": [
+                213,
+                253
+            ],
+            "7": [
+                256,
+                288
+            ]
+        }
+    },
+    {
+        "slug": "001_002_010_001",
+        "name": "ghrelin receptor",
+        "parent": {
+            "slug": "001_002_010",
+            "name": "Ghrelin receptors"
+        }
+    },
+    {
+        "slug": "001_002_011",
+        "name": "Gonadotrophin-releasing hormone receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                43,
+                71
+            ],
+            "3": [
+                78,
+                114
+            ],
+            "4": [
+                120,
+                147
+            ],
+            "5": [
+                172,
+                216
+            ],
+            "6": [
+                221,
+                262
+            ],
+            "7": [
+                269,
+                296
+            ]
+        }
+    },
+    {
+        "slug": "001_002_011_001",
+        "name": "GnRH<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_011",
+            "name": "Gonadotrophin-releasing hormone receptors"
+        }
+    },
+    {
+        "slug": "001_002_012",
+        "name": "Kisspeptin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                67
+            ],
+            "3": [
+                72,
+                108
+            ],
+            "4": [
+                116,
+                143
+            ],
+            "5": [
+                158,
+                208
+            ],
+            "6": [
+                212,
+                251
+            ],
+            "7": [
+                259,
+                288
+            ]
+        }
+    },
+    {
+        "slug": "001_002_012_001",
+        "name": "kisspeptin receptor",
+        "parent": {
+            "slug": "001_002_012",
+            "name": "Kisspeptin receptors"
+        }
+    },
+    {
+        "slug": "001_002_013",
+        "name": "Melanin-concentrating hormone",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                69
+            ],
+            "3": [
+                75,
+                111
+            ],
+            "4": [
+                119,
+                146
+            ],
+            "5": [
+                164,
+                202
+            ],
+            "6": [
+                207,
+                246
+            ],
+            "7": [
+                252,
+                278
+            ]
+        }
+    },
+    {
+        "slug": "001_002_013_001",
+        "name": "MCH<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_013",
+            "name": "Melanin-concentrating hormone"
+        }
+    },
+    {
+        "slug": "001_002_013_002",
+        "name": "MCH<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_013",
+            "name": "Melanin-concentrating hormone"
+        }
+    },
+    {
+        "slug": "001_002_014",
+        "name": "Melanocortin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                26
+            ],
+            "2": [
+                30,
+                64
+            ],
+            "3": [
+                68,
+                108
+            ],
+            "4": [
+                116,
+                142
+            ],
+            "5": [
+                144,
+                186
+            ],
+            "6": [
+                192,
+                227
+            ],
+            "7": [
+                238,
+                261
+            ]
+        }
+    },
+    {
+        "slug": "001_002_014_001",
+        "name": "MC<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_014",
+            "name": "Melanocortin receptors"
+        }
+    },
+    {
+        "slug": "001_002_014_002",
+        "name": "MC<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_014",
+            "name": "Melanocortin receptors"
+        }
+    },
+    {
+        "slug": "001_002_014_003",
+        "name": "MC<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_002_014",
+            "name": "Melanocortin receptors"
+        }
+    },
+    {
+        "slug": "001_002_014_004",
+        "name": "MC<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_002_014",
+            "name": "Melanocortin receptors"
+        }
+    },
+    {
+        "slug": "001_002_014_005",
+        "name": "MC<sub>5</sub> receptor",
+        "parent": {
+            "slug": "001_002_014",
+            "name": "Melanocortin receptors"
+        }
+    },
+    {
+        "slug": "001_002_015",
+        "name": "Motilin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                68
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                117,
+                144
+            ],
+            "5": [
+                209,
+                248
+            ],
+            "6": [
+                253,
+                291
+            ],
+            "7": [
+                293,
+                325
+            ]
+        }
+    },
+    {
+        "slug": "001_002_015_001",
+        "name": "motilin receptor",
+        "parent": {
+            "slug": "001_002_015",
+            "name": "Motilin receptors"
+        }
+    },
+    {
+        "slug": "001_002_016",
+        "name": "Neuromedin U receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                69
+            ],
+            "3": [
+                74,
+                110
+            ],
+            "4": [
+                118,
+                145
+            ],
+            "5": [
+                171,
+                211
+            ],
+            "6": [
+                214,
+                254
+            ],
+            "7": [
+                258,
+                290
+            ]
+        }
+    },
+    {
+        "slug": "001_002_016_001",
+        "name": "NMU1 receptor",
+        "parent": {
+            "slug": "001_002_016",
+            "name": "Neuromedin U receptors"
+        }
+    },
+    {
+        "slug": "001_002_016_002",
+        "name": "NMU2 receptor",
+        "parent": {
+            "slug": "001_002_016",
+            "name": "Neuromedin U receptors"
+        }
+    },
+    {
+        "slug": "001_002_017",
+        "name": "Neuropeptide FF/neuropeptide AF receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                29
+            ],
+            "2": [
+                33,
+                65
+            ],
+            "3": [
+                69,
+                105
+            ],
+            "4": [
+                111,
+                138
+            ],
+            "5": [
+                169,
+                210
+            ],
+            "6": [
+                217,
+                255
+            ],
+            "7": [
+                262,
+                291
+            ]
+        }
+    },
+    {
+        "slug": "001_002_017_001",
+        "name": "NPFF1 receptor",
+        "parent": {
+            "slug": "001_002_017",
+            "name": "Neuropeptide FF/neuropeptide AF receptors"
+        }
+    },
+    {
+        "slug": "001_002_017_002",
+        "name": "NPFF2 receptor",
+        "parent": {
+            "slug": "001_002_017",
+            "name": "Neuropeptide FF/neuropeptide AF receptors"
+        }
+    },
+    {
+        "slug": "001_002_018",
+        "name": "Neuropeptide S receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                36,
+                68
+            ],
+            "3": [
+                72,
+                108
+            ],
+            "4": [
+                114,
+                141
+            ],
+            "5": [
+                160,
+                208
+            ],
+            "6": [
+                217,
+                256
+            ],
+            "7": [
+                262,
+                289
+            ]
+        }
+    },
+    {
+        "slug": "001_002_018_001",
+        "name": "NPS receptor",
+        "parent": {
+            "slug": "001_002_018",
+            "name": "Neuropeptide S receptors"
+        }
+    },
+    {
+        "slug": "001_002_019",
+        "name": "Neuropeptide W/neuropeptide B receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                66
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                117,
+                144
+            ],
+            "5": [
+                162,
+                200
+            ],
+            "6": [
+                205,
+                244
+            ],
+            "7": [
+                248,
+                277
+            ]
+        }
+    },
+    {
+        "slug": "001_002_019_001",
+        "name": "NPBW1 receptor",
+        "parent": {
+            "slug": "001_002_019",
+            "name": "Neuropeptide W/neuropeptide B receptors"
+        }
+    },
+    {
+        "slug": "001_002_019_002",
+        "name": "NPBW2 receptor",
+        "parent": {
+            "slug": "001_002_019",
+            "name": "Neuropeptide W/neuropeptide B receptors"
+        }
+    },
+    {
+        "slug": "001_002_020",
+        "name": "Neuropeptide Y receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                35,
+                67
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                113,
+                140
+            ],
+            "5": [
+                161,
+                203
+            ],
+            "6": [
+                205,
+                244
+            ],
+            "7": [
+                248,
+                277
+            ]
+        }
+    },
+    {
+        "slug": "001_002_020_001",
+        "name": "Y<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_020",
+            "name": "Neuropeptide Y receptors"
+        }
+    },
+    {
+        "slug": "001_002_020_002",
+        "name": "Y<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_020",
+            "name": "Neuropeptide Y receptors"
+        }
+    },
+    {
+        "slug": "001_002_020_003",
+        "name": "Y<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_002_020",
+            "name": "Neuropeptide Y receptors"
+        }
+    },
+    {
+        "slug": "001_002_020_004",
+        "name": "Y<sub>5</sub> receptor",
+        "parent": {
+            "slug": "001_002_020",
+            "name": "Neuropeptide Y receptors"
+        }
+    },
+    {
+        "slug": "001_002_020_005",
+        "name": "y<sub>6</sub> receptor",
+        "parent": {
+            "slug": "001_002_020",
+            "name": "Neuropeptide Y receptors"
+        }
+    },
+    {
+        "slug": "001_002_021",
+        "name": "Neurotensin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                37,
+                69
+            ],
+            "3": [
+                75,
+                111
+            ],
+            "4": [
+                119,
+                146
+            ],
+            "5": [
+                168,
+                211
+            ],
+            "6": [
+                234,
+                272
+            ],
+            "7": [
+                277,
+                310
+            ]
+        }
+    },
+    {
+        "slug": "001_002_021_001",
+        "name": "NTS<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_021",
+            "name": "Neurotensin receptors"
+        }
+    },
+    {
+        "slug": "001_002_021_002",
+        "name": "NTS<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_021",
+            "name": "Neurotensin receptors"
+        }
+    },
+    {
+        "slug": "001_002_022",
+        "name": "Opioid receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                67
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                115,
+                142
+            ],
+            "5": [
+                159,
+                198
+            ],
+            "6": [
+                203,
+                242
+            ],
+            "7": [
+                246,
+                275
+            ]
+        }
+    },
+    {
+        "slug": "001_002_022_001",
+        "name": "&delta; receptor",
+        "parent": {
+            "slug": "001_002_022",
+            "name": "Opioid receptors"
+        }
+    },
+    {
+        "slug": "001_002_022_002",
+        "name": "&kappa; receptor",
+        "parent": {
+            "slug": "001_002_022",
+            "name": "Opioid receptors"
+        }
+    },
+    {
+        "slug": "001_002_022_003",
+        "name": "&mu; receptor",
+        "parent": {
+            "slug": "001_002_022",
+            "name": "Opioid receptors"
+        }
+    },
+    {
+        "slug": "001_002_022_004",
+        "name": "NOP receptor",
+        "parent": {
+            "slug": "001_002_022",
+            "name": "Opioid receptors"
+        }
+    },
+    {
+        "slug": "001_002_023",
+        "name": "Orexin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                30
+            ],
+            "2": [
+                34,
+                66
+            ],
+            "3": [
+                70,
+                106
+            ],
+            "4": [
+                112,
+                139
+            ],
+            "5": [
+                165,
+                204
+            ],
+            "6": [
+                237,
+                279
+            ],
+            "7": [
+                286,
+                316
+            ]
+        }
+    },
+    {
+        "slug": "001_002_023_001",
+        "name": "OX<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_023",
+            "name": "Orexin receptors"
+        }
+    },
+    {
+        "slug": "001_002_023_002",
+        "name": "OX<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_023",
+            "name": "Orexin receptors"
+        }
+    },
+    {
+        "slug": "001_002_024",
+        "name": "Peptide P518 receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                30
+            ],
+            "2": [
+                34,
+                66
+            ],
+            "3": [
+                70,
+                106
+            ],
+            "4": [
+                114,
+                141
+            ],
+            "5": [
+                165,
+                213
+            ],
+            "6": [
+                217,
+                256
+            ],
+            "7": [
+                263,
+                292
+            ]
+        }
+    },
+    {
+        "slug": "001_002_024_001",
+        "name": "QRFP receptor",
+        "parent": {
+            "slug": "001_002_024",
+            "name": "Peptide P518 receptors"
+        }
+    },
+    {
+        "slug": "001_002_025",
+        "name": "Prolactin-releasing peptide receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                35,
+                67
+            ],
+            "3": [
+                72,
+                108
+            ],
+            "4": [
+                114,
+                141
+            ],
+            "5": [
+                161,
+                203
+            ],
+            "6": [
+                207,
+                247
+            ],
+            "7": [
+                251,
+                281
+            ]
+        }
+    },
+    {
+        "slug": "001_002_025_001",
+        "name": "PrRP receptor",
+        "parent": {
+            "slug": "001_002_025",
+            "name": "Prolactin-releasing peptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_026",
+        "name": "Proteinase-activated receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                34,
+                64
+            ],
+            "3": [
+                70,
+                106
+            ],
+            "4": [
+                114,
+                139
+            ],
+            "5": [
+                162,
+                199
+            ],
+            "6": [
+                202,
+                237
+            ],
+            "7": [
+                242,
+                268
+            ]
+        }
+    },
+    {
+        "slug": "001_002_026_001",
+        "name": "PAR1",
+        "parent": {
+            "slug": "001_002_026",
+            "name": "Proteinase-activated receptors"
+        }
+    },
+    {
+        "slug": "001_002_026_002",
+        "name": "PAR2",
+        "parent": {
+            "slug": "001_002_026",
+            "name": "Proteinase-activated receptors"
+        }
+    },
+    {
+        "slug": "001_002_026_003",
+        "name": "PAR3",
+        "parent": {
+            "slug": "001_002_026",
+            "name": "Proteinase-activated receptors"
+        }
+    },
+    {
+        "slug": "001_002_026_004",
+        "name": "PAR4",
+        "parent": {
+            "slug": "001_002_026",
+            "name": "Proteinase-activated receptors"
+        }
+    },
+    {
+        "slug": "001_002_027",
+        "name": "Relaxin family peptide receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                29
+            ],
+            "2": [
+                33,
+                64
+            ],
+            "3": [
+                72,
+                111
+            ],
+            "4": [
+                118,
+                144
+            ],
+            "5": [
+                170,
+                208
+            ],
+            "6": [
+                210,
+                249
+            ],
+            "7": [
+                253,
+                279
+            ]
+        }
+    },
+    {
+        "slug": "001_002_027_001",
+        "name": "RXFP1",
+        "parent": {
+            "slug": "001_002_027",
+            "name": "Relaxin family peptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_027_002",
+        "name": "RXFP2",
+        "parent": {
+            "slug": "001_002_027",
+            "name": "Relaxin family peptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_027_003",
+        "name": "RXFP3",
+        "parent": {
+            "slug": "001_002_027",
+            "name": "Relaxin family peptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_027_004",
+        "name": "RXFP4",
+        "parent": {
+            "slug": "001_002_027",
+            "name": "Relaxin family peptide receptors"
+        }
+    },
+    {
+        "slug": "001_002_028",
+        "name": "Somatostatin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                66
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                115,
+                142
+            ],
+            "5": [
+                158,
+                196
+            ],
+            "6": [
+                201,
+                240
+            ],
+            "7": [
+                244,
+                272
+            ]
+        }
+    },
+    {
+        "slug": "001_002_028_001",
+        "name": "SST1 receptor",
+        "parent": {
+            "slug": "001_002_028",
+            "name": "Somatostatin receptors"
+        }
+    },
+    {
+        "slug": "001_002_028_002",
+        "name": "SST2 receptor",
+        "parent": {
+            "slug": "001_002_028",
+            "name": "Somatostatin receptors"
+        }
+    },
+    {
+        "slug": "001_002_028_003",
+        "name": "SST3 receptor",
+        "parent": {
+            "slug": "001_002_028",
+            "name": "Somatostatin receptors"
+        }
+    },
+    {
+        "slug": "001_002_028_004",
+        "name": "SST4 receptor",
+        "parent": {
+            "slug": "001_002_028",
+            "name": "Somatostatin receptors"
+        }
+    },
+    {
+        "slug": "001_002_028_005",
+        "name": "SST5 receptor",
+        "parent": {
+            "slug": "001_002_028",
+            "name": "Somatostatin receptors"
+        }
+    },
+    {
+        "slug": "001_002_029",
+        "name": "Tachykinin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                69
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                115,
+                142
+            ],
+            "5": [
+                160,
+                204
+            ],
+            "6": [
+                207,
+                247
+            ],
+            "7": [
+                253,
+                281
+            ]
+        }
+    },
+    {
+        "slug": "001_002_029_001",
+        "name": "NK<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_029",
+            "name": "Tachykinin receptors"
+        }
+    },
+    {
+        "slug": "001_002_029_002",
+        "name": "NK<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_029",
+            "name": "Tachykinin receptors"
+        }
+    },
+    {
+        "slug": "001_002_029_003",
+        "name": "NK<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_002_029",
+            "name": "Tachykinin receptors"
+        }
+    },
+    {
+        "slug": "001_002_030",
+        "name": "Thyrotropin-releasing hormone receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                67
+            ],
+            "3": [
+                72,
+                108
+            ],
+            "4": [
+                116,
+                143
+            ],
+            "5": [
+                161,
+                208
+            ],
+            "6": [
+                233,
+                271
+            ],
+            "7": [
+                276,
+                302
+            ]
+        }
+    },
+    {
+        "slug": "001_002_030_001",
+        "name": "TRH<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_002_030",
+            "name": "Thyrotropin-releasing hormone receptors"
+        }
+    },
+    {
+        "slug": "001_002_030_002",
+        "name": "TRH<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_030",
+            "name": "Thyrotropin-releasing hormone receptors"
+        }
+    },
+    {
+        "slug": "001_002_031",
+        "name": "Urotensin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                37
+            ],
+            "2": [
+                41,
+                71
+            ],
+            "3": [
+                76,
+                112
+            ],
+            "4": [
+                119,
+                146
+            ],
+            "5": [
+                160,
+                200
+            ],
+            "6": [
+                204,
+                243
+            ],
+            "7": [
+                245,
+                278
+            ]
+        }
+    },
+    {
+        "slug": "001_002_031_001",
+        "name": "UT receptor",
+        "parent": {
+            "slug": "001_002_031",
+            "name": "Urotensin receptors"
+        }
+    },
+    {
+        "slug": "001_002_032",
+        "name": "Vasopressin and oxytocin receptors",
+        "parent": {
+            "slug": "001_002",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                69
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                114,
+                141
+            ],
+            "5": [
+                161,
+                205
+            ],
+            "6": [
+                228,
+                266
+            ],
+            "7": [
+                271,
+                298
+            ]
+        }
+    },
+    {
+        "slug": "001_002_032_001",
+        "name": "V<sub>1A</sub> receptor",
+        "parent": {
+            "slug": "001_002_032",
+            "name": "Vasopressin and oxytocin receptors"
+        }
+    },
+    {
+        "slug": "001_002_032_002",
+        "name": "V<sub>1B</sub> receptor",
+        "parent": {
+            "slug": "001_002_032",
+            "name": "Vasopressin and oxytocin receptors"
+        }
+    },
+    {
+        "slug": "001_002_032_003",
+        "name": "V<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_002_032",
+            "name": "Vasopressin and oxytocin receptors"
+        }
+    },
+    {
+        "slug": "001_002_032_004",
+        "name": "OT receptor",
+        "parent": {
+            "slug": "001_002_032",
+            "name": "Vasopressin and oxytocin receptors"
+        }
+    },
+    {
+        "slug": "001_003",
+        "name": "Protein receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_003_001",
+        "name": "Chemerin receptor",
+        "parent": {
+            "slug": "001_003",
+            "name": "Protein receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                37
+            ],
+            "2": [
+                39,
+                70
+            ],
+            "3": [
+                75,
+                111
+            ],
+            "4": [
+                119,
+                146
+            ],
+            "5": [
+                171,
+                217
+            ],
+            "6": [
+                221,
+                253
+            ],
+            "7": [
+                256,
+                286
+            ]
+        }
+    },
+    {
+        "slug": "001_003_001_001",
+        "name": "chemerin receptor 1",
+        "parent": {
+            "slug": "001_003_001",
+            "name": "Chemerin receptor"
+        }
+    },
+    {
+        "slug": "001_003_001_002",
+        "name": "chemerin receptor 2",
+        "parent": {
+            "slug": "001_003_001",
+            "name": "Chemerin receptor"
+        }
+    },
+    {
+        "slug": "001_003_002",
+        "name": "Chemokine receptors",
+        "parent": {
+            "slug": "001_003",
+            "name": "Protein receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                35
+            ],
+            "2": [
+                39,
+                69
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                117,
+                144
+            ],
+            "5": [
+                161,
+                198
+            ],
+            "6": [
+                201,
+                237
+            ],
+            "7": [
+                239,
+                272
+            ]
+        }
+    },
+    {
+        "slug": "001_003_002_001",
+        "name": "CCR1",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_002",
+        "name": "CCR2",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_003",
+        "name": "CCR3",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_004",
+        "name": "CCR4",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_005",
+        "name": "CCR5",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_006",
+        "name": "CCR6",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_007",
+        "name": "CCR7",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_008",
+        "name": "CCR8",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_009",
+        "name": "CCR9",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_010",
+        "name": "CCR10",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_011",
+        "name": "CXCR1",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_012",
+        "name": "CXCR2",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_013",
+        "name": "CXCR3",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_014",
+        "name": "CXCR4",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_015",
+        "name": "CXCR5",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_016",
+        "name": "CXCR6",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_017",
+        "name": "CX<sub>3</sub>CR1",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_018",
+        "name": "XCR1",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_019",
+        "name": "ACKR1",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_020",
+        "name": "ACKR2",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_021",
+        "name": "ACKR3",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_022",
+        "name": "ACKR4",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_002_023",
+        "name": "CCRL2",
+        "parent": {
+            "slug": "001_003_002",
+            "name": "Chemokine receptors"
+        }
+    },
+    {
+        "slug": "001_003_003",
+        "name": "Glycoprotein hormone receptors",
+        "parent": {
+            "slug": "001_003",
+            "name": "Protein receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                29
+            ],
+            "2": [
+                34,
+                64
+            ],
+            "3": [
+                77,
+                112
+            ],
+            "4": [
+                120,
+                146
+            ],
+            "5": [
+                162,
+                197
+            ],
+            "6": [
+                201,
+                237
+            ],
+            "7": [
+                242,
+                268
+            ]
+        }
+    },
+    {
+        "slug": "001_003_003_001",
+        "name": "FSH receptor",
+        "parent": {
+            "slug": "001_003_003",
+            "name": "Glycoprotein hormone receptors"
+        }
+    },
+    {
+        "slug": "001_003_003_002",
+        "name": "LH receptor",
+        "parent": {
+            "slug": "001_003_003",
+            "name": "Glycoprotein hormone receptors"
+        }
+    },
+    {
+        "slug": "001_003_003_003",
+        "name": "TSH receptor",
+        "parent": {
+            "slug": "001_003_003",
+            "name": "Glycoprotein hormone receptors"
+        }
+    },
+    {
+        "slug": "001_003_004",
+        "name": "Prokineticin receptors",
+        "parent": {
+            "slug": "001_003",
+            "name": "Protein receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                35,
+                67
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                115,
+                142
+            ],
+            "5": [
+                166,
+                208
+            ],
+            "6": [
+                211,
+                251
+            ],
+            "7": [
+                257,
+                286
+            ]
+        }
+    },
+    {
+        "slug": "001_003_004_001",
+        "name": "PKR<sub>1</sub>",
+        "parent": {
+            "slug": "001_003_004",
+            "name": "Prokineticin receptors"
+        }
+    },
+    {
+        "slug": "001_003_004_002",
+        "name": "PKR<sub>2</sub>",
+        "parent": {
+            "slug": "001_003_004",
+            "name": "Prokineticin receptors"
+        }
+    },
+    {
+        "slug": "001_004",
+        "name": "Lipid receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_004_001",
+        "name": "Free fatty acid receptors",
+        "parent": {
+            "slug": "001_004",
+            "name": "Lipid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                30
+            ],
+            "2": [
+                33,
+                63
+            ],
+            "3": [
+                68,
+                104
+            ],
+            "4": [
+                112,
+                138
+            ],
+            "5": [
+                160,
+                196
+            ],
+            "6": [
+                201,
+                235
+            ],
+            "7": [
+                239,
+                263
+            ]
+        }
+    },
+    {
+        "slug": "001_004_001_001",
+        "name": "FFA1 receptor",
+        "parent": {
+            "slug": "001_004_001",
+            "name": "Free fatty acid receptors"
+        }
+    },
+    {
+        "slug": "001_004_001_002",
+        "name": "FFA2 receptor",
+        "parent": {
+            "slug": "001_004_001",
+            "name": "Free fatty acid receptors"
+        }
+    },
+    {
+        "slug": "001_004_001_003",
+        "name": "FFA3 receptor",
+        "parent": {
+            "slug": "001_004_001",
+            "name": "Free fatty acid receptors"
+        }
+    },
+    {
+        "slug": "001_004_001_004",
+        "name": "FFA4 receptor",
+        "parent": {
+            "slug": "001_004_001",
+            "name": "Free fatty acid receptors"
+        }
+    },
+    {
+        "slug": "001_004_001_005",
+        "name": "<i>GPR42</i>",
+        "parent": {
+            "slug": "001_004_001",
+            "name": "Free fatty acid receptors"
+        }
+    },
+    {
+        "slug": "001_004_002",
+        "name": "Leukotriene receptors",
+        "parent": {
+            "slug": "001_004",
+            "name": "Lipid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                35
+            ],
+            "2": [
+                36,
+                67
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                115,
+                141
+            ],
+            "5": [
+                157,
+                193
+            ],
+            "6": [
+                197,
+                234
+            ],
+            "7": [
+                237,
+                267
+            ]
+        }
+    },
+    {
+        "slug": "001_004_002_001",
+        "name": "BLT<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_004_002",
+            "name": "Leukotriene receptors"
+        }
+    },
+    {
+        "slug": "001_004_002_002",
+        "name": "BLT<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_004_002",
+            "name": "Leukotriene receptors"
+        }
+    },
+    {
+        "slug": "001_004_002_003",
+        "name": "CysLT<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_004_002",
+            "name": "Leukotriene receptors"
+        }
+    },
+    {
+        "slug": "001_004_002_004",
+        "name": "CysLT<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_004_002",
+            "name": "Leukotriene receptors"
+        }
+    },
+    {
+        "slug": "001_004_002_005",
+        "name": "OXE receptor",
+        "parent": {
+            "slug": "001_004_002",
+            "name": "Leukotriene receptors"
+        }
+    },
+    {
+        "slug": "001_004_003",
+        "name": "Lysophospholipid (LPA) receptors",
+        "parent": {
+            "slug": "001_004",
+            "name": "Lipid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                35,
+                62
+            ],
+            "3": [
+                69,
+                105
+            ],
+            "4": [
+                112,
+                138
+            ],
+            "5": [
+                154,
+                187
+            ],
+            "6": [
+                190,
+                228
+            ],
+            "7": [
+                231,
+                258
+            ]
+        }
+    },
+    {
+        "slug": "001_004_003_001",
+        "name": "LPA<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_004_003",
+            "name": "Lysophospholipid (LPA) receptors"
+        }
+    },
+    {
+        "slug": "001_004_003_002",
+        "name": "LPA<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_004_003",
+            "name": "Lysophospholipid (LPA) receptors"
+        }
+    },
+    {
+        "slug": "001_004_003_003",
+        "name": "LPA<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_004_003",
+            "name": "Lysophospholipid (LPA) receptors"
+        }
+    },
+    {
+        "slug": "001_004_003_004",
+        "name": "LPA<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_004_003",
+            "name": "Lysophospholipid (LPA) receptors"
+        }
+    },
+    {
+        "slug": "001_004_003_005",
+        "name": "LPA<sub>5</sub> receptor",
+        "parent": {
+            "slug": "001_004_003",
+            "name": "Lysophospholipid (LPA) receptors"
+        }
+    },
+    {
+        "slug": "001_004_003_006",
+        "name": "LPA<sub>6</sub> receptor",
+        "parent": {
+            "slug": "001_004_003",
+            "name": "Lysophospholipid (LPA) receptors"
+        }
+    },
+    {
+        "slug": "001_004_004",
+        "name": "Lysophospholipid (S1P) receptors",
+        "parent": {
+            "slug": "001_004",
+            "name": "Lipid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                30
+            ],
+            "2": [
+                34,
+                62
+            ],
+            "3": [
+                69,
+                105
+            ],
+            "4": [
+                112,
+                138
+            ],
+            "5": [
+                155,
+                192
+            ],
+            "6": [
+                196,
+                234
+            ],
+            "7": [
+                239,
+                266
+            ]
+        }
+    },
+    {
+        "slug": "001_004_004_001",
+        "name": "S1P<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_004_004",
+            "name": "Lysophospholipid (S1P) receptors"
+        }
+    },
+    {
+        "slug": "001_004_004_002",
+        "name": "S1P<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_004_004",
+            "name": "Lysophospholipid (S1P) receptors"
+        }
+    },
+    {
+        "slug": "001_004_004_003",
+        "name": "S1P<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_004_004",
+            "name": "Lysophospholipid (S1P) receptors"
+        }
+    },
+    {
+        "slug": "001_004_004_004",
+        "name": "S1P<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_004_004",
+            "name": "Lysophospholipid (S1P) receptors"
+        }
+    },
+    {
+        "slug": "001_004_004_005",
+        "name": "S1P<sub>5</sub> receptor",
+        "parent": {
+            "slug": "001_004_004",
+            "name": "Lysophospholipid (S1P) receptors"
+        }
+    },
+    {
+        "slug": "001_004_005",
+        "name": "Cannabinoid receptors",
+        "parent": {
+            "slug": "001_004",
+            "name": "Lipid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                38,
+                68
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                117,
+                143
+            ],
+            "5": [
+                160,
+                201
+            ],
+            "6": [
+                220,
+                258
+            ],
+            "7": [
+                260,
+                289
+            ]
+        }
+    },
+    {
+        "slug": "001_004_005_001",
+        "name": "CB<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_004_005",
+            "name": "Cannabinoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_005_002",
+        "name": "CB<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_004_005",
+            "name": "Cannabinoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_006",
+        "name": "GPR18, GPR55 and GPR119",
+        "parent": {
+            "slug": "001_004",
+            "name": "Lipid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                67
+            ],
+            "3": [
+                72,
+                108
+            ],
+            "4": [
+                116,
+                143
+            ],
+            "5": [
+                160,
+                195
+            ],
+            "6": [
+                198,
+                236
+            ],
+            "7": [
+                241,
+                267
+            ]
+        }
+    },
+    {
+        "slug": "001_004_006_001",
+        "name": "<i>GPR18</i>",
+        "parent": {
+            "slug": "001_004_006",
+            "name": "GPR18, GPR55 and GPR119"
+        }
+    },
+    {
+        "slug": "001_004_006_002",
+        "name": "<i>GPR55</i>",
+        "parent": {
+            "slug": "001_004_006",
+            "name": "GPR18, GPR55 and GPR119"
+        }
+    },
+    {
+        "slug": "001_004_006_003",
+        "name": "<i>GPR119</i>",
+        "parent": {
+            "slug": "001_004_006",
+            "name": "GPR18, GPR55 and GPR119"
+        }
+    },
+    {
+        "slug": "001_004_007",
+        "name": "Platelet-activating factor receptors",
+        "parent": {
+            "slug": "001_004",
+            "name": "Lipid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                35
+            ],
+            "2": [
+                39,
+                71
+            ],
+            "3": [
+                76,
+                112
+            ],
+            "4": [
+                120,
+                146
+            ],
+            "5": [
+                171,
+                207
+            ],
+            "6": [
+                211,
+                252
+            ],
+            "7": [
+                254,
+                290
+            ]
+        }
+    },
+    {
+        "slug": "001_004_007_001",
+        "name": "PAF receptor",
+        "parent": {
+            "slug": "001_004_007",
+            "name": "Platelet-activating factor receptors"
+        }
+    },
+    {
+        "slug": "001_004_008",
+        "name": "Prostanoid receptors",
+        "parent": {
+            "slug": "001_004",
+            "name": "Lipid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                26
+            ],
+            "2": [
+                31,
+                62
+            ],
+            "3": [
+                65,
+                100
+            ],
+            "4": [
+                108,
+                134
+            ],
+            "5": [
+                153,
+                191
+            ],
+            "6": [
+                195,
+                233
+            ],
+            "7": [
+                238,
+                263
+            ]
+        }
+    },
+    {
+        "slug": "001_004_008_001",
+        "name": "DP<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_004_008",
+            "name": "Prostanoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_008_002",
+        "name": "DP<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_004_008",
+            "name": "Prostanoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_008_003",
+        "name": "EP<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_004_008",
+            "name": "Prostanoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_008_004",
+        "name": "EP<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_004_008",
+            "name": "Prostanoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_008_005",
+        "name": "EP<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_004_008",
+            "name": "Prostanoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_008_006",
+        "name": "EP<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_004_008",
+            "name": "Prostanoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_008_007",
+        "name": "FP receptor",
+        "parent": {
+            "slug": "001_004_008",
+            "name": "Prostanoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_008_008",
+        "name": "IP receptor",
+        "parent": {
+            "slug": "001_004_008",
+            "name": "Prostanoid receptors"
+        }
+    },
+    {
+        "slug": "001_004_008_009",
+        "name": "TP receptor",
+        "parent": {
+            "slug": "001_004_008",
+            "name": "Prostanoid receptors"
+        }
+    },
+    {
+        "slug": "001_005",
+        "name": "Melatonin receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_005_001",
+        "name": "Melatonin",
+        "parent": {
+            "slug": "001_005",
+            "name": "Melatonin receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                69
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                117,
+                144
+            ],
+            "5": [
+                161,
+                199
+            ],
+            "6": [
+                204,
+                242
+            ],
+            "7": [
+                250,
+                276
+            ]
+        }
+    },
+    {
+        "slug": "001_005_001_001",
+        "name": "MT<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_005_001",
+            "name": "Melatonin"
+        }
+    },
+    {
+        "slug": "001_005_001_002",
+        "name": "MT<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_005_001",
+            "name": "Melatonin"
+        }
+    },
+    {
+        "slug": "001_006",
+        "name": "Nucleotide receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_006_001",
+        "name": "Adenosine receptors",
+        "parent": {
+            "slug": "001_006",
+            "name": "Nucleotide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                67
+            ],
+            "3": [
+                70,
+                106
+            ],
+            "4": [
+                114,
+                140
+            ],
+            "5": [
+                169,
+                209
+            ],
+            "6": [
+                213,
+                253
+            ],
+            "7": [
+                258,
+                284
+            ]
+        }
+    },
+    {
+        "slug": "001_006_001_001",
+        "name": "A<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_006_001",
+            "name": "Adenosine receptors"
+        }
+    },
+    {
+        "slug": "001_006_001_002",
+        "name": "A<sub>2A</sub> receptor",
+        "parent": {
+            "slug": "001_006_001",
+            "name": "Adenosine receptors"
+        }
+    },
+    {
+        "slug": "001_006_001_003",
+        "name": "A<sub>2B</sub> receptor",
+        "parent": {
+            "slug": "001_006_001",
+            "name": "Adenosine receptors"
+        }
+    },
+    {
+        "slug": "001_006_001_004",
+        "name": "A<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_006_001",
+            "name": "Adenosine receptors"
+        }
+    },
+    {
+        "slug": "001_006_002",
+        "name": "P2Y receptors",
+        "parent": {
+            "slug": "001_006",
+            "name": "Nucleotide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                34,
+                64
+            ],
+            "3": [
+                70,
+                106
+            ],
+            "4": [
+                114,
+                141
+            ],
+            "5": [
+                159,
+                195
+            ],
+            "6": [
+                198,
+                234
+            ],
+            "7": [
+                237,
+                270
+            ]
+        }
+    },
+    {
+        "slug": "001_006_002_001",
+        "name": "P2Y<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_006_002",
+            "name": "P2Y receptors"
+        }
+    },
+    {
+        "slug": "001_006_002_002",
+        "name": "P2Y<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_006_002",
+            "name": "P2Y receptors"
+        }
+    },
+    {
+        "slug": "001_006_002_003",
+        "name": "P2Y<sub>4</sub> receptor",
+        "parent": {
+            "slug": "001_006_002",
+            "name": "P2Y receptors"
+        }
+    },
+    {
+        "slug": "001_006_002_004",
+        "name": "P2Y<sub>6</sub> receptor",
+        "parent": {
+            "slug": "001_006_002",
+            "name": "P2Y receptors"
+        }
+    },
+    {
+        "slug": "001_006_002_005",
+        "name": "P2Y<sub>11</sub> receptor",
+        "parent": {
+            "slug": "001_006_002",
+            "name": "P2Y receptors"
+        }
+    },
+    {
+        "slug": "001_006_002_006",
+        "name": "P2Y<sub>12</sub> receptor",
+        "parent": {
+            "slug": "001_006_002",
+            "name": "P2Y receptors"
+        }
+    },
+    {
+        "slug": "001_006_002_007",
+        "name": "P2Y<sub>13</sub> receptor",
+        "parent": {
+            "slug": "001_006_002",
+            "name": "P2Y receptors"
+        }
+    },
+    {
+        "slug": "001_006_002_008",
+        "name": "P2Y<sub>14</sub> receptor",
+        "parent": {
+            "slug": "001_006_002",
+            "name": "P2Y receptors"
+        }
+    },
+    {
+        "slug": "001_007",
+        "name": "Steroid receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_007_001",
+        "name": "Bile acid receptors",
+        "parent": {
+            "slug": "001_007",
+            "name": "Steroid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                29
+            ],
+            "2": [
+                33,
+                61
+            ],
+            "3": [
+                67,
+                103
+            ],
+            "4": [
+                109,
+                132
+            ],
+            "5": [
+                148,
+                194
+            ],
+            "6": [
+                198,
+                240
+            ],
+            "7": [
+                244,
+                270
+            ]
+        }
+    },
+    {
+        "slug": "001_007_001_001",
+        "name": "GPBA receptor",
+        "parent": {
+            "slug": "001_007_001",
+            "name": "Bile acid receptors"
+        }
+    },
+    {
+        "slug": "001_007_002",
+        "name": "Estrogen (G protein-coupled) receptors",
+        "parent": {
+            "slug": "001_007",
+            "name": "Steroid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                37
+            ],
+            "2": [
+                41,
+                71
+            ],
+            "3": [
+                76,
+                111
+            ],
+            "4": [
+                119,
+                146
+            ],
+            "5": [
+                159,
+                194
+            ],
+            "6": [
+                197,
+                238
+            ],
+            "7": [
+                244,
+                277
+            ]
+        }
+    },
+    {
+        "slug": "001_007_002_001",
+        "name": "GPER",
+        "parent": {
+            "slug": "001_007_002",
+            "name": "Estrogen (G protein-coupled) receptors"
+        }
+    },
+    {
+        "slug": "001_008",
+        "name": "Alicarboxylic acid receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_008_001",
+        "name": "Hydroxycarboxylic acid receptors",
+        "parent": {
+            "slug": "001_008",
+            "name": "Alicarboxylic acid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                35
+            ],
+            "2": [
+                39,
+                69
+            ],
+            "3": [
+                74,
+                110
+            ],
+            "4": [
+                118,
+                145
+            ],
+            "5": [
+                160,
+                197
+            ],
+            "6": [
+                201,
+                240
+            ],
+            "7": [
+                244,
+                277
+            ]
+        }
+    },
+    {
+        "slug": "001_008_001_001",
+        "name": "HCA<sub>1</sub> receptor",
+        "parent": {
+            "slug": "001_008_001",
+            "name": "Hydroxycarboxylic acid receptors"
+        }
+    },
+    {
+        "slug": "001_008_001_002",
+        "name": "HCA<sub>2</sub> receptor",
+        "parent": {
+            "slug": "001_008_001",
+            "name": "Hydroxycarboxylic acid receptors"
+        }
+    },
+    {
+        "slug": "001_008_001_003",
+        "name": "HCA<sub>3</sub> receptor",
+        "parent": {
+            "slug": "001_008_001",
+            "name": "Hydroxycarboxylic acid receptors"
+        }
+    },
+    {
+        "slug": "001_008_002",
+        "name": "Oxoglutarate receptors",
+        "parent": {
+            "slug": "001_008",
+            "name": "Alicarboxylic acid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                31
+            ],
+            "2": [
+                35,
+                65
+            ],
+            "3": [
+                71,
+                107
+            ],
+            "4": [
+                115,
+                142
+            ],
+            "5": [
+                161,
+                197
+            ],
+            "6": [
+                201,
+                237
+            ],
+            "7": [
+                242,
+                275
+            ]
+        }
+    },
+    {
+        "slug": "001_008_002_001",
+        "name": "oxoglutarate receptor",
+        "parent": {
+            "slug": "001_008_002",
+            "name": "Oxoglutarate receptors"
+        }
+    },
+    {
+        "slug": "001_008_003",
+        "name": "Succinate receptors",
+        "parent": {
+            "slug": "001_008",
+            "name": "Alicarboxylic acid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                42
+            ],
+            "2": [
+                45,
+                75
+            ],
+            "3": [
+                80,
+                116
+            ],
+            "4": [
+                124,
+                154
+            ],
+            "5": [
+                169,
+                207
+            ],
+            "6": [
+                210,
+                251
+            ],
+            "7": [
+                255,
+                288
+            ]
+        }
+    },
+    {
+        "slug": "001_008_003_001",
+        "name": "succinate receptor",
+        "parent": {
+            "slug": "001_008_003",
+            "name": "Succinate receptors"
+        }
+    },
+    {
+        "slug": "001_009",
+        "name": "Sensory receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_009_001",
+        "name": "Opsins",
+        "parent": {
+            "slug": "001_009",
+            "name": "Sensory receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                69
+            ],
+            "3": [
+                73,
+                109
+            ],
+            "4": [
+                116,
+                142
+            ],
+            "5": [
+                166,
+                205
+            ],
+            "6": [
+                208,
+                246
+            ],
+            "7": [
+                251,
+                277
+            ]
+        }
+    },
+    {
+        "slug": "001_009_001_001",
+        "name": "Rhodopsin",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_002",
+        "name": "<i>OPN3</i>",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_003",
+        "name": "<i>OPN4</i>",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_004",
+        "name": "<i>OPN5</i>",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_005",
+        "name": "OPN1SW",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_006",
+        "name": "OPN1MW",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_007",
+        "name": "OPN1LW",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_010",
+        "name": "Olfactory receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_010_001",
+        "name": "Olfactory",
+        "parent": {
+            "slug": "001_010",
+            "name": "Olfactory receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                29
+            ],
+            "2": [
+                33,
+                65
+            ],
+            "3": [
+                69,
+                105
+            ],
+            "4": [
+                113,
+                143
+            ],
+            "5": [
+                168,
+                204
+            ],
+            "6": [
+                206,
+                242
+            ],
+            "7": [
+                245,
+                272
+            ]
+        }
+    },
+    {
+        "slug": "001_010_001_001",
+        "name": "Olfactory receptor 1A1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_002",
+        "name": "Olfactory receptor 1G1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_003",
+        "name": "Olfactory receptor 2T11",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_004",
+        "name": "Olfactory receptor 51A2",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_005",
+        "name": "Olfactory receptor 51A4",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_006",
+        "name": "Olfactory receptor 51A7",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_007",
+        "name": "Olfactory receptor 51B2",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_008",
+        "name": "Olfactory receptor 51B4",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_009",
+        "name": "Olfactory receptor 51B5",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_010",
+        "name": "Olfactory receptor 51B6",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_011",
+        "name": "Olfactory receptor 51D1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_012",
+        "name": "Olfactory receptor 51E1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_013",
+        "name": "Olfactory receptor 51E2",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_014",
+        "name": "Olfactory receptor 51F1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_015",
+        "name": "Olfactory receptor 51F2",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_016",
+        "name": "Olfactory receptor 51G1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_017",
+        "name": "Olfactory receptor 51G2",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_018",
+        "name": "Olfactory receptor 51I1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_019",
+        "name": "Olfactory receptor 51I2",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_020",
+        "name": "Olfactory receptor 51J1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_021",
+        "name": "Olfactory receptor 51L1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_022",
+        "name": "Olfactory receptor 51M1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_023",
+        "name": "Olfactory receptor 51Q1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_024",
+        "name": "Olfactory receptor 51S1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_025",
+        "name": "Olfactory receptor 51T1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_010_001_026",
+        "name": "Olfactory receptor 51V1",
+        "parent": {
+            "slug": "001_010_001",
+            "name": "Olfactory"
+        }
+    },
+    {
+        "slug": "001_011",
+        "name": "Orphan receptors",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_011_001",
+        "name": "Class A orphans",
+        "parent": {
+            "slug": "001_011",
+            "name": "Orphan receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                29
+            ],
+            "2": [
+                29,
+                59
+            ],
+            "3": [
+                60,
+                96
+            ],
+            "4": [
+                104,
+                129
+            ],
+            "5": [
+                137,
+                169
+            ],
+            "6": [
+                173,
+                206
+            ],
+            "7": [
+                209,
+                235
+            ]
+        }
+    },
+    {
+        "slug": "001_011_001_001",
+        "name": "<i>GPR3</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_002",
+        "name": "<i>GPR4</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_003",
+        "name": "<i>GPR6</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_004",
+        "name": "<i>GPR12</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_005",
+        "name": "<i>GPR15</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_006",
+        "name": "<i>GPR17</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_007",
+        "name": "<i>GPR19</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_008",
+        "name": "<i>GPR20</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_009",
+        "name": "<i>GPR21</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_010",
+        "name": "<i>GPR22</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_011",
+        "name": "<i>GPR25</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_012",
+        "name": "<i>GPR26</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_013",
+        "name": "<i>GPR27</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_014",
+        "name": "<i>GPR31</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_015",
+        "name": "<i>GPR32</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_016",
+        "name": "<i>GPR33</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_017",
+        "name": "<i>GPR34</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_018",
+        "name": "<i>GPR35</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_019",
+        "name": "<i>GPR37</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_020",
+        "name": "<i>GPR37L1</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_021",
+        "name": "<i>GPR39</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_022",
+        "name": "<i>GPR45</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_023",
+        "name": "<i>GPR50</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_024",
+        "name": "<i>GPR52</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_025",
+        "name": "<i>GPR61</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_026",
+        "name": "<i>GPR62</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_027",
+        "name": "<i>GPR63</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_028",
+        "name": "<i>GPR65</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_029",
+        "name": "<i>GPR68</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_030",
+        "name": "<i>GPR75</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_031",
+        "name": "<i>GPR78</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_032",
+        "name": "<i>GPR79</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_033",
+        "name": "<i>GPR82</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_034",
+        "name": "<i>GPR83</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_035",
+        "name": "<i>GPR84</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_036",
+        "name": "<i>GPR85</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_037",
+        "name": "<i>GPR87</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_038",
+        "name": "<i>GPR88</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_039",
+        "name": "<i>GPR101</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_040",
+        "name": "<i>GPR132</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_041",
+        "name": "<i>GPR135</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_042",
+        "name": "<i>GPR139</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_043",
+        "name": "<i>GPR141</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_044",
+        "name": "<i>GPR142</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_045",
+        "name": "<i>GPR146</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_046",
+        "name": "<i>GPR148</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_047",
+        "name": "<i>GPR149</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_048",
+        "name": "<i>GPR150</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_049",
+        "name": "<i>GPR151</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_050",
+        "name": "<i>GPR152</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_051",
+        "name": "<i>GPR153</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_052",
+        "name": "<i>GPR160</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_053",
+        "name": "<i>GPR161</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_054",
+        "name": "<i>GPR162</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_055",
+        "name": "<i>GPR171</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_056",
+        "name": "<i>GPR173</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_057",
+        "name": "<i>GPR174</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_058",
+        "name": "<i>GPR176</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_059",
+        "name": "<i>GPR182</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_060",
+        "name": "<i>GPR183</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_061",
+        "name": "<i>LGR4</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_062",
+        "name": "<i>LGR5</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_063",
+        "name": "<i>LGR6</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_064",
+        "name": "<i>MAS1</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_065",
+        "name": "<i>MAS1L</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_066",
+        "name": "<i>MRGPRD</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_067",
+        "name": "<i>MRGPRE</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_068",
+        "name": "<i>MRGPRF</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_069",
+        "name": "<i>MRGPRG</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_070",
+        "name": "<i>MRGPRX1</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_071",
+        "name": "<i>MRGPRX2</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_072",
+        "name": "<i>MRGPRX3</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_073",
+        "name": "<i>MRGPRX4</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_074",
+        "name": "<i>P2RY8</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_075",
+        "name": "<i>P2RY10</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_076",
+        "name": "<i>TAAR2</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_077",
+        "name": "<i>TAAR3</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_078",
+        "name": "<i>TAAR4P</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_079",
+        "name": "<i>TAAR5</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_080",
+        "name": "<i>TAAR6</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_081",
+        "name": "<i>TAAR8</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "001_011_001_082",
+        "name": "<i>TAAR9</i>",
+        "parent": {
+            "slug": "001_011_001",
+            "name": "Class A orphans"
+        }
+    },
+    {
+        "slug": "002",
+        "name": "Class B1 (Secretin)",
+        "parent": {
+            "slug": "000",
+            "name": "Parent family"
+        }
+    },
+    {
+        "slug": "002_001",
+        "name": "Peptide receptors",
+        "parent": {
+            "slug": "002",
+            "name": "Class B1 (Secretin)"
+        }
+    },
+    {
+        "slug": "002_001_001",
+        "name": "Calcitonin receptors",
+        "parent": {
+            "slug": "002_001",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                37
+            ],
+            "2": [
+                41,
+                69
+            ],
+            "3": [
+                80,
+                114
+            ],
+            "4": [
+                121,
+                149
+            ],
+            "5": [
+                158,
+                192
+            ],
+            "6": [
+                201,
+                225
+            ],
+            "7": [
+                229,
+                258
+            ]
+        }
+    },
+    {
+        "slug": "002_001_001_001",
+        "name": "CT receptor",
+        "parent": {
+            "slug": "002_001_001",
+            "name": "Calcitonin receptors"
+        }
+    },
+    {
+        "slug": "002_001_001_002",
+        "name": "AMY<sub>1</sub> receptor",
+        "parent": {
+            "slug": "002_001_001",
+            "name": "Calcitonin receptors"
+        }
+    },
+    {
+        "slug": "002_001_001_003",
+        "name": "AMY<sub>2</sub> receptor",
+        "parent": {
+            "slug": "002_001_001",
+            "name": "Calcitonin receptors"
+        }
+    },
+    {
+        "slug": "002_001_001_004",
+        "name": "AMY<sub>3</sub> receptor",
+        "parent": {
+            "slug": "002_001_001",
+            "name": "Calcitonin receptors"
+        }
+    },
+    {
+        "slug": "002_001_001_005",
+        "name": "calcitonin receptor-like receptor",
+        "parent": {
+            "slug": "002_001_001",
+            "name": "Calcitonin receptors"
+        }
+    },
+    {
+        "slug": "002_001_001_006",
+        "name": "CGRP receptor",
+        "parent": {
+            "slug": "002_001_001",
+            "name": "Calcitonin receptors"
+        }
+    },
+    {
+        "slug": "002_001_001_007",
+        "name": "AM<sub>1</sub> receptor",
+        "parent": {
+            "slug": "002_001_001",
+            "name": "Calcitonin receptors"
+        }
+    },
+    {
+        "slug": "002_001_001_008",
+        "name": "AM<sub>2</sub> receptor",
+        "parent": {
+            "slug": "002_001_001",
+            "name": "Calcitonin receptors"
+        }
+    },
+    {
+        "slug": "002_001_002",
+        "name": "Corticotropin-releasing factor receptors",
+        "parent": {
+            "slug": "002_001",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                42
+            ],
+            "2": [
+                46,
+                73
+            ],
+            "3": [
+                82,
+                117
+            ],
+            "4": [
+                123,
+                152
+            ],
+            "5": [
+                165,
+                196
+            ],
+            "6": [
+                201,
+                230
+            ],
+            "7": [
+                235,
+                264
+            ]
+        }
+    },
+    {
+        "slug": "002_001_002_001",
+        "name": "CRF<sub>1</sub> receptor",
+        "parent": {
+            "slug": "002_001_002",
+            "name": "Corticotropin-releasing factor receptors"
+        }
+    },
+    {
+        "slug": "002_001_002_002",
+        "name": "CRF<sub>2</sub> receptor",
+        "parent": {
+            "slug": "002_001_002",
+            "name": "Corticotropin-releasing factor receptors"
+        }
+    },
+    {
+        "slug": "002_001_003",
+        "name": "Glucagon receptor family",
+        "parent": {
+            "slug": "002_001",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                36
+            ],
+            "2": [
+                40,
+                68
+            ],
+            "3": [
+                80,
+                114
+            ],
+            "4": [
+                117,
+                145
+            ],
+            "5": [
+                154,
+                187
+            ],
+            "6": [
+                189,
+                219
+            ],
+            "7": [
+                223,
+                251
+            ]
+        }
+    },
+    {
+        "slug": "002_001_003_001",
+        "name": "GHRH receptor",
+        "parent": {
+            "slug": "002_001_003",
+            "name": "Glucagon receptor family"
+        }
+    },
+    {
+        "slug": "002_001_003_002",
+        "name": "GIP receptor",
+        "parent": {
+            "slug": "002_001_003",
+            "name": "Glucagon receptor family"
+        }
+    },
+    {
+        "slug": "002_001_003_003",
+        "name": "GLP-1 receptor",
+        "parent": {
+            "slug": "002_001_003",
+            "name": "Glucagon receptor family"
+        }
+    },
+    {
+        "slug": "002_001_003_004",
+        "name": "GLP-2 receptor",
+        "parent": {
+            "slug": "002_001_003",
+            "name": "Glucagon receptor family"
+        }
+    },
+    {
+        "slug": "002_001_003_005",
+        "name": "glucagon receptor",
+        "parent": {
+            "slug": "002_001_003",
+            "name": "Glucagon receptor family"
+        }
+    },
+    {
+        "slug": "002_001_003_006",
+        "name": "secretin receptor",
+        "parent": {
+            "slug": "002_001_003",
+            "name": "Glucagon receptor family"
+        }
+    },
+    {
+        "slug": "002_001_004",
+        "name": "Parathyroid hormone receptors",
+        "parent": {
+            "slug": "002_001",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                40
+            ],
+            "2": [
+                44,
+                77
+            ],
+            "3": [
+                103,
+                139
+            ],
+            "4": [
+                142,
+                174
+            ],
+            "5": [
+                183,
+                216
+            ],
+            "6": [
+                224,
+                254
+            ],
+            "7": [
+                260,
+                289
+            ]
+        }
+    },
+    {
+        "slug": "002_001_004_001",
+        "name": "PTH1 receptor",
+        "parent": {
+            "slug": "002_001_004",
+            "name": "Parathyroid hormone receptors"
+        }
+    },
+    {
+        "slug": "002_001_004_002",
+        "name": "PTH2 receptor",
+        "parent": {
+            "slug": "002_001_004",
+            "name": "Parathyroid hormone receptors"
+        }
+    },
+    {
+        "slug": "002_001_005",
+        "name": "VIP and PACAP receptors",
+        "parent": {
+            "slug": "002_001",
+            "name": "Peptide receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                39
+            ],
+            "2": [
+                43,
+                71
+            ],
+            "3": [
+                83,
+                118
+            ],
+            "4": [
+                121,
+                153
+            ],
+            "5": [
+                162,
+                196
+            ],
+            "6": [
+                203,
+                233
+            ],
+            "7": [
+                238,
+                264
+            ]
+        }
+    },
+    {
+        "slug": "002_001_005_001",
+        "name": "PAC<sub>1</sub> receptor",
+        "parent": {
+            "slug": "002_001_005",
+            "name": "VIP and PACAP receptors"
+        }
+    },
+    {
+        "slug": "002_001_005_002",
+        "name": "VPAC<sub>1</sub> receptor",
+        "parent": {
+            "slug": "002_001_005",
+            "name": "VIP and PACAP receptors"
+        }
+    },
+    {
+        "slug": "002_001_005_003",
+        "name": "VPAC<sub>2</sub> receptor",
+        "parent": {
+            "slug": "002_001_005",
+            "name": "VIP and PACAP receptors"
+        }
+    },
+    {
+        "slug": "003",
+        "name": "Class B2 (Adhesion)",
+        "parent": {
+            "slug": "000",
+            "name": "Parent family"
+        }
+    },
+    {
+        "slug": "003_001",
+        "name": "Adhesion receptors",
+        "parent": {
+            "slug": "003",
+            "name": "Class B2 (Adhesion)"
+        }
+    },
+    {
+        "slug": "003_001_001",
+        "name": "ADGRL",
+        "parent": {
+            "slug": "003_001",
+            "name": "Adhesion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                60
+            ],
+            "3": [
+                67,
+                101
+            ],
+            "4": [
+                108,
+                132
+            ],
+            "5": [
+                148,
+                183
+            ],
+            "6": [
+                191,
+                216
+            ],
+            "7": [
+                221,
+                247
+            ]
+        }
+    },
+    {
+        "slug": "003_001_001_001",
+        "name": "ADGRL1",
+        "parent": {
+            "slug": "003_001_001",
+            "name": "ADGRL"
+        }
+    },
+    {
+        "slug": "003_001_001_002",
+        "name": "ADGRL2",
+        "parent": {
+            "slug": "003_001_001",
+            "name": "ADGRL"
+        }
+    },
+    {
+        "slug": "003_001_001_003",
+        "name": "ADGRL3",
+        "parent": {
+            "slug": "003_001_001",
+            "name": "ADGRL"
+        }
+    },
+    {
+        "slug": "003_001_001_004",
+        "name": "ADGRL4",
+        "parent": {
+            "slug": "003_001_001",
+            "name": "ADGRL"
+        }
+    },
+    {
+        "slug": "003_001_002",
+        "name": "ADGRE",
+        "parent": {
+            "slug": "003_001",
+            "name": "Adhesion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                36,
+                60
+            ],
+            "3": [
+                67,
+                101
+            ],
+            "4": [
+                112,
+                136
+            ],
+            "5": [
+                152,
+                187
+            ],
+            "6": [
+                195,
+                220
+            ],
+            "7": [
+                225,
+                251
+            ]
+        }
+    },
+    {
+        "slug": "003_001_002_001",
+        "name": "ADGRE1",
+        "parent": {
+            "slug": "003_001_002",
+            "name": "ADGRE"
+        }
+    },
+    {
+        "slug": "003_001_002_002",
+        "name": "ADGRE2",
+        "parent": {
+            "slug": "003_001_002",
+            "name": "ADGRE"
+        }
+    },
+    {
+        "slug": "003_001_002_003",
+        "name": "ADGRE3",
+        "parent": {
+            "slug": "003_001_002",
+            "name": "ADGRE"
+        }
+    },
+    {
+        "slug": "003_001_002_004",
+        "name": "ADGRE4P",
+        "parent": {
+            "slug": "003_001_002",
+            "name": "ADGRE"
+        }
+    },
+    {
+        "slug": "003_001_002_005",
+        "name": "ADGRE5",
+        "parent": {
+            "slug": "003_001_002",
+            "name": "ADGRE"
+        }
+    },
+    {
+        "slug": "003_001_003",
+        "name": "ADGRA",
+        "parent": {
+            "slug": "003_001",
+            "name": "Adhesion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                35,
+                58
+            ],
+            "3": [
+                65,
+                101
+            ],
+            "4": [
+                117,
+                141
+            ],
+            "5": [
+                159,
+                194
+            ],
+            "6": [
+                236,
+                261
+            ],
+            "7": [
+                267,
+                293
+            ]
+        }
+    },
+    {
+        "slug": "003_001_003_001",
+        "name": "ADGRA1",
+        "parent": {
+            "slug": "003_001_003",
+            "name": "ADGRA"
+        }
+    },
+    {
+        "slug": "003_001_003_002",
+        "name": "ADGRA2",
+        "parent": {
+            "slug": "003_001_003",
+            "name": "ADGRA"
+        }
+    },
+    {
+        "slug": "003_001_003_003",
+        "name": "ADGRA3",
+        "parent": {
+            "slug": "003_001_003",
+            "name": "ADGRA"
+        }
+    },
+    {
+        "slug": "003_001_004",
+        "name": "ADGRC",
+        "parent": {
+            "slug": "003_001",
+            "name": "Adhesion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                37,
+                61
+            ],
+            "3": [
+                66,
+                100
+            ],
+            "4": [
+                107,
+                131
+            ],
+            "5": [
+                147,
+                182
+            ],
+            "6": [
+                186,
+                211
+            ],
+            "7": [
+                216,
+                242
+            ]
+        }
+    },
+    {
+        "slug": "003_001_004_001",
+        "name": "<i>CELSR1</i>",
+        "parent": {
+            "slug": "003_001_004",
+            "name": "ADGRC"
+        }
+    },
+    {
+        "slug": "003_001_004_002",
+        "name": "<i>CELSR2</i>",
+        "parent": {
+            "slug": "003_001_004",
+            "name": "ADGRC"
+        }
+    },
+    {
+        "slug": "003_001_004_003",
+        "name": "<i>CELSR3</i>",
+        "parent": {
+            "slug": "003_001_004",
+            "name": "ADGRC"
+        }
+    },
+    {
+        "slug": "003_001_005",
+        "name": "ADGRD",
+        "parent": {
+            "slug": "003_001",
+            "name": "Adhesion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                36
+            ],
+            "2": [
+                40,
+                67
+            ],
+            "3": [
+                70,
+                105
+            ],
+            "4": [
+                112,
+                136
+            ],
+            "5": [
+                152,
+                189
+            ],
+            "6": [
+                192,
+                222
+            ],
+            "7": [
+                224,
+                251
+            ]
+        }
+    },
+    {
+        "slug": "003_001_005_001",
+        "name": "ADGRD1",
+        "parent": {
+            "slug": "003_001_005",
+            "name": "ADGRD"
+        }
+    },
+    {
+        "slug": "003_001_005_002",
+        "name": "ADGRD2",
+        "parent": {
+            "slug": "003_001_005",
+            "name": "ADGRD"
+        }
+    },
+    {
+        "slug": "003_001_006",
+        "name": "ADGRF",
+        "parent": {
+            "slug": "003_001",
+            "name": "Adhesion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                34
+            ],
+            "2": [
+                40,
+                67
+            ],
+            "3": [
+                72,
+                108
+            ],
+            "4": [
+                113,
+                141
+            ],
+            "5": [
+                160,
+                190
+            ],
+            "6": [
+                199,
+                229
+            ],
+            "7": [
+                230,
+                256
+            ]
+        }
+    },
+    {
+        "slug": "003_001_006_001",
+        "name": "ADGRF1",
+        "parent": {
+            "slug": "003_001_006",
+            "name": "ADGRF"
+        }
+    },
+    {
+        "slug": "003_001_006_002",
+        "name": "ADGRF2",
+        "parent": {
+            "slug": "003_001_006",
+            "name": "ADGRF"
+        }
+    },
+    {
+        "slug": "003_001_006_003",
+        "name": "ADGRF3",
+        "parent": {
+            "slug": "003_001_006",
+            "name": "ADGRF"
+        }
+    },
+    {
+        "slug": "003_001_006_004",
+        "name": "ADGRF4",
+        "parent": {
+            "slug": "003_001_006",
+            "name": "ADGRF"
+        }
+    },
+    {
+        "slug": "003_001_006_005",
+        "name": "ADGRF5",
+        "parent": {
+            "slug": "003_001_006",
+            "name": "ADGRF"
+        }
+    },
+    {
+        "slug": "003_001_007",
+        "name": "ADGRB",
+        "parent": {
+            "slug": "003_001",
+            "name": "Adhesion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                38,
+                62
+            ],
+            "3": [
+                69,
+                103
+            ],
+            "4": [
+                109,
+                133
+            ],
+            "5": [
+                150,
+                185
+            ],
+            "6": [
+                204,
+                229
+            ],
+            "7": [
+                235,
+                261
+            ]
+        }
+    },
+    {
+        "slug": "003_001_007_001",
+        "name": "ADGRB1",
+        "parent": {
+            "slug": "003_001_007",
+            "name": "ADGRB"
+        }
+    },
+    {
+        "slug": "003_001_007_002",
+        "name": "ADGRB2",
+        "parent": {
+            "slug": "003_001_007",
+            "name": "ADGRB"
+        }
+    },
+    {
+        "slug": "003_001_007_003",
+        "name": "ADGRB3",
+        "parent": {
+            "slug": "003_001_007",
+            "name": "ADGRB"
+        }
+    },
+    {
+        "slug": "003_001_008",
+        "name": "ADGRG",
+        "parent": {
+            "slug": "003_001",
+            "name": "Adhesion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                35,
+                64
+            ],
+            "3": [
+                66,
+                102
+            ],
+            "4": [
+                109,
+                134
+            ],
+            "5": [
+                157,
+                191
+            ],
+            "6": [
+                198,
+                221
+            ],
+            "7": [
+                223,
+                249
+            ]
+        }
+    },
+    {
+        "slug": "003_001_008_001",
+        "name": "ADGRG1",
+        "parent": {
+            "slug": "003_001_008",
+            "name": "ADGRG"
+        }
+    },
+    {
+        "slug": "003_001_008_002",
+        "name": "ADGRG2",
+        "parent": {
+            "slug": "003_001_008",
+            "name": "ADGRG"
+        }
+    },
+    {
+        "slug": "003_001_008_003",
+        "name": "ADGRG3",
+        "parent": {
+            "slug": "003_001_008",
+            "name": "ADGRG"
+        }
+    },
+    {
+        "slug": "003_001_008_004",
+        "name": "ADGRG4",
+        "parent": {
+            "slug": "003_001_008",
+            "name": "ADGRG"
+        }
+    },
+    {
+        "slug": "003_001_008_005",
+        "name": "ADGRG5",
+        "parent": {
+            "slug": "003_001_008",
+            "name": "ADGRG"
+        }
+    },
+    {
+        "slug": "003_001_008_006",
+        "name": "ADGRG6",
+        "parent": {
+            "slug": "003_001_008",
+            "name": "ADGRG"
+        }
+    },
+    {
+        "slug": "003_001_008_007",
+        "name": "ADGRG7",
+        "parent": {
+            "slug": "003_001_008",
+            "name": "ADGRG"
+        }
+    },
+    {
+        "slug": "003_001_009",
+        "name": "ADGRV",
+        "parent": {
+            "slug": "003_001",
+            "name": "Adhesion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                32
+            ],
+            "2": [
+                34,
+                58
+            ],
+            "3": [
+                65,
+                101
+            ],
+            "4": [
+                108,
+                132
+            ],
+            "5": [
+                159,
+                194
+            ],
+            "6": [
+                199,
+                224
+            ],
+            "7": [
+                229,
+                255
+            ]
+        }
+    },
+    {
+        "slug": "003_001_009_001",
+        "name": "ADGRV1",
+        "parent": {
+            "slug": "003_001_009",
+            "name": "ADGRV"
+        }
+    },
+    {
+        "slug": "004",
+        "name": "Class C (Glutamate)",
+        "parent": {
+            "slug": "000",
+            "name": "Parent family"
+        }
+    },
+    {
+        "slug": "004_001",
+        "name": "Ion receptors",
+        "parent": {
+            "slug": "004",
+            "name": "Class C (Glutamate)"
+        }
+    },
+    {
+        "slug": "004_001_001",
+        "name": "Calcium-sensing receptors",
+        "parent": {
+            "slug": "004_001",
+            "name": "Ion receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                28
+            ],
+            "2": [
+                37,
+                60
+            ],
+            "3": [
+                63,
+                97
+            ],
+            "4": [
+                110,
+                137
+            ],
+            "5": [
+                160,
+                188
+            ],
+            "6": [
+                192,
+                219
+            ],
+            "7": [
+                220,
+                254
+            ]
+        }
+    },
+    {
+        "slug": "004_001_001_001",
+        "name": "CaS receptor",
+        "parent": {
+            "slug": "004_001_001",
+            "name": "Calcium-sensing receptors"
+        }
+    },
+    {
+        "slug": "004_002",
+        "name": "Amino acid receptors",
+        "parent": {
+            "slug": "004",
+            "name": "Class C (Glutamate)"
+        }
+    },
+    {
+        "slug": "004_002_001",
+        "name": "GABA<sub>B<-sub> receptors",
+        "parent": {
+            "slug": "004_002",
+            "name": "Amino acid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                28
+            ],
+            "2": [
+                37,
+                61
+            ],
+            "3": [
+                67,
+                103
+            ],
+            "4": [
+                112,
+                139
+            ],
+            "5": [
+                171,
+                200
+            ],
+            "6": [
+                206,
+                232
+            ],
+            "7": [
+                234,
+                267
+            ]
+        }
+    },
+    {
+        "slug": "004_002_001_001",
+        "name": "GABA<sub>B</sub> receptor",
+        "parent": {
+            "slug": "004_002_001",
+            "name": "GABA<sub>B</sub> receptors"
+        }
+    },
+    {
+        "slug": "004_002_001_002",
+        "name": "GABA<sub>B1</sub>",
+        "parent": {
+            "slug": "004_002_001",
+            "name": "GABA<sub>B</sub> receptors"
+        }
+    },
+    {
+        "slug": "004_002_001_003",
+        "name": "GABA<sub>B2</sub>",
+        "parent": {
+            "slug": "004_002_001",
+            "name": "GABA<sub>B</sub> receptors"
+        }
+    },
+    {
+        "slug": "004_002_002",
+        "name": "Metabotropic glutamate receptors",
+        "parent": {
+            "slug": "004_002",
+            "name": "Amino acid receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                26
+            ],
+            "2": [
+                35,
+                59
+            ],
+            "3": [
+                61,
+                97
+            ],
+            "4": [
+                108,
+                135
+            ],
+            "5": [
+                162,
+                188
+            ],
+            "6": [
+                194,
+                220
+            ],
+            "7": [
+                222,
+                254
+            ]
+        }
+    },
+    {
+        "slug": "004_002_002_001",
+        "name": "mGlu<sub>1</sub> receptor",
+        "parent": {
+            "slug": "004_002_002",
+            "name": "Metabotropic glutamate receptors"
+        }
+    },
+    {
+        "slug": "004_002_002_002",
+        "name": "mGlu<sub>2</sub> receptor",
+        "parent": {
+            "slug": "004_002_002",
+            "name": "Metabotropic glutamate receptors"
+        }
+    },
+    {
+        "slug": "004_002_002_003",
+        "name": "mGlu<sub>3</sub> receptor",
+        "parent": {
+            "slug": "004_002_002",
+            "name": "Metabotropic glutamate receptors"
+        }
+    },
+    {
+        "slug": "004_002_002_004",
+        "name": "mGlu<sub>4</sub> receptor",
+        "parent": {
+            "slug": "004_002_002",
+            "name": "Metabotropic glutamate receptors"
+        }
+    },
+    {
+        "slug": "004_002_002_005",
+        "name": "mGlu<sub>5</sub> receptor",
+        "parent": {
+            "slug": "004_002_002",
+            "name": "Metabotropic glutamate receptors"
+        }
+    },
+    {
+        "slug": "004_002_002_006",
+        "name": "mGlu<sub>6</sub> receptor",
+        "parent": {
+            "slug": "004_002_002",
+            "name": "Metabotropic glutamate receptors"
+        }
+    },
+    {
+        "slug": "004_002_002_007",
+        "name": "mGlu<sub>7</sub> receptor",
+        "parent": {
+            "slug": "004_002_002",
+            "name": "Metabotropic glutamate receptors"
+        }
+    },
+    {
+        "slug": "004_002_002_008",
+        "name": "mGlu<sub>8</sub> receptor",
+        "parent": {
+            "slug": "004_002_002",
+            "name": "Metabotropic glutamate receptors"
+        }
+    },
+    {
+        "slug": "004_003",
+        "name": "Sensory receptors",
+        "parent": {
+            "slug": "004",
+            "name": "Class C (Glutamate)"
+        }
+    },
+    {
+        "slug": "004_003_001",
+        "name": "Taste 1 receptors",
+        "parent": {
+            "slug": "004_003",
+            "name": "Sensory receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                28
+            ],
+            "2": [
+                37,
+                60
+            ],
+            "3": [
+                63,
+                97
+            ],
+            "4": [
+                111,
+                138
+            ],
+            "5": [
+                162,
+                190
+            ],
+            "6": [
+                194,
+                221
+            ],
+            "7": [
+                222,
+                256
+            ]
+        }
+    },
+    {
+        "slug": "004_003_001_001",
+        "name": "<i>TAS1R1</i>",
+        "parent": {
+            "slug": "004_003_001",
+            "name": "Taste 1 receptors"
+        }
+    },
+    {
+        "slug": "004_003_001_002",
+        "name": "<i>TAS1R2</i>",
+        "parent": {
+            "slug": "004_003_001",
+            "name": "Taste 1 receptors"
+        }
+    },
+    {
+        "slug": "004_003_001_003",
+        "name": "<i>TAS1R3</i>",
+        "parent": {
+            "slug": "004_003_001",
+            "name": "Taste 1 receptors"
+        }
+    },
+    {
+        "slug": "004_004",
+        "name": "Orphan receptors",
+        "parent": {
+            "slug": "004",
+            "name": "Class C (Glutamate)"
+        }
+    },
+    {
+        "slug": "004_004_001",
+        "name": "Class C Orphans",
+        "parent": {
+            "slug": "004_004",
+            "name": "Orphan receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                26
+            ],
+            "2": [
+                33,
+                56
+            ],
+            "3": [
+                59,
+                93
+            ],
+            "4": [
+                99,
+                126
+            ],
+            "5": [
+                142,
+                167
+            ],
+            "6": [
+                174,
+                200
+            ],
+            "7": [
+                202,
+                235
+            ]
+        }
+    },
+    {
+        "slug": "004_004_001_001",
+        "name": "<i>GPR156</i>",
+        "parent": {
+            "slug": "004_004_001",
+            "name": "Class C Orphans"
+        }
+    },
+    {
+        "slug": "004_004_001_002",
+        "name": "<i>GPR158</i>",
+        "parent": {
+            "slug": "004_004_001",
+            "name": "Class C Orphans"
+        }
+    },
+    {
+        "slug": "004_004_001_003",
+        "name": "<i>GPR179</i>",
+        "parent": {
+            "slug": "004_004_001",
+            "name": "Class C Orphans"
+        }
+    },
+    {
+        "slug": "004_004_001_004",
+        "name": "<i>GPRC5A</i>",
+        "parent": {
+            "slug": "004_004_001",
+            "name": "Class C Orphans"
+        }
+    },
+    {
+        "slug": "004_004_001_005",
+        "name": "<i>GPRC5B</i>",
+        "parent": {
+            "slug": "004_004_001",
+            "name": "Class C Orphans"
+        }
+    },
+    {
+        "slug": "004_004_001_006",
+        "name": "<i>GPRC5C</i>",
+        "parent": {
+            "slug": "004_004_001",
+            "name": "Class C Orphans"
+        }
+    },
+    {
+        "slug": "004_004_001_007",
+        "name": "<i>GPRC5D</i>",
+        "parent": {
+            "slug": "004_004_001",
+            "name": "Class C Orphans"
+        }
+    },
+    {
+        "slug": "004_004_001_008",
+        "name": "GPRC6 receptor",
+        "parent": {
+            "slug": "004_004_001",
+            "name": "Class C Orphans"
+        }
+    },
+    {
+        "slug": "005",
+        "name": "Class D1 (Ste2-like fungal pheromone)",
+        "parent": {
+            "slug": "000",
+            "name": "Parent family"
+        }
+    },
+    {
+        "slug": "005_001",
+        "name": "Ste2-like receptors",
+        "parent": {
+            "slug": "005",
+            "name": "Class D1 (Ste2-like fungal pheromone)"
+        }
+    },
+    {
+        "slug": "005_001_001",
+        "name": "STE2",
+        "parent": {
+            "slug": "005_001",
+            "name": "Ste2-like receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                36
+            ],
+            "2": [
+                41,
+                68
+            ],
+            "3": [
+                68,
+                103
+            ],
+            "4": [
+                108,
+                143
+            ],
+            "5": [
+                149,
+                185
+            ],
+            "6": [
+                190,
+                217
+            ],
+            "7": [
+                224,
+                255
+            ]
+        }
+    },
+    {
+        "slug": "006",
+        "name": "Class F (Frizzled)",
+        "parent": {
+            "slug": "000",
+            "name": "Parent family"
+        }
+    },
+    {
+        "slug": "006_001",
+        "name": "Protein receptors",
+        "parent": {
+            "slug": "006",
+            "name": "Class F (Frizzled)"
+        }
+    },
+    {
+        "slug": "006_001_001",
+        "name": "Frizzled",
+        "parent": {
+            "slug": "006_001",
+            "name": "Protein receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                33
+            ],
+            "2": [
+                38,
+                64
+            ],
+            "3": [
+                87,
+                119
+            ],
+            "4": [
+                122,
+                153
+            ],
+            "5": [
+                169,
+                207
+            ],
+            "6": [
+                211,
+                257
+            ],
+            "7": [
+                270,
+                294
+            ]
+        }
+    },
+    {
+        "slug": "006_001_001_001",
+        "name": "FZD<sub>1</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_002",
+        "name": "FZD<sub>2</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_003",
+        "name": "FZD<sub>3</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_004",
+        "name": "FZD<sub>4</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_005",
+        "name": "FZD<sub>5</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_006",
+        "name": "FZD<sub>6</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_007",
+        "name": "FZD<sub>7</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_008",
+        "name": "FZD<sub>8</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_009",
+        "name": "FZD<sub>9</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_010",
+        "name": "FZD<sub>10</sub>",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "006_001_001_011",
+        "name": "SMO",
+        "parent": {
+            "slug": "006_001_001",
+            "name": "Frizzled"
+        }
+    },
+    {
+        "slug": "007",
+        "name": "Class T (Taste 2)",
+        "parent": {
+            "slug": "000",
+            "name": "Parent family"
+        }
+    },
+    {
+        "slug": "007_001",
+        "name": "Sensory receptors",
+        "parent": {
+            "slug": "007",
+            "name": "Class T (Taste 2)"
+        }
+    },
+    {
+        "slug": "007_001_001",
+        "name": "Taste 2 receptors",
+        "parent": {
+            "slug": "007_001",
+            "name": "Sensory receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                38
+            ],
+            "2": [
+                40,
+                71
+            ],
+            "3": [
+                75,
+                110
+            ],
+            "4": [
+                122,
+                153
+            ],
+            "5": [
+                171,
+                212
+            ],
+            "6": [
+                216,
+                253
+            ],
+            "7": [
+                255,
+                280
+            ]
+        }
+    },
+    {
+        "slug": "007_001_001_001",
+        "name": "<i>TAS2R1</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_002",
+        "name": "<i>TAS2R3</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_003",
+        "name": "<i>TAS2R4</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_004",
+        "name": "<i>TAS2R5</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_005",
+        "name": "<i>TAS2R7</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_006",
+        "name": "<i>TAS2R8</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_007",
+        "name": "<i>TAS2R9</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_008",
+        "name": "<i>TAS2R10</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_009",
+        "name": "<i>TAS2R13</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_010",
+        "name": "<i>TAS2R14</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_011",
+        "name": "<i>TAS2R16</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_012",
+        "name": "<i>TAS2R19</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_013",
+        "name": "<i>TAS2R20</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_014",
+        "name": "<i>TAS2R30</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_015",
+        "name": "<i>TAS2R31</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_016",
+        "name": "<i>TAS2R38</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_017",
+        "name": "<i>TAS2R39</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_018",
+        "name": "<i>TAS2R40</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_019",
+        "name": "<i>TAS2R41</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_020",
+        "name": "<i>TAS2R42</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_021",
+        "name": "<i>TAS2R43</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_022",
+        "name": "<i>TAS2R45</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_023",
+        "name": "<i>TAS2R46</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_024",
+        "name": "<i>TAS2R50</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "007_001_001_025",
+        "name": "<i>TAS2R60</i>",
+        "parent": {
+            "slug": "007_001_001",
+            "name": "Taste 2 receptors"
+        }
+    },
+    {
+        "slug": "008",
+        "name": "Other GPCRs",
+        "parent": {
+            "slug": "000",
+            "name": "Parent family"
+        }
+    },
+    {
+        "slug": "008_001",
+        "name": "Orphan receptors",
+        "parent": {
+            "slug": "008",
+            "name": "Other GPCRs"
+        }
+    },
+    {
+        "slug": "008_001_001",
+        "name": "Other GPCR orphans",
+        "parent": {
+            "slug": "008_001",
+            "name": "Orphan receptors"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                40
+            ],
+            "2": [
+                46,
+                71
+            ],
+            "3": [
+                77,
+                111
+            ],
+            "4": [
+                125,
+                150
+            ],
+            "5": [
+                153,
+                176
+            ],
+            "6": [
+                210,
+                235
+            ],
+            "7": [
+                255,
+                277
+            ]
+        }
+    },
+    {
+        "slug": "008_001_001_001",
+        "name": "<i>GPR107</i>",
+        "parent": {
+            "slug": "008_001_001",
+            "name": "Other GPCR orphans"
+        }
+    },
+    {
+        "slug": "008_001_001_002",
+        "name": "<i>GPR137</i>",
+        "parent": {
+            "slug": "008_001_001",
+            "name": "Other GPCR orphans"
+        }
+    },
+    {
+        "slug": "008_001_001_003",
+        "name": "<i>TPRA1</i>",
+        "parent": {
+            "slug": "008_001_001",
+            "name": "Other GPCR orphans"
+        }
+    },
+    {
+        "slug": "008_001_001_004",
+        "name": "<i>GPR143</i>",
+        "parent": {
+            "slug": "008_001_001",
+            "name": "Other GPCR orphans"
+        }
+    },
+    {
+        "slug": "008_001_001_005",
+        "name": "<i>GPR157</i>",
+        "parent": {
+            "slug": "008_001_001",
+            "name": "Other GPCR orphans"
+        }
+    },
+    {
+        "slug": "001_012",
+        "name": "Other",
+        "parent": {
+            "slug": "001",
+            "name": "Class A (Rhodopsin)"
+        }
+    },
+    {
+        "slug": "001_012_001",
+        "name": "Unclassified",
+        "parent": {
+            "slug": "001_012",
+            "name": "Other"
+        },
+        "TM_index": {
+            "1": [
+                0,
+                37
+            ],
+            "2": [
+                41,
+                71
+            ],
+            "3": [
+                75,
+                111
+            ],
+            "4": [
+                115,
+                140
+            ],
+            "5": [
+                158,
+                194
+            ],
+            "6": [
+                197,
+                233
+            ],
+            "7": [
+                237,
+                270
+            ]
+        }
+    },
+    {
+        "slug": "001_012_001_001",
+        "name": "US28",
+        "parent": {
+            "slug": "001_012_001",
+            "name": "Unclassified"
+        }
+    },
+    {
+        "slug": "001_009_001_008",
+        "name": "Other",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_009",
+        "name": "TMTOPS2",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_010",
+        "name": "Parapinopsin",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_011",
+        "name": "CI-OPSIN1",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_012",
+        "name": "OPN7B",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_013",
+        "name": "TMT",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_012_001_002",
+        "name": "BILF1",
+        "parent": {
+            "slug": "001_012_001",
+            "name": "Unclassified"
+        }
+    },
+    {
+        "slug": "001_009_001_014",
+        "name": "AMPHIOP1",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_015",
+        "name": "OPN5-like",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "001_009_001_016",
+        "name": "AND_008710",
+        "parent": {
+            "slug": "001_009_001",
+            "name": "Opsins"
+        }
+    },
+    {
+        "slug": "100",
+        "name": "G-Protein",
+        "parent": {
+            "slug": "000",
+            "name": "Parent family"
+        }
+    },
+    {
+        "slug": "100_001",
+        "name": "Alpha",
+        "parent": {
+            "slug": "100",
+            "name": "G-Protein"
+        }
+    },
+    {
+        "slug": "100_001_001",
+        "name": "Gs",
+        "parent": {
+            "slug": "100_001",
+            "name": "Alpha"
+        }
+    },
+    {
+        "slug": "100_001_001_001",
+        "name": "GNAS2",
+        "parent": {
+            "slug": "100_001_001",
+            "name": "Gs"
+        }
+    },
+    {
+        "slug": "100_001_001_002",
+        "name": "GNAL",
+        "parent": {
+            "slug": "100_001_001",
+            "name": "Gs"
+        }
+    },
+    {
+        "slug": "100_001_002",
+        "name": "Gi/o",
+        "parent": {
+            "slug": "100_001",
+            "name": "Alpha"
+        }
+    },
+    {
+        "slug": "100_001_002_001",
+        "name": "GNAI1",
+        "parent": {
+            "slug": "100_001_002",
+            "name": "Gi/o"
+        }
+    },
+    {
+        "slug": "100_001_002_002",
+        "name": "GNAI2",
+        "parent": {
+            "slug": "100_001_002",
+            "name": "Gi/o"
+        }
+    },
+    {
+        "slug": "100_001_002_003",
+        "name": "GNAI3",
+        "parent": {
+            "slug": "100_001_002",
+            "name": "Gi/o"
+        }
+    },
+    {
+        "slug": "100_001_002_004",
+        "name": "GNAT1",
+        "parent": {
+            "slug": "100_001_002",
+            "name": "Gi/o"
+        }
+    },
+    {
+        "slug": "100_001_002_005",
+        "name": "GNAT2",
+        "parent": {
+            "slug": "100_001_002",
+            "name": "Gi/o"
+        }
+    },
+    {
+        "slug": "100_001_002_006",
+        "name": "GNAT3",
+        "parent": {
+            "slug": "100_001_002",
+            "name": "Gi/o"
+        }
+    },
+    {
+        "slug": "100_001_002_007",
+        "name": "GNAZ",
+        "parent": {
+            "slug": "100_001_002",
+            "name": "Gi/o"
+        }
+    },
+    {
+        "slug": "100_001_002_008",
+        "name": "GNAO",
+        "parent": {
+            "slug": "100_001_002",
+            "name": "Gi/o"
+        }
+    },
+    {
+        "slug": "100_001_003",
+        "name": "Gq/11",
+        "parent": {
+            "slug": "100_001",
+            "name": "Alpha"
+        }
+    },
+    {
+        "slug": "100_001_003_001",
+        "name": "GNAQ",
+        "parent": {
+            "slug": "100_001_003",
+            "name": "Gq/11"
+        }
+    },
+    {
+        "slug": "100_001_003_002",
+        "name": "GNA11",
+        "parent": {
+            "slug": "100_001_003",
+            "name": "Gq/11"
+        }
+    },
+    {
+        "slug": "100_001_003_003",
+        "name": "GNA14",
+        "parent": {
+            "slug": "100_001_003",
+            "name": "Gq/11"
+        }
+    },
+    {
+        "slug": "100_001_003_004",
+        "name": "GNA15",
+        "parent": {
+            "slug": "100_001_003",
+            "name": "Gq/11"
+        }
+    },
+    {
+        "slug": "100_001_004",
+        "name": "G12/13",
+        "parent": {
+            "slug": "100_001",
+            "name": "Alpha"
+        }
+    },
+    {
+        "slug": "100_001_004_001",
+        "name": "GNA12",
+        "parent": {
+            "slug": "100_001_004",
+            "name": "G12/13"
+        }
+    },
+    {
+        "slug": "100_001_004_002",
+        "name": "GNA13",
+        "parent": {
+            "slug": "100_001_004",
+            "name": "G12/13"
+        }
+    },
+    {
+        "slug": "100_001_005",
+        "name": "GPa1 family",
+        "parent": {
+            "slug": "100_001",
+            "name": "Alpha"
+        }
+    },
+    {
+        "slug": "100_001_005_001",
+        "name": "GPa1",
+        "parent": {
+            "slug": "100_001_005",
+            "name": "GPa1 family"
+        }
+    },
+    {
+        "slug": "100_002",
+        "name": "Beta",
+        "parent": {
+            "slug": "100",
+            "name": "G-Protein"
+        }
+    },
+    {
+        "slug": "100_002_001",
+        "name": "G(I)/G(S)/G(T)",
+        "parent": {
+            "slug": "100_002",
+            "name": "Beta"
+        }
+    },
+    {
+        "slug": "100_003",
+        "name": "Gamma",
+        "parent": {
+            "slug": "100",
+            "name": "G-Protein"
+        }
+    },
+    {
+        "slug": "100_003_001",
+        "name": "G(I)/G(S)/G(O)",
+        "parent": {
+            "slug": "100_003",
+            "name": "Gamma"
+        }
+    },
+    {
+        "slug": "200",
+        "name": "Arrestins",
+        "parent": null
+    },
+    {
+        "slug": "200_000",
+        "name": "Arrestin",
+        "parent": {
+            "slug": "200",
+            "name": "Arrestins"
+        }
+    },
+    {
+        "slug": "200_000_001",
+        "name": "Beta",
+        "parent": {
+            "slug": "200_000",
+            "name": "Arrestin"
+        }
+    },
+    {
+        "slug": "200_000_001_001",
+        "name": "ARRB1",
+        "parent": {
+            "slug": "200_000_001",
+            "name": "Beta"
+        }
+    },
+    {
+        "slug": "200_000_001_002",
+        "name": "ARRB2",
+        "parent": {
+            "slug": "200_000_001",
+            "name": "Beta"
+        }
+    },
+    {
+        "slug": "200_000_002",
+        "name": "Visual",
+        "parent": {
+            "slug": "200_000",
+            "name": "Arrestin"
+        }
+    },
+    {
+        "slug": "200_000_002_001",
+        "name": "ARRC",
+        "parent": {
+            "slug": "200_000_002",
+            "name": "Visual"
+        }
+    },
+    {
+        "slug": "200_000_002_002",
+        "name": "ARRS",
+        "parent": {
+            "slug": "200_000_002",
+            "name": "Visual"
+        }
+    }
+]

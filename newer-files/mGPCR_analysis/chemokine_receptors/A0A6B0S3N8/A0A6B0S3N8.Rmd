@@ -1,0 +1,249 @@
+---
+title: "multi-Chemokine Receptor Analysis"
+author: "Kilicali Isildayancan"
+date: "2023-04-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+homedir <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/chemokine_receptors/A0A6B0S3N8/"
+```
+
+# A0A6B0S3N8
+
+## First Domain
+
+
+Sequence [66-360]: VGQIEAQLLPPLYSLVFIFGFVGNLLVVLILINCKKLKSMTDIYLLNLAISDLLFLLTMPFWAHYAADQWVFGNVMCKFFTGLYHIGYFGGIFFIILLTIDRYLAIVHAVFALKARTVTFGVVTSGVTWVVAVFASLPGIIFIKSLEEHSGYACAPYFPLGWKNFHTIMRSILGLVLPLLVMIVCYSGIIKTLLRCRNEKKKHKAVRLIFVIMIVYFLFWAPYNIVLLLSTFQEFFGLSNCKSSSQLDQAMQVTETLGLTHCCINPIIYAFVGEKFRRYLSTFFRKHIAKHLCKQ
+
+### Homologies
+
+Psi-blast search against Swiss-Prot:
+
+```{r, echo=FALSE}
+first_csvDir <- paste0(homedir,"first_psiblast.csv")
+first_domain_homologs <- read.csv(first_csvDir)
+colnames(first_domain_homologs) <- c("Receptor Name", "Organism", "Max Score", "Total Score", "Query Cover", "E value", "Percent Identity", "Accession Length", "Accession")
+
+for (rowi in 1:nrow(first_domain_homologs)) {
+  fullName <- first_domain_homologs[rowi,1]
+  short_name <- strsplit(strsplit(first_domain_homologs$`Receptor Name`[rowi], ';')[[1]][1],"Full=")[[1]][2]
+  first_domain_homologs[rowi,1] <- short_name
+}
+
+first_five <- first_domain_homologs[1:5,c(1,2,7,5,6)]
+first_fifty <- first_domain_homologs[1:50,c(1,7)]
+```
+
+#### First 5 Full Homologues
+
+
+```{r fiveH1, echo=FALSE}
+(first_five)
+```
+
+#### First 50 Unique Homologues
+
+```{r fiftyUnique1, echo=FALSE}
+(first_fifty)
+```
+
+The similarity of the 50th match: 61% identity.
+
+### Structure
+
+### Motifs
+
+```{r, echo=FALSE, fig.align='center'}
+motifs_legends <- "/home/kilicali/multi-domain_gpcr/mGPCR_analysis/motif_legends.png"
+knitr::include_graphics(motifs_legends)
+```
+
+
+```{r, fig.align='center', echo=FALSE}
+#ray traced, width: 11cm, height: 10cm
+motifs1 <- paste0(homedir,"first_domain_motifs-colored.png")
+knitr::include_graphics(motifs1)
+```
+
+
+### Conservation
+
+Conservation of the protein from SwissProt with highest homology to the first domain:
+C-C chemokine receptor type 2, UniProt ID: O18793
+
+#### Conservation in the homolog
+
+```{r, echo=FALSE, fig.align='center'}
+cons_first <- paste0(homedir,"conservation_first-domain.png")
+knitr::include_graphics(cons_first)
+```
+
+#### Pairwise alignment with homolog
+
+Looking at the conserved sites predicted by ConSurf, and cross-referencing to our first domain sequence:
+
+```{r, echo=FALSE, fig.align='center'}
+pairwise_cons <-paste0(homedir,"pairwise_homolog_first-domain.png")
+knitr::include_graphics(pairwise_cons)
+```
+
+#### Binding ligands of homolog
+
+7XA3 is with natural ligand (CCL2),
+6GPX is a non-natural ligand (MK-0812),
+
+#### Ligand superimposition of domain and homolog with ligand
+
+RMSD with the ligand-bound receptor: 1.391 \AA
+
+```{r, echo=FALSE, fig.align='center'}
+ligand_superimp <-paste0(homedir,"first_domain_ligand-superimposed.png")
+knitr::include_graphics(ligand_superimp)
+```
+
+Of note, the extracellular side has some different amino acid residues, even though the pairwise alignment is almost identical. This might be important in deciding if the binding ligand is in fact CCL2.
+
+
+#### Structural sequence alignment between binding pockets
+
+This alignment is between the native ligand receptor, and the second domain of the AF predicted structure of our multi-domain GPCR.
+
+RMSD: 1.848 \AA
+
+
+#### Superimposition with Consurf'd best homologue
+
+RMSD: 0.556
+
+```{r, fig.align='center', echo=FALSE}
+#ray traced, width: 11cm, height: 10cm
+motifs1 <- paste0(homedir,"consurf_superimposed_first-domain.png")
+knitr::include_graphics(motifs1)
+```
+
+\* Both are AlphaFold predicted structures
+
+## Second domain
+
+Sequence [412-709]: LNVRQIAARLLPPLYSLVFIFGFVGNMLVVLILINCKKLKSMTDIYLLNLAISDLLFIITIPFWAHYAADQWVFGNTTCQLFTGFYFIGYFGGIFFIILLTIDRYLAIVHAVFALKARTVTFGAATSVVTWVVAVFASLPGIIFTKSQKEGSRHTCSPHFPSSQYHFWKNFQTLKIVILGLVLPLLVMIVCYSGIIKTLLRCRNEKKKHKAVRLIFVIMIVYFLFWAPYNIVLLLSTFQEFFGLNNCSGSNRLDQAMQVTETLGMTHCCINPIIYAFVGEKFRNYLLRFFRKYFASRF
+
+### Homologies
+
+Psi-blast search against Swiss-Prot:
+
+```{r, echo=FALSE}
+second_csvDir <-paste0(homedir, "second_psiblast.csv")
+second_domain_homologs <- read.csv(second_csvDir)
+colnames(second_domain_homologs) <- c("Receptor Name", "Organism", "Max Score", "Total Score", "Query Cover", "E value", "Percent Identity", "Accession Length", "Accession")
+
+for (rowi in 1:nrow(second_domain_homologs)) {
+  fullName <- second_domain_homologs[rowi,1]
+  short_name <- strsplit(strsplit(second_domain_homologs$`Receptor Name`[rowi], ';')[[1]][1],"Full=")[[1]][2]
+  second_domain_homologs[rowi,1] <- short_name
+}
+
+first_five <- second_domain_homologs[1:5,c(1,2,7,5,6)]
+first_fifty <- second_domain_homologs[1:50,c(1,7)]
+```
+
+
+#### First 5 Full Homologues
+
+
+```{r fiveH2, echo=FALSE}
+(first_five)
+```
+
+
+
+#### First 50 Unique Homologues
+
+```{r fiftyUnique2, echo=FALSE}
+(first_fifty)
+```
+
+The similarity of the 50th match: 61% identity.
+
+### Structure
+
+### Motifs
+
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics(motifs_legends)
+```
+
+```{r, fig.align='center', echo=FALSE}
+#ray traced, width: 11cm, height: 10cm
+motifs2 <- paste0(homedir,"second_domain_motifs-colored.png")
+knitr::include_graphics(motifs2)
+```
+
+### Conservation
+
+Conservation of the protein from SwissProt with highest homology to the second domain:
+C-C chemokine receptor type 5, UniProt ID: Q2HJ17
+
+#### Conservation with homolog
+
+```{r, echo=FALSE, fig.align='center'}
+cons_first <- paste0(homedir,"conservation_second-domain.png")
+knitr::include_graphics(cons_first)
+```
+
+#### Pairwise alignment with homolog
+
+```{r, echo=FALSE, fig.align='center'}
+pairwise_cons <- paste0(homedir,"pairwise_homolog_second-domain.png")
+knitr::include_graphics(pairwise_cons)
+```
+
+
+#### Binding ligands of homolog
+
+5UIW is with natural ligand (CCR5),
+6AKX, 6AKY is a non-natural ligand (Compound 21, 34),
+
+#### Ligand superimposition of domain and homolog with ligand
+
+RMSD with the ligand-bound receptor: 0.506 \AA
+
+```{r, echo=FALSE, fig.align='center'}
+ligand_superimp2 <-paste0(homedir,"second_domain_ligand-superimposed.png")
+knitr::include_graphics(ligand_superimp2)
+```
+
+Of note, the extracellular side has some different amino acid residues, even though the pairwise alignment is almost identical. This might be important in deciding if the binding ligand is in fact CCL2.
+
+
+### Structural sequence alignment between binding pockets
+
+This alignment is between the native ligand receptor, and the second domain of the AF predicted structure of our multi-domain GPCR.
+
+RMSD: 0.610 \AA
+
+
+#### Superimposition with Consurf'd best homologue
+
+RMSD: 0.317
+
+```{r, fig.align='center', echo=FALSE}
+consurf_superimpo2 <- paste0(homedir,"consurf_superimposed_second-domain.png")
+knitr::include_graphics(consurf_superimpo2)
+```
+
+## Relative domains
+
+### Pairwise alignment
+
+```{r, fig.align='center', echo=FALSE}
+pwAli <- paste0(homedir,"pairwise_alignment_needle.png")
+knitr::include_graphics(pwAli)
+```
+
+## Genomic sequence
+
+Does not exist in a genome database viewer.
+

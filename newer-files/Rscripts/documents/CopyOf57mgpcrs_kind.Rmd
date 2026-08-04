@@ -1,0 +1,120 @@
+---
+title: "Taxonomical Analysis of 57 multi-domain GPCRs"
+author: "Kilicali Isildayancan"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  pdf_document:
+    extra_dependencies: ["fancyhdr", "xcolor"]
+
+#bibliography: "" #pathway to .bib
+---
+
+
+```{r setup, include=FALSE}
+library('kableExtra')
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+options(knitr.kable.NA = "")
+```
+
+\pagestyle{fancy}
+\widowpenalties 1 10000
+\raggedbottom
+
+# Results
+
+```{r mGPCRs_original}
+coln <- c("Accession","Genus","Close Homologues")
+#######
+
+upkb_accessions <- c('A0A5J5DEG3', 'A0A7J5XRY7', 'A0A5N4D1C3', 'A0A1A6I049', 'A0A1A6GQ15', 'L5MBD6', 'L9KKD4', 'A0A3L7HS58', 'L9LEK1', 'A0A5E4D615', 'A0A3L7HH88', 'A0A485NDU3', 'A0A091CTM0', 'L9KTW2', 'A0A3L7HS10', 'L5K5K3', 'S9XRQ8', 'A0A3L7GMS1', 'A0A3L7HEN0', 'A0A485N3G9', 'S7N9M8', 'A0A3L7HF35', 'A0A3L7HF00', 'A0A3L7HFZ0', 'A0A5E4CY53', 'A0A5E4CGQ7', 'S9W9G8', 'A0A3L7HXS2', 'A0A3L7HXQ6','A0A402FIC8', 'A0A3L7HXX2', 'B3RF99', 'A0A7J7ESG3', 'W5NQ75', 'A0A3L7GLK1', 'S7QBY2', 'A0A3L7I3J5', 'A0A087X729', 'A0A061I414', 'A0A3L7HFH9', 'A0A061IA73')
+upkb_taxonomy <- c('Etheostoma','Dissostichus','Camelus','Neotoma','Neotoma','Myotis','Tupaia','Cricetulus','Tupaia','Marmota','Cricetulus','Lynx','Fukomys','Tupaia','Cricetulus','Pteropus','Camelus','Cricetulus','Cricetulus','Lynx','Myotis','Cricetulus','Cricetulus','Cricetulus','Marmota','Marmota','Camelus','Cricetulus','Cricetulus','Cricetulus','Cricetulus','Sorex','Diceros','Ovis','Cricetulus','Myotis','Cricetulus','Poecilia', 'Cricetulus','Cricetulus','Cricetulus')
+upkb_close_homologues <- c('Dicentrarchus(1), Notolabrus(1), Anarrhichthys(1), Plectropomus(1)','Anarrchichthys(1), Plectropomus(1), Etheostoma(1)','Neotoma(1)','Galemys(1), Myotis(1), Tupaia(1)','No mGPCR homologues','Lynx(1), Tupaia(1)','Lynx(1), Myotis(1)','Invalid*','No mGPCR homologues','No mGPCR homologues','Invalid*','No mGPCR homologues','Lynx(1)','Lynx(1)','Invalid*','No mGPCR homologues','No mGPCR homologues','Invalid*','Invalid*','Ceratotherium(1), Myotis(1), Nannospalax(1), Ursus(1), Camelus(2)','Lynx(1), Camelus(1), Manis(1)','Invalid*','Invalid*','Invalid*','Sciurus(1)','No mGPCR homologues','Marmota, Galemys, Microtus','Invalid*','Invalid*','Invalid*','Invalid*','Galemys(1)','Capra(1)','Capra(1), Cervus(1), Sorex(1)','Invalid*','No mGPCR homologues','Invalid*','No mGPCR homologues','No mGPCR homologues', 'Invalid*', 'No mGPCR homologues')
+
+upkbTable <- data.frame(cbind(upkb_accessions, upkb_taxonomy, upkb_close_homologues))
+colnames(upkbTable) <- coln
+#######################################################
+
+upi_accessions <- c('UPI00149064B7', 'UPI0010A3F807', 'UPI0015E1EB90', 'UPI000C6E386B', 'UPI0018ACCBAC', 'UPI00117FEB6D', 'UPI00165B9D03', 'UPI0013F2086D', 'UPI00111BD4F7', 'UPI0003316245', 'UPI000649B007', 'UPI000719830D', 'UPI0018901E1C', 'UPI001155D300', 'UPI000FFD56A3', 'UPI00148EA50D')
+upi_taxonomy <- c('Notolabrus','Dendiceps','Morone','Xiphophorus','Kryptolebias','Sphaeramia','Fundulus','Chelonoidis','Nannospalax','Sorex', 'Sorex','Ceratotherim','Talpa','Suricata','Vombatus','Marmota')
+upi_close_homologues <- c('!8 mGPCRs in Moronidae (bony fish)','No mGPCR homologues','!7 mGPCRs in Moronidae (bony fish)','!X. hellerii(1), 6 mGPCRs distributed in Poecillinae','Poecilia (1)','No mGPCR homologues','No mGPCR homologues','No mGPCR homologues','Myotis(1), Ursus(1)','No mGPCR homologues**','No mGPCR homologues**','Myotis(2), Ursus(1), Lynx(1)','No mGPCR homologues','Lynx(1)','No mGPCR homologues','No mGPCR homologues')
+
+upiTable <- data.frame(cbind(upi_accessions, upi_taxonomy, upi_close_homologues))
+colnames(upiTable) <- coln
+```
+
+\renewcommand{\arraystretch}{2}
+```{r mGPCRs_table1}
+knitr::kable(upkbTable, row.names = TRUE, longtable = TRUE)
+```
+
+\newpage
+
+```{r mGPCRs_table2}
+knitr::kable(upiTable, row.names = TRUE)
+```
+\renewcommand{\arraystretch}{1}
+
+\newpage
+
+# Procedure
+
+Each representative sequence of the 57 clusters of multi-GPCRs identified in the original search pipeline were searched against NCBI non-redundant database using protein BLAST. The goal was to identify and analyze the phylogenetic relationship of close homologues to these mGPCRs. The filtering criteria for finding close homologues were as follows: 
+
+\begin{center}
+\begin{math}\displaystyle{SID(x, q) > 70{\%}}
+\end{math}
+\end{center}
+
+\begin{center}
+\begin{math}\displaystyle{(LEN(q) - 30) < LEN(x) < (LEN(q) + 150)}
+\end{math}
+\end{center}
+
+ where,
+ 
+*x*: candidate/matched sequence
+ 
+*q*: query sequence (from the 57)
+
+*SID(a,b)*: sequence identity between a and b
+
+*LEN(a)*: length of sequence a
+\newline
+\newline
+\noindent\fbox{%
+  \parbox{\textwidth}{%
+    \textcolor{red}{Rationale for the criteria}: The lower cutoff of the length was specified in a more strict way than the upper cutoff to ensure that the mGPCR is not cut anywhere to falsely match fragments or single GPCRs. The sequence identity was chosen to be lenient, but nevertheless enable the query to match all of its domains. For example, a sequence identity of 50\% of a di-GPCR to a new candidate/homologue, in the best case scenario, constitutes only a match to one of the two GPCR domains in the query protein. 
+
+  }%
+}
+\newline
+\newline
+
+For candidates that passed the above criteria, the genus of the species of the close homologues were noted as well as the number of occurrences in that genus, as seen in the tables above.
+
+\newpage
+
+# Discussion
+
+In the whole set of 57 mGPCRs, 41 are from UniProtKB and they can be seen in the first table. 15 out of the 41 (36.6%) are invalid which is explained later. 26 of the rest of the proteins do not have close homologues in their genus, or their family. Some of these have no matches to predicted proteins and are standalone in the database. For others, they are matches between distant species. 
+
+### Invalid *Cricetulus* griseus sequences
+
+The "Close homologues" column marked as Invalid* against sequences that match the pattern "A0A3L7____" are sequences from a WGS sequence of Chinese Hamster that match to the same entry in GenBank (RAZU00000000.2.). When they were discovered and placed in the UniProt database, they probably were splicing alternatives to one DNA sequence, but all the versions were removed to be replaced with the master DNA sequence that is the WGS. As these are no longer reliable as mRNA/protein outputs, they are not considered in the analysis.
+
+## UniParc Proteins
+
+The latter table shows the 16 sequences that are under the database UniParc. 9 of these sequences have no mGPCR homologues that pass the criteria, and are standalone proteins in the database. 3 sequences that are marked at the beginning with "!" have at least some close homologues in their family.
+
+### *Xiphophorus*
+
+For the genus *Xiphophorus*, the genomic location and the mRNA products were investigated to potentially support the existence of the found mGPCR. 
+
+As for the location of the protein, all of them were found to be in the $11^{th}$ chromosome of the species (3 species in total) in the genus. As the RNA splicing predictions and exon-inferring of non-model organisms lack to a large extent, it is hard to deduce which parts of the DNA sequence is transcribed, spliced out and translated.
+
+## Genomic analysis
+
+This list of close homologues could maybe be expanded, and potentially more candidates could be found in the genus or the family of these candidates by looking at their genomes and the genomic sequences that make up these proteins, but that would require changing the automatic mRNA deduction of these databases, and I presume this would be hard to do as neither them, or us, know much about the splicing patterns of these organisms. 
+
+
+

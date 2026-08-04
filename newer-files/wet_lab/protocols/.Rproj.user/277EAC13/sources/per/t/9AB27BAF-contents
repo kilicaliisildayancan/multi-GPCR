@@ -1,0 +1,54 @@
+---
+output: stevetemplates::cover_letter
+geometry: margin=1in
+header-includes:
+  - \linespread{1.05}
+
+author: Kilicali Isildayancan
+address: |
+    | Sutlabi sokak, no: 368
+    | Istanbul, Turkiye
+email: "kilic.isildayancan@gmail.com"
+url: False
+phone: +90 531 602 2362
+fontsize: 11pt
+mainfont: cochineal
+monofont: Fira Code
+
+date: "`r format(Sys.time(), '%d %B %Y')`"
+greetings: "Dear Sir or Madam:"
+---
+
+```{r setup, include=F}
+
+place <- "Oribiotech"
+jobtitle <- "Associate Scientist"
+
+
+```
+
+I write to apply to be a candidate for the `r jobtitle` position at `r place`. I think I have the foundational skill set and the practical knowledge necessary to start my career in `r place`.
+
+I have graduated from the University of Toronto, specializing in Cell & Molecular Biology. 
+I have practical research experience in wet and dry labs in molecular biology. 
+I have built up in-depth knowledge of Python, R, and bash/Linux OS. I have worked for over two years with HPCs, and familiar with many aspects of computational biology. I have built connections with Israeli researchers for collaborations and acquiring new and relevant skills in the field.
+I (used to) conduct research on evolution on pairs of topologically conserved genes and their protein products, focusing on GPCR evolution, specifically two chemokine receptors from the human immune system, working simultaneously in three labs, Ben-Tal and Kolodny lab for computational biology, and Peled lab for the wet lab work. Due to current events in Israel, the research has been put on hold.
+
+
+I see this job opportunity as a good starting point for my professional career. I believe while I am adequate in wet lab work, I can also bring computational tools to the table which is a very essential component of any modern biotechnology company.
+I am motivated in the field of research, development, and manufacturing of biopharmaceuticals and biomaterials as I am passionate in the exploration and furthering of these subjects.
+I possess effective communication abilities, both spoken and written, and I take the perfection of communication as a priority because I regard communication as one of the foundational pillars of science. 
+I am a results-oriented person, and a disciplined researcher. 
+I believe I will be an strong asset to `r place` with my productivity and discipline. My expected salary range is £25,000-£35,00. 
+It is important to note that I am applying for this position beforehand, as I have a guranteed work permit from "High Potential Individual Visa" from my University of Toronto Bachelor's studies, but I have not yet started the process.
+
+
+
+Best regards,
+
+```{r Signature, echo=FALSE, out.width='25%'}
+knitr::include_graphics('/home/kilicali/Miscellaneous/Professional_files/e-signature.png')
+# ^ put your signature here as a PNG or something.
+```
+
+Kilicali Isildayancan

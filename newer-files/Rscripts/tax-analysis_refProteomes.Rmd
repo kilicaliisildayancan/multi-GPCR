@@ -1,0 +1,251 @@
+---
+title: "Reference Proteomes Taxonomical Analysis"
+author: "Kilicali Isildayancan"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_document
+---
+
+```{=html}
+<style type="text/css">
+.main-container {
+  max-width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+# Taxonomical Analysis
+
+## First look
+
+```{r startup, echo=FALSE, warning=FALSE, message=FALSE}
+library('ggtree')
+library('ggplot2')
+library('ggimage')
+library('RColorBrewer')
+direcTax <- '/home/kilicali/multi-domain_gpcr/phylo/tax-refprot'
+fileTax <- read.csv(direcTax, sep = '\t')
+taxIds <- as.numeric(fileTax[[1]])
+```
+
+```{r fetchingInfo, warning=FALSE}
+taxDB <- taxize::classification(taxIds, db = 'ncbi')
+```
+
+## High-level taxonomy (Superkingdoms, kingdoms, and phylum)
+
+```{r low_level3s}
+allSKs<-c()
+allKs <- c()
+allPs <- c()
+idPs <- c()
+for (taxo in taxDB) {
+  superkingdom<-taxo$name[taxo$rank=='superkingdom']
+  allSKs <- c(allSKs, superkingdom)
+  kingdom<-taxo$name[taxo$rank=='kingdom']
+  allKs <- c(allKs, kingdom)
+  phylum<-taxo$name[taxo$rank=='phylum']
+  allPs <- c(allPs, phylum)
+  tmpid <- taxo$id[taxo$rank=='phylum']
+  idPs <- unique(c(idPs, tmpid))
+}
+
+idPs <- as.numeric(idPs)
+```
+
+### Superkingdoms
+
+-   There are `r length(unique(allSKs))` superkingdom(s), namely: `r unique(allSKs)`. Eukaryotes represent `r sum(allSKs=='Eukaryota')/length(allSKs)*100` (There are `r sum(allSKs=='Bacteria')` from Bacteria).
+
+### Kingdoms
+
+-   There are `r length(unique(allKs))` kingdoms, namely: `r unique(allKs)`. Here is the distribution:
+
+```{r histKingdoms, fig.align='center', fig.width=15}
+kingdomDF <- as.data.frame(table(allKs))
+# Create the bar plot
+ggplot2::ggplot(kingdomDF, aes(x = allKs, y = Freq, fill = allKs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "Categorical Frequencies", x = "Kingdom", y = "Frequency") +
+  theme(axis.text.x=element_blank())
+```
+
+### Phylum
+
+-   There are `r length (unique(allPs))` phylums, namely: `r unique(allPs)`.
+
+Here is a visual representation of all the phylums present (which covers all the lower-level taxa):
+
+```{r treeP, fig.align='center', fig.width=10, fig.height=12}
+phylumClass<-taxize::classification(idPs,'ncbi')
+phylumTree <- taxize::class2tree(phylumClass)
+ggtree::ggtree(phylumTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+```
+
+Also the histogram distribution:
+
+```{r histPhylum, fig.align='center', fig.width=20}
+
+phylumDF <- as.data.frame(table(allPs))
+# Create the bar plot
+ggplot2::ggplot(phylumDF, aes(x = allPs, y = Freq, fill = allPs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Phylum", x = "Phylum", y = "Frequency") +
+  geom_text(aes(label = allPs),fontface = "bold",nudge_y=4.2,size=5) +
+  theme(axis.text.x=element_blank())
+```
+
+The chordates represent `r sum(allPs=='Chordata')/length(allPs)*100` of all the phylums in the reference proteomes with a total of `r sum(allPs=='Chordata')`.
+
+## Mid-level taxonomy (Order)
+
+We are considering only order here, and looking for the phylum of Chordata in particular.
+
+```{r mid_level}
+allOs <- c()
+phylumDB <- data.frame()
+for (taxo in taxDB) {
+  order<-taxo$name[taxo$rank=='order']
+  allOs <- c(allOs, order)
+}
+```
+
+```{r histOrder}
+orderDF <- as.data.frame(table(allOs))
+split1ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq>30],Freq=orderDF$Freq[orderDF$Freq>30])
+split2ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq<=30 & orderDF$Freq>=10],Freq=orderDF$Freq[orderDF$Freq<=30 & orderDF$Freq>=10])
+split3ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq<=10 & orderDF$Freq>=5],Freq=orderDF$Freq[orderDF$Freq<=10 & orderDF$Freq>=5])
+split4ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq<5],Freq=orderDF$Freq[orderDF$Freq<5])
+```
+
+```{r ordGT30, fig.align='center', fig.width=12}
+# Create the bar plot
+ggplot2::ggplot(split1ord, aes(x = allOs, y = Freq, fill = allOs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Order", x = "Order", y = "Frequency") +
+  theme_minimal(base_size = 15)+
+  theme(axis.text.x=element_text(size=12,face='bold'))
+```
+
+```{r ordBTW10and30, fig.align='center', fig.width=20}
+# Create the bar plot
+ggplot2::ggplot(split2ord, aes(x = allOs, y = Freq, fill = allOs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Order", x = "Order", y = "Frequency") +
+  geom_text(aes(label=allOs),nudge_y=.3, size=6)+
+  theme_minimal() +
+  theme(axis.text.x=element_blank())
+```
+
+```{r ordsplit3, fig.align='center', fig.width=25}
+# Create the bar plot
+ggplot2::ggplot(split3ord, aes(x = allOs, y = Freq, fill = allOs)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Order", x = "Order", y = "Frequency") +
+  geom_text(aes(label=allOs),nudge_y=.1, size=6, check_overlap=TRUE)+
+  theme_minimal() +
+  theme(axis.text.x=element_blank())
+```
+
+## Low-level taxonomy (Family and Species)
+
+```{r lo_level}
+allFams <- c()
+idFs <- c()
+for (taxo in taxDB) {
+  family<-taxo$name[taxo$rank=='family']
+  allFams <- c(allFams, family)
+  if ('Cricetidae' %in% taxo$name) {
+    tmpid <- taxo$id[taxo$rank=="species"]
+    idFs <- unique(c(idFs, tmpid))
+  }
+  
+}
+
+idFs <- as.numeric(idFs)
+```
+
+```{r histFamily}
+familyDF <- as.data.frame(table(allFams))
+split1f <- data.frame(allFams=familyDF$allFams[familyDF$Freq>30],Freq=familyDF$Freq[familyDF$Freq>30])
+split2f <- data.frame(allFams=familyDF$allFams[familyDF$Freq<30 & familyDF$Freq>10],Freq=familyDF$Freq[familyDF$Freq<30 & familyDF$Freq>10])
+split3f <- data.frame(allFams=familyDF$allFams[familyDF$Freq<10 & familyDF$Freq>5],Freq=familyDF$Freq[familyDF$Freq<10 & familyDF$Freq>5])
+split4f <- data.frame(allFams=familyDF$allFams[familyDF$Freq<5],Freq=familyDF$Freq[familyDF$Freq<5])
+```
+
+```{r famGT30, fig.align='center', fig.width=10}
+# Create the bar plot
+ggplot2::ggplot(split1f, aes(x = allFams, y = Freq, fill = allFams)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Family", x = "Family", y = "Frequency") +
+  theme_minimal()
+```
+
+```{r famBTW3and5, fig.align='center', fig.width=20}
+# Create the bar plot
+ggplot2::ggplot(split2f, aes(x = allFams, y = Freq, fill = allFams)) + 
+  geom_bar(stat = "identity") +
+  labs(title = "diChemokines in Organisms by Family", x = "Family", y = "Frequency") +
+  geom_text(aes(label=allFams),nudge_y=.3, size=6,check_overlap=TRUE)+
+  theme_minimal(base_size = 25) +
+  theme(axis.text.x=element_blank())
+```
+
+```{r famLT3}
+#There is a need to split further this group if need be, but I am ignoring it for the current analysis
+# Create the bar plot
+```
+
+### Cricetidae
+
+```{r Cricetidae, fig.align='center', fig.width=10}
+famClass<-taxize::classification(idFs,'ncbi')
+famTree <- taxize::class2tree(famClass,check=FALSE)
+ggtree::ggtree(famTree$phylo)+ggtree::geom_nodelab(nudge_x=-4,nudge_y=0.065)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+```
+
+### Families of model organisms
+
+Considered model organisms (and respective orders): if they are in our protein phylogeny
+
+-   Mus musculus (Rodentia): `r ("Rodentia" %in% allOs)`
+
+-   Rattus norvegicus (Rodentia): `r ("Rodentia" %in% allOs)`
+
+-   Drosophila melanogaster (Drosophilidae): `r ("Drosophilidae" %in% allOs)`
+
+-   Bos taurus (Artiodactyla): `r ("Artiodactyla" %in% allOs)`
+
+-   Callosobruchus maculatus (Coleoptera): `r ("Coleoptera" %in% allOs)`
+
+-   Danio rerio (Cypriniformes): `r ("Cypriniformes" %in% allOs)`
+
+-   Fundulus heteroclitus (Cyprinodontiformes) \~not a "model" : `r ("Cyprinodontiformes" %in% allOs)`
+
+-   Nothobranchius furzeri (Cyprinodontiformes): `r ("Cyprinodontiformes" %in% allOs)`
+
+-   Oryzias latipes (Beloniformes): `r ("Beloniformes" %in% allOs)`
+
+-   Anolis carolinensis (Squamata): `r ("Squamata" %in% allOs)`
+
+-   Gallus gallus (Galliformes): `r ("Galliformes" %in% allOs)` (UPI001F01E243 is in Gallus gallus?)
+
+-   Taeniopygia castanotis (Passeriformes): `r ("Passeriformes" %in% allOs)`
+
+-   Xenopus laevis (Anura): `r ("Anura" %in% allOs)`
+
+-   Xenopus tropicalis (Anura): `r ("Anura" %in% allOs)`
+
+-   Saccharomyces cerevisiae (Saccharomycetales): `r ("Saccharomycetales" %in% allOs)`
+
+-   Any primate might be good to start with (Primates): `r ("Primates" %in% allOs)`
+
+-   Caenorhabditis elegans (Rhabditida): `r ("Rhabditida" %in% allOs)`
+
+-   Strongylocentrotus purpuratus (Echinoida): `r ("Echinoida" %in% allOs)`
+
+There are low amount of hits in Muridae, but it can be interesting since it has Rattus and Mus in it as geni (mice and rats as model organisms)

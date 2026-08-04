@@ -1,0 +1,86 @@
+H.Sapiens:
+Orientation: +
+chr3:46,354,111-46,360,940 (CCR2)
+chr3:46,370,946-46,376,206 (CCR5)
+
+Chimp:
+Orientation: +
+
+
+
+Bonobo:
+Orientation: +
+
+
+
+Gorilla:
+Orientation: +
+
+
+
+Orangutan:
+Orientation: +
+
+
+
+Gibbon:
+Orientation: +
+
+
+
+Green monkey: 
+Orientation:
+
+
+
+Crab-eating Macaque:
+Orientation:
+
+
+
+Rhesus:
+Orientation:
+
+
+
+Baboon (anubis):
+Orientation:
+
+
+
+Proboscis monkey:
+Orientation:
+
+
+
+Golden snub-nosed monkey:
+Orientation:
+
+
+
+Marmoset:
+Orientation:
+
+
+
+Squirrel monkey:
+Orientation:
+
+
+
+Tarsier:
+Orientation:
+
+
+
+Mouse lemur:
+Orientation:
+
+
+
+Bushbaby:
+Orientation:
+
+
+
+

@@ -1,0 +1,7 @@
+# Bulk sequence data — regenerate from the UniProt/GPCRdb fetch scripts
+newer-files/datafiles/
+
+# Raw hmmsearch/hmmscan output. 53G total, dominated by
+# newer-files/pipeline/hmmouts/. Regenerate by rerunning the pipeline;
+# the parsed .json/.clstr summaries downstream of these are tracked.
+*.out

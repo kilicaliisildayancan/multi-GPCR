@@ -1,0 +1,27 @@
+{
+    "id": "4CB89A3D",
+    "path": "~/multi-domain_gpcr/MDG_Rscripts/olfactorySensoryNeurons_RNAseq.Rmd",
+    "project_path": "olfactorySensoryNeurons_RNAseq.Rmd",
+    "type": "r_markdown",
+    "hash": "1484644318",
+    "contents": "",
+    "dirty": false,
+    "created": 1674731432972.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "13,25",
+        "scrollLine": "10"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1674735368,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1674735368658,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,110 @@
+---
+title: "mGPCR class A Taxonomical Analysis"
+author: "Kilicali Isildayancan"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library('jsonlite')
+library('ggtree')
+library('ggplot2')
+library('ggimage')
+library('RColorBrewer')
+```
+
+
+```{r}
+homedir <- "/home/kilicali/multi-domain_gpcr/datafiles/clusters/chemokine_receptors/8-22TM/"
+clusters_dir <- paste0(homedir, "clusters.json")
+taxIds_dir <- paste0(homedir, "cluster_taxids.json")
+
+clusters <- jsonlite::fromJSON(clusters_dir)
+taxIds <- jsonlite::fromJSON(taxIds_dir)
+```
+
+```{r populateList, echo=FALSE}
+cluster_with_taxids <- list()
+for (cluster in names(clusters)) {
+  cluster_ids <- c()
+  for (acc_id in clusters[[cluster]]) {
+    taxid <- taxIds[[acc_id]]
+    cluster_ids <- c(cluster_ids, taxid)
+  }
+  cluster_with_taxids[[cluster]] <- cluster_ids
+}
+
+```
+
+```{r}
+plot_list <- list()
+
+for (i in 1:10) {
+  single_cluster <- cluster_with_taxids[[i]]
+  if (length(unique(single_cluster)) < 3) {next}
+  taxDB <- taxize::classification(unique(single_cluster), db = 'ncbi')
+  cluster_taxDB <- taxize::classification(in_cluster_taxIds, db = 'ncbi')
+  fullTree <- taxize::class2tree(taxDB, check=FALSE)
+  
+  p <- ggtree::ggtree(fullTree$phylo)+ggtree::geom_nodelab(nudge_x=-5.5,nudge_y=0.35)+ggtree::geom_tiplab()+ggtree::xlim(-10,90)
+  plot_list[[i]] <- p
+  Sys.sleep(5)
+}
+
+write.beast.newick(as.treedata(fullTree$phylo), file = "./someTree.nwk")
+
+```
+
+```{r}
+tidytree::as.phylo(fullTree)
+
+heatmap_df <- (matrix(0, nrow=13,ncol=4))
+heatmap_df[1,] <- c(1,0,1,0)
+heatmap_df[2,] <- c(0,0,1,1)
+heatmap_df[3,] <- c(0,0,0,0)
+heatmap_df[4,] <- c(1,1,0,0)
+heatmap_df[5,] <- c(0,1,1,1)
+heatmap_df[6,] <- c(1,0,0,0)
+heatmap_df[7,] <- c(0,1,0,0)
+heatmap_df[8,] <- c(1,1,0,0)
+heatmap_df[9,] <- c(0,1,1,1)
+heatmap_df[10,] <- c(0,0,0,1)
+heatmap_df[11,] <- c(1,1,1,1)
+heatmap_df[12,] <- c(1,0,0,0)
+heatmap_df[13,] <- c(0,1,0,1)
+rownames(heatmap_df) <- fullTree$classification$species
+
+p <- ggtree(fullTree$phylo)
+gheatmap(p, heatmap_df)
+p
+```
+
+```{r}
+library(treeio)
+library(ggtree)
+
+beast_file <- system.file("examples/MCC_FluA_H3.tree", 
+                          package="ggtree")
+rst_file <- system.file("examples/rst", package="ggtree")
+mlc_file <- system.file("examples/mlc", package="ggtree")
+
+beast_tree <- read.beast(beast_file)
+codeml_tree <- read.codeml(rst_file, mlc_file)
+merged_tree <- merge_tree(beast_tree, codeml_tree)
+
+cols <- scale_color(object=merged_tree, by="dN_vs_dS", 
+                    low="#0072B2", high="#D55E00",
+                    interval=seq(0, 1.5, length.out=100))
+p <- ggtree(merged_tree, size=.8, mrsd="2013-01-01", 
+            ndigits = 2, color=cols)
+p <- add_colorbar(p, cols, font.size=3)
+
+p <- p + geom_text(aes(label=posterior), color="darkgreen", 
+                   vjust=-.1, hjust=-.03, size=1.8)
+```
+
+
+
+

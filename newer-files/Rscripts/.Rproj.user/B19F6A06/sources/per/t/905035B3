@@ -1,0 +1,26 @@
+{
+    "id": "905035B3",
+    "path": "~/multi-domain_gpcr/MDG_Rscripts/mGPCR_phylo.R",
+    "project_path": "mGPCR_phylo.R",
+    "type": "r_source",
+    "hash": "4101688500",
+    "contents": "",
+    "dirty": false,
+    "created": 1671539388834.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "9,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1671615762,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1671615763001,
+    "read_only": false,
+    "read_only_alternatives": []
+}

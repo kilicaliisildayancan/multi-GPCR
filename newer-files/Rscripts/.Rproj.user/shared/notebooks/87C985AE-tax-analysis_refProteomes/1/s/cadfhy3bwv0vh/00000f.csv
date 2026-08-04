@@ -1,0 +1,5 @@
+"0","orderDF <- as.data.frame(table(allOs))"
+"0","split1ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq>30],Freq=orderDF$Freq[orderDF$Freq>30])"
+"0","split2ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq<=30 & orderDF$Freq>=10],Freq=orderDF$Freq[orderDF$Freq<=30 & orderDF$Freq>=10])"
+"0","split3ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq<=10 & orderDF$Freq>=5],Freq=orderDF$Freq[orderDF$Freq<=10 & orderDF$Freq>=5])"
+"0","split4ord <- data.frame(allOs=orderDF$allOs[orderDF$Freq<5],Freq=orderDF$Freq[orderDF$Freq<5])"

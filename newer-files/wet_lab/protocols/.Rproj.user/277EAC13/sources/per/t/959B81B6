@@ -1,0 +1,27 @@
+{
+    "id": "959B81B6",
+    "path": "~/multi-domain_gpcr/wet_lab/protocols/RNA_methods.Rmd",
+    "project_path": "RNA_methods.Rmd",
+    "type": "r_markdown",
+    "hash": "191933513",
+    "contents": "",
+    "dirty": false,
+    "created": 1691754359633.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "271,1",
+        "scrollLine": "0",
+        "last_setup_crc32": ""
+    },
+    "folds": "28|31|31|0|\n32|34|35|0|\n36|32|45|0|\n66|26|87|0|\n118|13|145|0|\n148|26|169|0|\n170|27|197|4|\n198|39|229|0|\n",
+    "lastKnownWriteTime": 1695815266,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1695815266405,
+    "read_only": false,
+    "read_only_alternatives": []
+}

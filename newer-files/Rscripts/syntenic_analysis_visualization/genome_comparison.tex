@@ -1,0 +1,195 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Genome Comparisons},
+  pdfauthor={Kilicali Isildayancan},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Genome Comparisons}
+\author{Kilicali Isildayancan}
+\date{2024-04-11}
+
+\begin{document}
+\maketitle
+
+\hypertarget{spliced-multi-protein-genes}{%
+\subsection{Spliced Multi-Protein
+Genes}\label{spliced-multi-protein-genes}}
+
+\hypertarget{data-structure}{%
+\subsubsection{Data Structure}\label{data-structure}}
+
+UCSC Genomic Data has 15, Importantly, these are specified:
+
+\begin{itemize}
+\tightlist
+\item
+  unique identifier (e.g.~ENST00000684719.1)
+\item
+  chromosome number (e.g.~chr3)
+\item
+  strand (+ or -)
+\item
+  transcription start and end location
+\item
+  gene name (e.g.~RERE, EIF4G3)
+\end{itemize}
+
+All of the attributes are: name, chrom, strand, txStart, txEnd,
+cdsStart, cdsEnd, exonCount, exonStarts, exonEnds, score, name2,
+cdsStartStat, cdsEndStat, exonFrames
+
+\hypertarget{search-protocol}{%
+\subsubsection{Search Protocol}\label{search-protocol}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Pre-processing genomic data
+\end{enumerate}
+
+First, all entries are split according to their chromosome, and then
+according to their strand orientation. This produces 2n different files
+given n chromosomes of an organism. For example, humans have 22+2
+chromosomes, and this produces 48 files for sorting. This is done for
+the next steps and how the analysis algorithm works. The rationale
+behind this is that we are interested in the local proximity of the any
+one gene, and this is constrained by the chromosome and locus, as well
+as the strand (reverse genes shouldn't produce meaningful multi-protein
+products). Splitting the data into smaller parts allows the algorithm to
+work in a simple way, dealing with only a chromosome and a single strand
+orientation at any given time.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Potential problem: chromosome-based splitting is based on their naming (potentially their assembly), and this causes to be more than 2n files (chr1, chromUn, etc. could all correspond to the same chromosome). To check if this is a problem, we can look at the amount of unique genes that are in the 'alternative chromosome naming' (e.g. comparing chr22 and chr22_KQ458388v1_alt) because joining these haphazardly is probably not trivial. Moreover, this seems like a big problem (drosophila doesn't have this problem, and their pairs go up to 160k).
+    }%
+}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Finding proximal gene pairs
+\end{enumerate}
+
+Given each file (specifying a chromosome and strand), each gene is
+paired with a proximal gene based on their transcription end and start
+locations, with a 200k bp intergenic distance threshold. The algorithm
+looks at the end location of the transcription of a gene, and checks if
+the next closest gene is close enough to be under the given threshold.
+This is extended to other genes if it's under the threshold. This
+procedure produces a list of pairs of genes (GENE1 - GENE2) for a given
+genome of a species.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Potential problem: While producing the list, the gene name is used instead of their unique identifier. This is done to enable comparing with other genes from other organisms. This could have potential drawbacks when extending to other species (i.e. the problem of naming genes).
+    }%
+}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Comparing between species
+\end{enumerate}
+
+Once the pairing is done for every gene pair, inter-species data is
+compared. A script goes through two organism gene pairs, and extracts
+all the common gene pairs as well as their intergenic distance. This
+supports a presence of evolutionary pressure to keep two genes in close
+proximity. When a gene pair is conserved across multiple species, we
+should have stronger support against random chance and more support for
+evolutionary pressure.
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Potential problem: As we will see in the next chapter, genomes that are not well studied (relative to human or mouse) shorten the list dramatically, because the total pool of gene pairs shrink drastically. What we could do is start with human-mouse comparison, and then when comparing with a third species, first check if both of the genes in the gene pair are available in the third organism to ascertain a true negative: that the synteny was not conserved in the third organism.
+    }%
+}
+
+\hypertarget{genome-quality}{%
+\subsection{Genome Quality}\label{genome-quality}}
+
+To look at the extent of the amount of raw gene data in animals genomes,
+we compare the sets of genes (according to their gene names) of species
+we have data for. Each unique gene is counted once, and then the sets of
+unique genes are compared in a matrix form to look at the potential gene
+pool we are choosing from.
+
+Centering on humans, we have primates, mammals, vertebrates, and one
+insect that is well studied (drosophila melanogaster). Important to note
+that some genes are simply not present in distant species, so looking
+for chemokine receptors in insects or fish is not relevant.
+
+\includegraphics{genome_comparison_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\hypertarget{finding-syntenic-pairs}{%
+\subsection{Finding Syntenic Pairs}\label{finding-syntenic-pairs}}
+
+\end{document}

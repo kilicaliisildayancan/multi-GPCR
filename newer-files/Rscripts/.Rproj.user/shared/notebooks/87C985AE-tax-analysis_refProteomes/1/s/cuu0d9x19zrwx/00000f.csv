@@ -1,0 +1,5 @@
+"0","familyDF <- as.data.frame(table(allFams))"
+"0","split1f <- data.frame(allFams=familyDF$allFams[familyDF$Freq>30],Freq=familyDF$Freq[familyDF$Freq>30])"
+"0","split2f <- data.frame(allFams=familyDF$allFams[familyDF$Freq<30 & familyDF$Freq>10],Freq=familyDF$Freq[familyDF$Freq<30 & familyDF$Freq>10])"
+"0","split3f <- data.frame(allFams=familyDF$allFams[familyDF$Freq<10 & familyDF$Freq>5],Freq=familyDF$Freq[familyDF$Freq<10 & familyDF$Freq>5])"
+"0","split4f <- data.frame(allFams=familyDF$allFams[familyDF$Freq<5],Freq=familyDF$Freq[familyDF$Freq<5])"

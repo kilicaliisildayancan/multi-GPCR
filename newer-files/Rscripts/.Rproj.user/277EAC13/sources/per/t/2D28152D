@@ -1,0 +1,27 @@
+{
+    "id": "2D28152D",
+    "path": "~/multi-domain_gpcr/Rscripts/syntenic_analysis_visualization/synteny_genepair-conservation_vis.Rmd",
+    "project_path": "syntenic_analysis_visualization/synteny_genepair-conservation_vis.Rmd",
+    "type": "r_markdown",
+    "hash": "1558241260",
+    "contents": "",
+    "dirty": false,
+    "created": 1714823039380.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "134,0",
+        "scrollLine": "120",
+        "last_setup_crc32": ""
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1715116191,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1715267593017,
+    "read_only": false,
+    "read_only_alternatives": []
+}
